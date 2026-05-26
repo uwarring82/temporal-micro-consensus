@@ -1,0 +1,26 @@
+# GitHub Pages (Jekyll) configuration — serves the repository as a documentation site.
+# The site is built from the current `main`; the landing page (index.md) lists the
+# most recent version of each artefact. Inter-document .md links are rewritten to .html
+# by GitHub Pages' jekyll-relative-links plugin (enabled by default).
+
+title: Temporal Consensus Harbour
+description: >-
+  Consensus-Emergence of Classical Proper Time — a Local-Stewardship research
+  framework, with Breakwater Ledger classifications and Sail commentaries.
+theme: jekyll-theme-cayman
+
+# Apply the theme's layout to every page (the artefact .md files carry no front matter).
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Keep non-content files out of the built site (licences/config are served from the repo).
+exclude:
+  - LICENSE-MIT
+  - LICENSE-CC-BY-SA-4.0
+  - LICENSE-CC-BY-NC-SA-4.0
+  - CITATION.cff
+  - .gitignore
+  - _config.yml
