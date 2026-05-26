@@ -68,3 +68,9 @@
 - **Actor:** Steward (decision: minimal factual correction) / Agent (drafting). **Commit:** *(this change).*
 - Resolves the "Pending" item in the entry above. [`sails/sorci-commentary-v0.3.md`](../sails/sorci-commentary-v0.3.md) issued (v0.2 frozen); the only changes versus v0.2 are the metadata block, the removal of the C. Sanner acknowledgement clause (the steward has no relationship with Sanner), and the version-history row. The D. Leibfried acknowledgement is retained.
 - **Deliberately *not* changed:** anchoring remains Coastline **v0.2** / Ledger CL-2026-006 v0.2 (re-anchoring to Coastline v0.3 is a substantive change), and the broader acknowledgement decision (retain / reformulate / remove) remains open — both deferred to the Phase-4 Sail pass.
+
+## 2026-05-26 — Phase 4 step 1: Ledger CL-2026-007 opened
+
+- **Actor:** Steward (direction: "go step by step" through Phase 4) / Agent (drafting). **Commit:** *(this change).*
+- [`ledger/CL-2026-007-smith-ahmadi-v0.1.md`](../ledger/CL-2026-007-smith-ahmadi-v0.1.md) issued (v0.1), classifying Smith & Ahmadi (2020) **UNDERDETERMINED** against **Coastline v0.3**. Declared measure: Fisher information F[τ] (deliberately distinct from CL-2026-006's mutual information, road-testing measure pluralism). Crux/discriminant: whether the quantum time-dilation correction is coherence-dependent (superposition ≠ classical mixture) — the coherence-sensitive test it lacks is what the Sorci visibility witness (CL-2026-006) provides.
+- Roadmap "possible future Ledger entries" updated (CL-2026-007 → opened); README Ledger mention + structure tree updated. **Next steps (Phase 4):** CL-2026-008 (distributed networks); Sail re-anchor to v0.3; methodological notes.
