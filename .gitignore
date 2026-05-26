@@ -1,0 +1,58 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor swap and backup files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.bak
+*.orig
+
+# Markdown editor artefacts
+.obsidian/
+.zk/
+
+# LaTeX (if any future typesetting work is added)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+*.dvi
+
+# Python (if any future numerical work is added)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Caches
+.cache/
+
+# Local notes that should not be versioned
+draft-notes/
+scratch/
