@@ -40,7 +40,7 @@ The broad sweep is organised into seven clusters. Each paper entering the corpus
 | **C** | Quantum clocks & clock metrology (trapped ions, optical standards) | The experimental substrate; source of candidate witnesses (Claim III). |
 | **D** | Quantum metrology of time / Fisher information | The leading Claim IV operational anchor; includes FIT. |
 | **E** | Relativistic & gravitational effects on quantum coherence | The SR/weak-field boundary (roadmap GR-boundary item); mass-defect couplings. **High-traffic cluster:** the Sorci Hamiltonian descends from the Zych–Rudnicki–Pikovski composite-system action argument, so this is load-bearing for the programme, not merely contextual. |
-| **F** | Distributed clock networks & multipartite metrology | Where "multipartite redundancy" (Claim V) becomes literal; CL-2026-008. |
+| **F** | Distributed clock networks & multipartite metrology | Where the *multipartite* structure (Claim V) becomes literal — though, per synthesis-v0.1, these protocols are typically entanglement-enhanced and hence *anti-redundant*, so they realise multipartiteness without the Claim II redundancy; CL-2026-008. |
 | **G** | Adjacent foundations | Thermal/relational time, arrow-of-time, decoherence reviews, relational QM. Broad-sweep extension; entry-gated and tier-capped (see Phase 1). |
 
 A seeded, cluster-tagged bibliography lives in [`docs/literature/references.bib`](literature/references.bib); the running triage table lives in [`docs/literature/index.md`](literature/index.md). Some papers (e.g. Nambu, Mendes & Soares-Pinto) sit legitimately in two clusters; the primary-cluster choice is a **decision, not a fact**, and is recorded as such in `index.md` with a one-line rationale.

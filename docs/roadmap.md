@@ -17,16 +17,21 @@
 
 An extensive, broad-sweep **comprehensive field map** is the current upstream workstream, governed by its own plan: [`docs/literature-review-plan.md`](literature-review-plan.md). It assembles and verifies one reusable corpus ([`docs/literature/`](literature/)) feeding all three artefact families. The Coastline v0.3 candidates, candidate Ledger entries, and Sail reference apparatus listed below are its intended downstream consumers (Phase 4 of that plan).
 
-### Coastline v0.3 candidates
+### Coastline v0.3 — issued 2026-05-26
 
-The following revisions to *Consensus-Emergence of Classical Proper Time* are collected for a future v0.3, to be drafted after Sail v0.2 (and any subsequent Sail revisions) road-test the framework in earnest.
+Coastline v0.3 ([`coastlines/consensus-emergence-v0.3.md`](../coastlines/consensus-emergence-v0.3.md)) was drafted after the literature review (Phases 1–3) road-tested the framework, drawing on [`docs/literature/synthesis-v0.1.md`](literature/synthesis-v0.1.md).
 
-- **Registration protocol for Claim IV measure selection.** Require any deployment of the framework — Ledger entry, Sail, methodological note — to declare its chosen operational measure and threshold upfront, with explicit justification. Preserves the pluralism of Claim IV while closing the measure-shifting vulnerability identified in the Scout horizon scan of Coastline v0.2.
-- **FIT citation in External Constraints.** Add Fisher-Informational Time (arXiv 2605.03958, May 2026) as a fourth external citation alongside quantum mechanics, special relativity, Page–Wootters, and quantum Darwinism. FIT operates at the single-trajectory layer; consensus-emergence at the multipartite-redundancy layer. The two are compatible but distinct.
-- **FIT positioning bullet in Claim V.** Add a third positioning bullet making the trajectory-vs-multipartite distinction explicit. FIT-style accumulated Fisher distance is one available realisation of the Fisher-information anchor in Claim IV, not a substitute for the redundancy/stability/compressibility criteria across many records.
-- **GR boundary statement.** External Constraints currently cite SR proper-time relations among inertial worldlines. Add an explicit boundary note that the framework operates in the SR-and-weak-field regime; extension to strongly accelerated worldlines or curved-spacetime regimes requires additional structure. Becomes relevant when the framework is applied to distributed-clock networks across regions of differing gravitational potential.
-- **"Many" specification.** Distinguish between *multi-carrier across subsystems* (the multipartite case proper) and *multi-channel within one subsystem* (multiple observables of a single constituent). Both can satisfy the redundancy condition, but the structural content differs. Guardian flag on Coastline v0.2.
-- **Claim III softening.** Final sentence currently reads "This discrimination is what converts the criterion of Claim II from a description into a witness." Guardian recommends "This discrimination is a *necessary step in* converting the criterion of Claim II from a descriptive framework into an experimentally credible witness." Slightly more careful; necessary not sufficient.
+**Folded into v0.3:**
+- **"Many" specification** — done, as the Claim II *"many vs redundant"* terminology note, extended (per synthesis) to distinguish redundant carriers from *entanglement-enhanced (anti-redundant)* multipartiteness; mirrored by a placement sentence in Claim V.
+- **Claim III softening** — done ("is what converts" → "is a *necessary step in* converting").
+- **Lineage fixes** (new, from the synthesis lineage audit) — removed the Hartong–Have–Obers–Pikovski mis-attribution from the Page–Wootters list; corrected Mendes & Soares-Pinto 2018→2019; added the Ollivier–Poulin–Zurek objective-histories formulation as the closest configurational precursor.
+- **Transplant gap** (new, the synthesis headline) — the configurational→temporal transplant registered as the *principal open problem* (Claim II status-of-specialisation paragraph, Anti-Claim #6, Deferred Items priority).
+
+**Deferred to a later Coastline version (still open, in roadmap):**
+- **Registration protocol for Claim IV measure selection.** Require any deployment — Ledger entry, Sail, methodological note — to declare its chosen operational measure and threshold upfront, with explicit justification. Closes the measure-shifting vulnerability while preserving Claim IV pluralism. (The Ledger CL-2026-006 already does this in practice via its declared I(C:M); the Coastline-level requirement is not yet written.)
+- **FIT citation in External Constraints.** Add Fisher-Informational Time (arXiv 2605.03958, 2026) as an external citation. FIT operates at the single-trajectory layer; consensus-emergence at the multipartite-redundancy layer — compatible but distinct (synthesis §3.5: the framework *subsumes/extends* FIT, not competes).
+- **FIT positioning bullet in Claim V.** Make the trajectory-vs-multipartite distinction explicit; FIT-style accumulated Fisher distance is one realisation of the Claim IV Fisher anchor, not a substitute for redundancy/stability/compressibility across many records.
+- **GR boundary statement.** Add an explicit note that the framework operates in the SR-and-weak-field regime; extension to strongly accelerated worldlines or curved spacetime requires additional structure. Becomes load-bearing when the framework is applied to distributed-clock networks across differing gravitational potential (CL-2026-008).
 
 ### Ledger schema candidates
 
@@ -60,13 +65,14 @@ These are noted as plausible future extensions but not committed in the current 
 
 ## Stewardship decisions pending
 
-- **External circulation of Sail.** Decision points before any external venue: (i) acknowledgements; (ii) reference apparatus completion; (iii) optional courtesy contact with subject-paper authors before deposit. Not urgent.
+- **External circulation of Sail.** Decision points before any external venue: (i) acknowledgements; (ii) reference apparatus completion; (iii) optional courtesy contact with subject-paper authors before deposit. *Sharpened by synthesis-v0.1 §4:* D. Leibfried and C. Sanner — acknowledged in the Sail as close contacts — are **co-authors** of the subject paper (Sorci et al.), not third parties. Point (i) is therefore an independence-of-commentary question, not merely a proximity disclosure; this should be foregrounded in the decision. Not urgent.
 - **arXiv vs journal-comment vs preprint-only.** If external circulation is pursued, the route — arXiv-only deposit, formal Comment to PRL, Nature Physics News & Views via Dr Pichon route, or other — needs deliberation. Each has different timelines, audiences, and discipline requirements.
 - **Public visibility of repository.** *Resolved 2026-05-26:* repository is now public at `github.com/uwarring82/temporal-micro-consensus`. This remains separable from external circulation of the Sail — public hosting of versioned draft artefacts under Local Stewardship does not itself constitute external circulation of the Sorci commentary, which retains its own decision points below.
 
 ## Retired or completed items
 
-*None yet. This section will track items that have been advanced (moved into a versioned document) or formally retired with rationale.*
+- **Literature review, Phases 1–3 (2026-05-26).** Comprehensive field map: 29-entry corpus assembled and verified, Tier-1 fixed at 13 with full per-claim annotation, [`docs/literature/synthesis-v0.1.md`](literature/synthesis-v0.1.md) committed. Governed by [`docs/literature-review-plan.md`](literature-review-plan.md). Phase 4 (artefact edits) is the downstream work tracked above.
+- **Coastline v0.3 (2026-05-26).** Issued — see the "Coastline v0.3 — issued" subsection above. Folded the "many" specification, Claim III softening, three lineage fixes, and the transplant-gap open problem; deferred FIT/GR-boundary/measure-registration.
 
 ---
 
