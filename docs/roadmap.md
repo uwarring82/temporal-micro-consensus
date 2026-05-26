@@ -76,6 +76,7 @@ These are noted as plausible future extensions but not committed in the current 
 - **Ledger CL-2026-007 (2026-05-26).** Opened (Smith & Ahmadi); corrected to v0.2 after Verifier review (crux relocated to the experimental-witness level).
 - **Ledger CL-2026-008 (2026-05-26).** Opened (distributed entanglement-enhanced clock networks, class claim); first to exercise *multipartite ≠ redundant* and the resolution/classification anchor split; its D1 made the GR boundary load-bearing.
 - **Coastline v0.4 (2026-05-26).** Issued the **GR-regime boundary statement** ([`coastlines/consensus-emergence-v0.4.md`](../coastlines/consensus-emergence-v0.4.md)). Decision: *extend* to the SR-and-weak-field (post-Newtonian) regime, not bound at SR. Satisfies the framework-side condition of CL-2026-008 D1. Still deferred: FIT citation + positioning; Claim IV measure-registration protocol.
+- **Version-consistency re-anchors (2026-05-26).** Closing the loop after Coastline v0.4: **CL-2026-006 → v0.3** (re-anchored to Coastline v0.4; verdict and discriminants unchanged — the v0.2→v0.4 changes are refinements the entry already anticipated) and **CL-2026-008 → v0.2** (re-evaluated against v0.4 — D1's framework-side gap now satisfied by the Regime of Validity; classification stays UNDERDETERMINED, now resting on D2 alone). *Pending optional touch:* Sail v0.4 still cites CL-2026-006 v0.2 (valid; no verdict change) — a Sail pointer update to v0.3 can ride the next Sail revision.
 
 ---
 

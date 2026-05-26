@@ -113,3 +113,12 @@
 - **Ledger anchor kept at CL-2026-006 v0.2** (per scope), with a mixed-anchor note: the v0.2→v0.4 Coastline changes are refinements consistent with the Ledger's UNDERDETERMINED verdict; CL-2026-006's own re-anchor is a separate pending step.
 - **Bookkeeping (per steward note):** stale roadmap headings normalised — "Coastline v0.3 — issued" → "Coastline — issued revisions & remaining candidates"; "Sail v0.3 candidates" → "Sail — pending decisions & candidates" (+ fixed the cross-reference). README current-Sail pointer/tree → v0.4.
 - **Remaining Phase 4:** methodological notes (temporal-redundancy toy functional; nuisance-discrimination kit). Pending separate steps: re-anchor CL-2026-006 → v0.4; re-evaluate CL-2026-008 against v0.4.
+
+## 2026-05-26 — Version-consistency loop: CL-2026-006 v0.3, CL-2026-008 v0.2
+
+- **Actor:** Steward (direction: "the cheap consistency loop") / Agent (drafting). **Commit:** *(this change).*
+- Also fixed a bookkeeping miss the steward caught: README item 3 still described the Sail as anchored to Coastline v0.2 — corrected to v0.4 (mixed anchor).
+- **CL-2026-006 → v0.3** (v0.2 frozen): re-anchored Coastline v0.2 → v0.4. **No verdict or discriminant change** — UNDERDETERMINED, I(C : M), D1–D3/D−1 all stand. The v0.2→v0.4 changes are refinements the entry already anticipated ("two carriers, not many"); added a note that the trapped-ion setting falls within v0.4's *Regime of Validity*.
+- **CL-2026-008 → v0.2** (v0.1 frozen): re-anchored v0.3 → v0.4 **and re-evaluated**. Coastline v0.4 wrote the GR boundary that v0.1's **D1** demanded, so the **framework-side gap is closed** (D1 ✓ satisfied); classification **stays UNDERDETERMINED**, now resting on **D2** (experimental discriminability) alone. Verdict, Classification, D1, and the roadmap-feedback note rewritten; the CL-006/007/008 set now all sit at the experimental-witness level.
+- **Mixed-anchor residue (flagged, not actioned):** Sail v0.4 still cites CL-2026-006 as v0.2 — valid (no verdict/discriminant change), and a pointer bump to v0.3 can ride the next Sail revision rather than forcing a Sail v0.5 now.
+- **PAUSE here** (per steward): the next item — the temporal-redundancy toy functional — is research work, not bookkeeping. Holding before it.
