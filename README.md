@@ -43,7 +43,8 @@ harbour-temporal-consensus/
 ├── sails/
 │   ├── sorci-commentary-v0.1.md
 │   ├── sorci-commentary-v0.2.md
-│   └── sorci-commentary-v0.3.md     (current)
+│   ├── sorci-commentary-v0.3.md
+│   └── sorci-commentary-v0.4.md     (current)
 └── docs/
     ├── roadmap.md
     ├── logbook.md                    (project logbook — provenance / FAIR)
@@ -111,7 +112,7 @@ This repository operates within the broader Open-Science Harbour architecture ma
 If you are encountering this repository for the first time:
 
 1. Start with the most recent Coastline (`coastlines/consensus-emergence-v0.4.md`) to understand the framework.
-2. Read the most recent Sail (`sails/sorci-commentary-v0.3.md`) to see how the framework is applied in a concrete case.
+2. Read the most recent Sail (`sails/sorci-commentary-v0.4.md`) to see how the framework is applied in a concrete case.
 3. Consult the Sorci Ledger entry (`ledger/CL-2026-006-sorci-v0.2.md`) for the framework-relative classification underwriting the Sail.
 4. Consult `docs/roadmap.md` for what is in active development and what is deferred.
 

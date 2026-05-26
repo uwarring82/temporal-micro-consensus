@@ -17,7 +17,7 @@
 
 An extensive, broad-sweep **comprehensive field map** is the current upstream workstream, governed by its own plan: [`docs/literature-review-plan.md`](literature-review-plan.md). It assembles and verifies one reusable corpus ([`docs/literature/`](literature/)) feeding all three artefact families. The Coastline v0.3 candidates, candidate Ledger entries, and Sail reference apparatus listed below are its intended downstream consumers (Phase 4 of that plan).
 
-### Coastline v0.3 — issued 2026-05-26
+### Coastline — issued revisions & remaining candidates
 
 Coastline v0.3 ([`coastlines/consensus-emergence-v0.3.md`](../coastlines/consensus-emergence-v0.3.md)) was drafted after the literature review (Phases 1–3) road-tested the framework, drawing on [`docs/literature/synthesis-v0.1.md`](literature/synthesis-v0.1.md).
 
@@ -37,7 +37,7 @@ Coastline v0.3 ([`coastlines/consensus-emergence-v0.3.md`](../coastlines/consens
 
 - **Layer A/B/C architecture.** Guardian proposal during CL-2026-006 review: future Ledger entries make explicit three layers — (A) structural dynamics, (B) measure adequacy, (C) experimental discriminability. The current entry already does all three in substance; explicit labelling would make the schema more reusable across cases.
 
-### Sail v0.3 candidates
+### Sail — pending decisions & candidates
 
 Pending for the Sorci commentary if it is to leave internal circulation:
 
@@ -72,7 +72,7 @@ These are noted as plausible future extensions but not committed in the current 
 ## Retired or completed items
 
 - **Literature review, Phases 1–3 (2026-05-26).** Comprehensive field map: 29-entry corpus assembled and verified, Tier-1 fixed at 13 with full per-claim annotation, [`docs/literature/synthesis-v0.1.md`](literature/synthesis-v0.1.md) committed. Governed by [`docs/literature-review-plan.md`](literature-review-plan.md). Phase 4 (artefact edits) is the downstream work tracked above.
-- **Coastline v0.3 (2026-05-26).** Issued — see the "Coastline v0.3 — issued" subsection above. Folded the "many" specification, Claim III softening, three lineage fixes, and the transplant-gap open problem; deferred FIT/GR-boundary/measure-registration.
+- **Coastline v0.3 (2026-05-26).** Issued — see the "Coastline — issued revisions & remaining candidates" subsection above. Folded the "many" specification, Claim III softening, three lineage fixes, and the transplant-gap open problem; deferred FIT/GR-boundary/measure-registration.
 - **Ledger CL-2026-007 (2026-05-26).** Opened (Smith & Ahmadi); corrected to v0.2 after Verifier review (crux relocated to the experimental-witness level).
 - **Ledger CL-2026-008 (2026-05-26).** Opened (distributed entanglement-enhanced clock networks, class claim); first to exercise *multipartite ≠ redundant* and the resolution/classification anchor split; its D1 made the GR boundary load-bearing.
 - **Coastline v0.4 (2026-05-26).** Issued the **GR-regime boundary statement** ([`coastlines/consensus-emergence-v0.4.md`](../coastlines/consensus-emergence-v0.4.md)). Decision: *extend* to the SR-and-weak-field (post-Newtonian) regime, not bound at SR. Satisfies the framework-side condition of CL-2026-008 D1. Still deferred: FIT citation + positioning; Claim IV measure-registration protocol.
