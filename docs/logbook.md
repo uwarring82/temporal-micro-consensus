@@ -122,3 +122,10 @@
 - **CL-2026-008 → v0.2** (v0.1 frozen): re-anchored v0.3 → v0.4 **and re-evaluated**. Coastline v0.4 wrote the GR boundary that v0.1's **D1** demanded, so the **framework-side gap is closed** (D1 ✓ satisfied); classification **stays UNDERDETERMINED**, now resting on **D2** (experimental discriminability) alone. Verdict, Classification, D1, and the roadmap-feedback note rewritten; the CL-006/007/008 set now all sit at the experimental-witness level.
 - **Mixed-anchor residue (flagged, not actioned):** Sail v0.4 still cites CL-2026-006 as v0.2 — valid (no verdict/discriminant change), and a pointer bump to v0.3 can ride the next Sail revision rather than forcing a Sail v0.5 now.
 - **PAUSE here** (per steward): the next item — the temporal-redundancy toy functional — is research work, not bookkeeping. Holding before it.
+
+## 2026-05-26 — Cleanup: CL-2026-007 v0.3 re-anchor + roadmap normalisation
+
+- **Actor:** Verifier review (catch) / Agent (cleanup). **Commit:** *(this change).*
+- Verifier caught that the "all three entries anchored to v0.4" claim was not literally true — **CL-2026-007 was still on Coastline v0.3**. Re-anchored: **CL-2026-007 → v0.3** ([entry](../ledger/CL-2026-007-smith-ahmadi-v0.3.md); v0.2 frozen), a pure re-anchor to Coastline v0.4 with **no verdict/discriminant change** (v0.4's only addition over v0.3 — the GR boundary — is irrelevant to this bipartite SR/weak-field case). All three Ledger entries are now literally anchored to Coastline v0.4.
+- Normalised the stale roadmap **active** section: "Possible future Ledger entries" → "Ledger entries opened from candidates", with both bullets refreshed to current versions (007 v0.3, 008 v0.2) and current verdicts. README ledger tree → CL-2026-007 v0.3 (current).
+- **PAUSE holds:** next is the temporal-redundancy toy functional (research). Nothing further actioned.

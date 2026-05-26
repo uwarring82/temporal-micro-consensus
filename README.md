@@ -39,7 +39,8 @@ harbour-temporal-consensus/
 │   ├── CL-2026-006-sorci-v0.2.md
 │   ├── CL-2026-006-sorci-v0.3.md          (current)
 │   ├── CL-2026-007-smith-ahmadi-v0.1.md
-│   ├── CL-2026-007-smith-ahmadi-v0.2.md   (current)
+│   ├── CL-2026-007-smith-ahmadi-v0.2.md
+│   ├── CL-2026-007-smith-ahmadi-v0.3.md   (current)
 │   ├── CL-2026-008-clock-networks-v0.1.md
 │   └── CL-2026-008-clock-networks-v0.2.md (current)
 ├── sails/
