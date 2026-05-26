@@ -4,14 +4,18 @@
 
 | Field | Value |
 | --- | --- |
-| Version | v0.1 |
-| Date | 2026-05-23 |
+| Version | v0.2 |
+| Date | 2026-05-26 |
 | Steward | U. Warring |
 | Status | Living document — updated as items advance or are retired |
 
 ---
 
 ## Active development
+
+### Literature review (upstream of everything below)
+
+An extensive, broad-sweep **comprehensive field map** is the current upstream workstream, governed by its own plan: [`docs/literature-review-plan.md`](literature-review-plan.md). It assembles and verifies one reusable corpus ([`docs/literature/`](literature/)) feeding all three artefact families. The Coastline v0.3 candidates, candidate Ledger entries, and Sail reference apparatus listed below are its intended downstream consumers (Phase 4 of that plan).
 
 ### Coastline v0.3 candidates
 
@@ -58,7 +62,7 @@ These are noted as plausible future extensions but not committed in the current 
 
 - **External circulation of Sail.** Decision points before any external venue: (i) acknowledgements; (ii) reference apparatus completion; (iii) optional courtesy contact with subject-paper authors before deposit. Not urgent.
 - **arXiv vs journal-comment vs preprint-only.** If external circulation is pursued, the route — arXiv-only deposit, formal Comment to PRL, Nature Physics News & Views via Dr Pichon route, or other — needs deliberation. Each has different timelines, audiences, and discipline requirements.
-- **Public visibility of repository.** Currently private / Local-Stewardship draft. Public hosting on GitHub, GitLab, or institutional infrastructure is a separable decision from external circulation of the Sail; the repository can remain private while individual artefacts are circulated externally.
+- **Public visibility of repository.** *Resolved 2026-05-26:* repository is now public at `github.com/uwarring82/temporal-micro-consensus`. This remains separable from external circulation of the Sail — public hosting of versioned draft artefacts under Local Stewardship does not itself constitute external circulation of the Sorci commentary, which retains its own decision points below.
 
 ## Retired or completed items
 
@@ -71,3 +75,4 @@ These are noted as plausible future extensions but not committed in the current 
 | Version | Date | Notes |
 | --- | --- | --- |
 | v0.1 | 2026-05-23 | Initial roadmap. Captures v0.3 candidate items for Coastline, Ledger schema, and Sail; deferred items from Coastline v0.2; possible future Ledger entries and Sails; stewardship decisions pending. |
+| v0.2 | 2026-05-26 | Added literature-review workstream pointer (new `docs/literature-review-plan.md`) as upstream of all active-development items. Resolved the public-visibility stewardship decision (repository now public). |

@@ -56,3 +56,12 @@ dist/
 # Local notes that should not be versioned
 draft-notes/
 scratch/
+
+# Literature sources — original article PDFs are kept LOCAL ONLY.
+# Publisher PDFs are copyrighted and must not be redistributed in a public
+# repository. The public record is the findings notes under docs/literature/notes/,
+# not the source documents. See docs/literature/sources/README.md.
+docs/literature/sources/**
+!docs/literature/sources/README.md
+# Belt-and-braces: never commit a PDF from anywhere in the literature area.
+docs/literature/**/*.pdf
