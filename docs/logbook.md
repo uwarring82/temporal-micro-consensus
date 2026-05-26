@@ -62,3 +62,9 @@
 - The steward reports having **never met or directly interacted with C. Sanner**. This corrects an earlier inference (logged 2026-05-26, Phase 3) that treated both Leibfried and Sanner as "close contacts" of the steward.
 - **Effect:** The Sail's Acknowledgements (`sails/sorci-commentary-v0.2.md`) state "ongoing exchanges" with C. Sanner — this is **factually inaccurate** and is flagged for correction. The genuine prior association is with **D. Leibfried** (discussions at NIST Boulder, 2010–2012). Both Leibfried and Sanner are co-authors of the subject paper (Sorci et al.); the independence-of-commentary consideration for any external circulation therefore concerns the steward's prior association with **Leibfried** alone.
 - **Propagated:** `literature/synthesis-v0.1.md` §4 and `roadmap.md` (external-circulation item) corrected. **Pending:** the Sail acknowledgement itself awaits the steward's decision on correction (remove the Sanner clause / reformulate / handle in the Phase-4 Sail pass).
+
+## 2026-05-26 — Sail v0.3 issued (Sanner acknowledgement removed)
+
+- **Actor:** Steward (decision: minimal factual correction) / Agent (drafting). **Commit:** *(this change).*
+- Resolves the "Pending" item in the entry above. [`sails/sorci-commentary-v0.3.md`](../sails/sorci-commentary-v0.3.md) issued (v0.2 frozen); the only changes versus v0.2 are the metadata block, the removal of the C. Sanner acknowledgement clause (the steward has no relationship with Sanner), and the version-history row. The D. Leibfried acknowledgement is retained.
+- **Deliberately *not* changed:** anchoring remains Coastline **v0.2** / Ledger CL-2026-006 v0.2 (re-anchoring to Coastline v0.3 is a substantive change), and the broader acknowledgement decision (retain / reformulate / remove) remains open — both deferred to the Phase-4 Sail pass.

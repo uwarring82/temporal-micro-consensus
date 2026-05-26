@@ -1,0 +1,122 @@
+# Visibility, the Right Witness
+
+*On Quantum Proper-Time Signatures in Optical Ion Clocks: A Commentary on Sorci et al.*
+
+| Field | Value |
+| --- | --- |
+| Version | v0.3 |
+| Date | 2026-05-26 |
+| Author | U. Warring |
+| Affiliation | Physikalisches Institut, Albert-Ludwigs-Universität Freiburg |
+| Licence | CC BY-NC-SA 4.0 (authored work) |
+| Status | Draft Sail — for internal review |
+| Anchoring frameworks | Coastline *Consensus-Emergence of Classical Proper Time* v0.2; Ledger *CL-2026-006* v0.2 |
+| Subject paper | G. Sorci, J. Foo, D. Leibfried, C. Sanner, I. Pikovski, *Phys. Rev. Lett.* **136**, 163602 (2026), DOI 10.1103/qhj9-pc2b |
+| Predecessor | v0.2 (2026-05-23) |
+
+---
+
+## Thesis
+
+The recent proposal by Sorci and colleagues for observing time-dilation-induced clock–motion entanglement in motionally squeezed trapped-ion optical clocks is a valuable operationalisation step in a long-standing conceptual programme. Its central move — locating the genuinely nonclassical signature in interferometric visibility loss rather than in frequency shifts that admit a semiclassical reproduction — is the correct demarcation, and the predicted visibility reduction to roughly 0.93 for state-of-the-art ²⁷Al⁺ parameters places the proposal within striking distance of present capabilities. The proposal as published does not yet close the question its language opens. Under a multipartite-redundancy account of how a classical proper-time variable emerges across microscopic temporal records, the predicted visibility loss is structurally aligned with a partial failure of the conditions under which a single effective τ_cl supports the reduced clock subsystem — exactly the kind of failure mode for which visibility is the appropriate witness. But under any operationally well-defined measure of clock–motion correlation, generic decoherence that destroys the squeezed state's quantum coherence can reduce the witness signal as effectively as the time-dilation Hamiltonian does. The Hamiltonian-level structure is consistent with the proposed quantum-proper-time interpretation; the published evidentiary package is not yet sufficient to make that interpretation experimentally discriminating. The path from operational advance to isolating evidence runs through a master-equation-level open-system analysis with explicit nuisance decomposition, an r-dependence test that separates sinh²(2r) scaling from squeezing-preparation-infidelity scaling, and a null-test protocol that suppresses the predicted contribution while independently bounding the nuisance budget. Visibility, as Sorci and colleagues correctly emphasise, is the right witness; what remains is to make it experimentally isolating.
+
+---
+
+## 1. The operational advance
+
+The conceptual ingredients of the paper — quantum proper time, clock–motion entanglement, interferometric visibility as a witness — are established in the line of work running from Page and Wootters through Zych, Pikovski, Brukner and collaborators. The principal contribution of Sorci et al. is therefore not the introduction of these ideas but their translation into a platform-specific Hamiltonian treatment of trapped-ion optical clocks, an explicit hierarchy of relativistic frequency-shift effects, and the identification of a concrete parameter regime in which a non-trivial witness should become observable.
+
+The Hamiltonian framing is elegant. Beginning from a composite-system action argument due to Zych, Rudnicki and Pikovski, the authors arrive at
+
+> Ĥ = Ĥ_c + ℏω (n̂ + 1/2) − (ℏω / 2mc²) Ĥ_c P̂²
+
+for a harmonically trapped clock atom, with the last term encoding the relativistic clock–motion coupling. The unitary evolution then admits a clean factorisation in which the dominant motional rotation acquires a clock-state-dependent frequency, and the residual squeezing operators capture the higher-order qSODS contributions. This provides an unusually clean derivation of the trapped-ion mass-defect and time-dilation structure, and it serves to organise four distinct frequency shifts — the standard second-order Doppler shift (SODS), the vacuum SODS, the squeezing-induced SODS, and the quantum SODS — within a single formalism.
+
+The most important single insight in the paper, however, is the authors' explicit demarcation between effects that can and cannot be reproduced by a semiclassical description of proper time. They show, to first order in ε_c, that frequency-shift signatures admit the reduction
+
+> ⟨e^(−iω'_c(n̂) t)⟩ ≃ e^(−iω'_c(⟨n̂⟩) t),
+
+so that the clock evolves *as if* under a single classically averaged proper time ⟨τ⟩ ≈ t(1 − ⟨v²⟩/(2c²)). Both the SODS and the vSODS are recovered in this way. The genuine quantum-mechanical content of the proper-time dynamics therefore cannot be located in the frequency shifts themselves. It must be sought in observables that the classical-averaging argument cannot reach.
+
+This is where the visibility argument enters. For an initial motional squeezed state |ξ⟩ = Ŝ(ξ)|0⟩ with squeezing parameter r, the off-diagonal elements of the reduced clock state acquire an interferometric visibility
+
+> V ≃ 1 − (ε_m ω_c t)² sinh²(2r) / 16
+
+which is *not* reproducible by any classical proper-time average. The visibility loss is a genuine clock–motion entanglement effect: it arises only because the squeezed motional state and the clock state become correlated through the relativistic coupling, and it leaves an imprint on the clock alone that cannot be reabsorbed into a semiclassical description.
+
+For ²⁷Al⁺ parameters (ε_m = 3.3 × 10⁻¹⁸), a 20 MHz trap, t ≃ 1 s, and r ≈ 2.26 — a squeezing level demonstrated in trapped-ion experiments — this yields V ≃ 0.93. That is a striking number. It places the witness within reach of state-of-the-art optical clocks, given simultaneous capabilities in motional squeezing, free-evolution coherence, and detection fidelity.
+
+The demarcation between semiclassically reproducible and genuinely nonclassical signatures is, in my view, the strongest single contribution of the paper. It draws the line in the right place.
+
+## 2. The conditions for a classical proper time
+
+One useful way to read the proposal is to ask under what conditions a reduced clock subsystem can still be assigned a single effective classical proper time. The relevant question is not whether one can write proper time as an operator τ̂(x̂, p̂) — which is a representational choice — but whether the resulting observables carry experimentally isolable content beyond standard energy-dependent dynamical coupling. The visibility witness identified by the authors is, structurally, a candidate for exactly such content.
+
+A classical proper-time variable τ_cl, in any reasonable account, requires more of the underlying physics than that a single trajectory exist. It requires that the temporal information held by the various physical degrees of freedom involved be mutually compatible — redundantly carried, stable under marginalisation, and compressible to a single coarse-grained parameter without inferential loss. These conditions are weak in the simple case of a clock isolated from its environment, and become non-trivial precisely when the clock is coupled to additional degrees of freedom that carry their own temporal information.
+
+The Sorci protocol engages exactly two such records: the clock internal state and the squeezed motional state. In this minimally coupled case, the predictions are sharp. Frequency shifts (SODS, vSODS, sqSODS) remain compressible: a single τ_cl organises the clock's phase evolution adequately, and no inferential improvement is gained by resolving the underlying motional substructure. Visibility loss is precisely the failure of stability under marginalisation: it is what one observes when the motional record cannot be traced out without informational cost. The authors' insistence that visibility is the load-bearing witness amounts, in this language, to the recognition that a classical proper-time variable for the reduced clock subsystem ceases to be a faithful summary of the joint dynamics. That is the conceptually right place to locate a nonclassical proper-time effect, and it is what makes the proposal worth taking seriously.
+
+The framework also suggests a further way of reading the protocol. Because the proposal engages only two carriers, it does not reveal a strong failure of classical proper-time emergence — the kind one might expect to encounter in distributed-clock networks across regions of differing gravitational potential — but the minimum nontrivial failure compatible with a coherent nonclassical description. This is a feature, not a limitation: it suggests that Sorci-type experiments and distributed-clock proposals occupy distinct positions on a common conceptual scale, with the former providing the earliest accessible rung.
+
+It is worth registering that the trapped-ion setting concerns proper time along an accelerated, non-inertial worldline rather than between inertial frames. The Sorci Hamiltonian is the weak-field limit of the more general composite-system action argument, and the special-relativistic time-dilation structure invoked here is operative in that controlled limit. The structural reading offered above is being applied within that limit; it is not a statement about the curved-spacetime regime or about strongly accelerated worldlines, both of which would require additional structure.
+
+## 3. The experimental bottleneck
+
+The principal weakness of the proposal as published lies not in its sensitivity claim — which appears defensible — but in its identification of the visibility signal with the time-dilation interpretation. The two are not the same claim. A signal can be measurable without yet being evidentially discriminating, and the gap between the two is the centre of the present commentary.
+
+Ramsey interferometric visibility is one of the most extensively studied and intensively engineered quantities in atomic and ion physics. It is also vulnerable to a long list of standard nuisance channels. Motional heating during the t ≃ 1 s free-evolution window contributes a fractional visibility loss that scales with the heating rate ṅ and with t. Motional dephasing γ_φ acting on the squeezed state degrades its quantum coherence in a manner that depends sensitively on r — the more strongly squeezed the state, the more fragile it is to any process that does not preserve the squeezing axis. Squeezing-preparation infidelity, both in the initial state and in any state-dependent reversal operations, contributes its own r-dependent visibility reduction. Drive-phase noise during the Ramsey interrogation produces a visibility envelope unrelated to motion. In multi-ion clock architectures such as the ²⁷Al⁺ logic-ion configuration, anomalous mode mixing between the targeted motional mode and other normal modes can imprint phase information that, on partial trace, looks like visibility loss. Detection-side infidelity correlated with the motional state — a common feature of state-dependent fluorescence — closes the loop.
+
+Each of these channels reduces the correlation between the clock and motional degrees of freedom by reducing the coherent two-mode structure that the time-dilation Hamiltonian would otherwise produce. Under any operationally well-defined measure of clock–motion correlation — mutual information, quantum Fisher information about elapsed time, cross-probe phase mismatch — a generic decoherence channel that destroys the squeezed state's quantum coherence reduces the witness signal as effectively as the unitary entanglement generated by the relativistic coupling. The authors quote a target visibility of V ≃ 0.93. Without an explicit nuisance budget bounding the contributions of the channels listed above, that target cannot be assigned to the time-dilation interpretation in preference to any of several conventional explanations.
+
+This is the central point. The Sorci proposal demonstrates a *sensitivity* regime in which the predicted time-dilation contribution to the visibility loss is large enough to be seen. It does not yet demonstrate a *discriminability* regime in which the contribution can be cleanly separated from generic decoherence. Sensitivity is a necessary condition for an isolating experiment; it is not a sufficient one. "Within reach," when applied to a witness claim, must mean both — and the second of the two is the harder requirement.
+
+## 4. Toward isolating evidence
+
+What would convert the Sorci proposal from a sensitivity argument into a discriminating one? Three specifications appear to be sufficient, and they are platform-general.
+
+*First*, a master-equation-level open-system analysis decomposing the predicted visibility loss into contributions from the unitary time-dilation Hamiltonian and from each named nuisance channel. The required infrastructure exists: Lindblad and stochastic-master-equation simulations of trapped-ion squeezed-state Ramsey protocols are within standard scope, and recent work on driven-dissipative ion-trap systems provides a natural template. The output of such an analysis is a nuisance budget — a quantitative statement of how much of the observed visibility reduction can be attributed to mechanisms that do not depend on the relativistic coupling. The signal must then exceed this budget in a statistically meaningful sense before any visibility loss can be assigned to the time-dilation interpretation.
+
+*Second*, an r-dependence test. The Sorci prediction is that the time-dilation contribution to the visibility loss scales as sinh²(2r) — a particularly aggressive scaling with squeezing strength. Squeezing-preparation infidelity, by contrast, contributes a visibility reduction with a typically different r-dependence, often closer to linear or cubic in r over the accessible range. A measured r-scan that follows sinh²(2r) over a finite range of r, after subtraction of the nuisance budget bounded by the first specification, provides a positive structural test that the time-dilation prediction is operating. A measured r-scan that does not follow sinh²(2r), or that follows it only over a range narrower than the model's region of validity, places the interpretation in difficulty.
+
+*Third*, a null-test protocol. The natural toggle is the dimensionless parameter ε_m = ℏω/(mc²), which can be reduced by lowering the trap frequency, increasing the ion mass, or lowering the clock frequency. The predicted time-dilation contribution to the visibility loss should fall accordingly, while the nuisance channels typically do not scale with ε_m. A clean null test compares the visibility reduction observed in the signal configuration with that observed in a configuration in which ε_m has been suppressed by some calibrated factor. The difference, after correcting for any associated and independently bounded changes in the nuisance channels under the parameter shift, places a direct experimental bound on the time-dilation contribution.
+
+The independence assumption is critical here: a null test is only as clean as the model that supports its independence claim, and that model must itself be defended. Among the nuisance channels listed in §3, mode mixing in multi-ion configurations is structurally the most problematic, because the normal-mode spectrum of the ion crystal itself changes when the trap frequency or ion species is toggled. A null test that takes those parameters as the toggle therefore cannot treat mode-mixing contributions as independently bounded in advance; a dedicated sensitivity analysis would be needed in any concrete experimental proposal.
+
+None of the three specifications requires capabilities beyond those already demonstrated, *in isolation*, in trapped-ion clock laboratories. Their joint demonstration in a single experimental campaign — simultaneous nuisance-budget control, r-scanning across an extended range, and a calibrated null-test toggle, all within one coherent measurement protocol — is a substantially harder requirement than any of the three taken alone, and that compounding is itself part of what makes the witness experimentally challenging. Subject to that caveat, their joint demonstration would constitute, in my view, the first experimentally discriminating observation of a quantum proper-time signature in any atomic clock.
+
+The three specifications above correspond, respectively, to the discriminant conditions D1, D3, and D2 of the Breakwater Ledger entry that classifies the Sorci interpretive claim under the framework cited in §2. The Ledger entry registers an UNDERDETERMINED classification under the declared evaluating measure of clock–motion mutual information; satisfaction of all three specifications would warrant a reclassification to COMPATIBLE.
+
+## 5. Closing posture
+
+The path from a proposed witness to an isolating witness is, in atomic physics generally, the harder half of the work. The strength of Sorci, Foo, Leibfried, Sanner and Pikovski's contribution is that they have placed the proposed witness on a footing solid enough for that harder half to begin. The demarcation they draw between semiclassically reproducible frequency shifts and genuinely nonclassical visibility loss is the right demarcation; the experimental parameters they identify are realistic; and the conceptual programme they advance is one worth pursuing.
+
+The present commentary should not be read as a critique of the conceptual programme. It is a request that the witness claim be raised to the evidentiary standard the programme deserves. Visibility, as Sorci and colleagues correctly emphasise, is the right witness; what remains is to make it experimentally isolating.
+
+---
+
+## Anchoring Frameworks
+
+This Sail is anchored to and derives its interpretive structure from:
+
+- *Consensus-Emergence of Classical Proper Time*, Coastline v0.2 (Warring, 2026-05-23). The framework underwriting §2. The Coastline's Claim II (jointly: redundancy, stability under marginalisation, compressibility) provides the language in which the structural alignment of the Sorci visibility witness is articulated, and its Weak Falsification clause provides the discriminability requirement load-bearing in §3.
+- *Breakwater Claim Analysis Ledger Entry CL-2026-006*, v0.2 (Warring, 2026-05-23). Classifies the Sorci interpretive claim C2 as UNDERDETERMINED against Coastline v0.2 under the declared evaluating measure I(C : M) (mutual information between clock and motional temporal records). The three specifications offered in §4 of this Sail restate, in journal-comment prose, the Ledger's discriminant conditions D1, D3, and D2 respectively, as also noted in the final paragraph of §4.
+
+Both anchoring documents are issued under Local Stewardship. Their version numbers are part of the citation; this Sail's claims are tied to them and would need to be re-evaluated against any later versions.
+
+## Acknowledgements (internal version)
+
+I am grateful to D. Leibfried for many discussions during my time at NIST Boulder (2010–2012), which shaped my understanding of trapped-ion clock metrology. The present commentary takes its appreciative-but-demanding posture in part from that relationship.
+
+*Note for external circulation:* this section is retained for the internal-review version of the Sail. Before any external venue, the question of whether the proximity disclosure helps the piece scientifically — versus complicating its perception as an independent commentary — should be revisited. Options include removal, reformulation as a brief disclosure note, or retention with explicit framing as context rather than gratitude.
+
+## Version History
+
+| Version | Date | Notes |
+| --- | --- | --- |
+| v0.1 | 2026-05-23 | Initial draft. Five-section structure built on Coastline v0.2 and Ledger CL-2026-006 v0.2. For internal review prior to any external circulation. |
+| v0.2 | 2026-05-23 | Two-stance review pass (Guardian + Scout). §2 lightly de-Harboured: framework triad named softly (redundantly carried, stable under marginalisation, compressible) rather than as Coastline-internal labels; opening reframed as "one useful way to read the proposal." Non-inertial regime acknowledgement added at the end of §2 noting that the trapped-ion setting concerns accelerated worldlines and that the SR structure is being applied in a controlled limit. §1: "cleanest derivation I have encountered" softened to "unusually clean derivation"; "genuine multipartite-quantum effect" replaced with "genuine clock–motion entanglement effect" given the minimal two-carrier protocol. §2: "the framework also makes one further prediction" reframed as "the framework also suggests a further way of reading the protocol." §3: paragraph split before "This is the central point" to let the key argumentative sentence land harder. §4: null-test paragraph split, with a dedicated paragraph on the independence assumption and mode mixing flagged as the structurally most problematic of the three specifications; "in isolation" caveat italicised and a joint-demonstration sentence added explicitly acknowledging the compounding-systematics burden; explicit Ledger-mapping sentence added at the end of §4 (specifications correspond to D1, D3, D2 of CL-2026-006 v0.2). Acknowledgements retained with explicit note for external-circulation reconsideration. Thesis paragraph, §5 closing, and licensing unchanged. No structural recomposition. |
+| v0.3 | 2026-05-26 | Minimal factual correction (steward; provenance in `docs/logbook.md`). Removed the acknowledgement of "ongoing exchanges" with C. Sanner: the steward has **no relationship with C. Sanner** (never met or directly interacted), so the v0.2 statement was factually inaccurate. The acknowledgement of D. Leibfried (NIST Boulder, 2010–2012) is retained. **No other change:** thesis, §§1–5, the external-circulation note, anchoring (still Coastline v0.2 / Ledger CL-2026-006 v0.2), and licensing are unchanged. Re-anchoring to Coastline v0.3 and the broader acknowledgement decision (retain / reformulate / remove) are deferred to a later Phase-4 Sail pass. |
+
+---
+
+*This Sail is a commentary issued under Local Stewardship. It does not represent the position of any institution. Citations of Sorci et al. and of related literature use standard scientific conventions; citations of anchoring Harbour frameworks use Local-Stewardship version conventions.*
