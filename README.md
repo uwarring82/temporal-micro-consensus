@@ -36,7 +36,8 @@ harbour-temporal-consensus/
 ├── ledger/
 │   ├── CL-2026-006-sorci-v0.1.md
 │   ├── CL-2026-006-sorci-v0.2.md
-│   └── CL-2026-007-smith-ahmadi-v0.1.md
+│   ├── CL-2026-007-smith-ahmadi-v0.1.md
+│   └── CL-2026-007-smith-ahmadi-v0.2.md   (current)
 ├── sails/
 │   ├── sorci-commentary-v0.1.md
 │   ├── sorci-commentary-v0.2.md
@@ -109,7 +110,7 @@ If you are encountering this repository for the first time:
 
 1. Start with the most recent Coastline (`coastlines/consensus-emergence-v0.3.md`) to understand the framework.
 2. Read the most recent Sail (`sails/sorci-commentary-v0.3.md`) to see how the framework is applied in a concrete case.
-3. Consult the most recent Ledger entry (`ledger/CL-2026-006-sorci-v0.2.md`) for the framework-relative classification underwriting the Sail.
+3. Consult the Sorci Ledger entry (`ledger/CL-2026-006-sorci-v0.2.md`) for the framework-relative classification underwriting the Sail.
 4. Consult `docs/roadmap.md` for what is in active development and what is deferred.
 
 Earlier versions are retained for transparency; readers comparing against current claims should always use the latest version.
