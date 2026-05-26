@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | Reference | Y. Nambu, "Qubit Clock in Quantum Cosmology", *Universe* **8**, 99 (2022). DOI 10.3390/universe8020099, arXiv:2201.02770. |
-| Cluster · Tier | A/D · 1 |
+| Cluster · Tier | A/D · 2 (down-tiered from 1 — contextual Fisher/PW application) |
 | Source PDF | `sources/nambu2022.pdf` — 8 pp. ✅ complete |
 | Extracted | 2026-05-26 |
 

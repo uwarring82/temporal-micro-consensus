@@ -4,7 +4,7 @@
 
 | Field | Value |
 | --- | --- |
-| Version | v0.2 |
+| Version | v0.2.1 |
 | Date | 2026-05-26 |
 | Steward | U. Warring |
 | Status | Living document — phases updated as they advance or close |
@@ -151,6 +151,11 @@ This plan is itself revisable, with explicit triggers so review cycles have term
 - **Structural-finding trigger.** If Phase 1 or Phase 2 surfaces a finding that invalidates a cluster assignment or a Coastline claim, a **new plan version is drafted before the next phase exit**. The structural finding is not silently absorbed.
 - A plan revision bumps the version (this doc) and records the trigger in the version history.
 
+### Structural-finding log
+
+- **2026-05-26 — `hartong2024` mis-attribution (Phase 2).** PDF extraction confirmed Hartong–Have–Obers–Pikovski (SciPost Phys. 16, 088) is a post-Newtonian *coupling-prescription* paper, not a Page–Wootters / relational-time paper. **Evaluation against the structural-finding trigger:** it does **not** invalidate the A–G cluster scheme (the paper stays in Cluster A as a methods/lineage node, down-tiered 1→2 — a triage decision, not a scheme change) and does **not** invalidate any of the five Coastline claims. It invalidates one *External-Constraints attribution inside the Coastline* — an artefact-level issue logged for the **Phase 4** Coastline pass, not a plan-structure issue. **Decision: no structural plan revision (v0.3) required;** recorded here so the finding is not silently absorbed.
+- **2026-05-26 — Tier-1 down-tiering (steward call).** After extraction, Tier 1 was reduced 18 → 13 (demoted: `hartong2024`, `nambu2022`, `hohnsmith2021`, `brandao2015`, `giovannetti2011`, `fit2026`). Normal triage within the cap (the >25 trigger was never reached); recorded in `index.md`. No plan revision required.
+
 ---
 
 ## 7. Completion criteria
@@ -178,6 +183,7 @@ The review is complete when: (1) `references.bib` is fully verified with no `VER
 | --- | --- | --- |
 | v0.1 | 2026-05-26 | Initial draft (pre-review). Comprehensive field map, broad-sweep scope; seven clusters; five phases; tier triage; VERIFY discipline. Not committed — superseded by v0.2 after Guardian review. |
 | v0.2 | 2026-05-26 | Guardian-review refinements: (1) Tier-1 scope cap (≤25, else plan revision); (2) Cluster G entry gate + Tier-2 cap; (3) Ledger-candidate flagging deferred to Phase 4; (4) plan-revision protocol with structural-finding trigger (§6); (5) two-commit Phase 0 boundary. CCUF-bridge material **locked** out of corpus (§8). Added: structural-plan/calendar-separation note (§1); **source-handling policy** — PDFs local-only/git-ignored, findings notes public (§4); Phase-4 methodological-notes deliverable; Cluster E flagged high-traffic; non-canonical cluster calls recorded as decisions. |
+| v0.2.1 | 2026-05-26 | Documentation/decision update (no structural change). Recorded the §6 structural-finding log: `hartong2024` mis-attribution evaluated — no v0.3 revision required (artefact-level, logged for Phase 4); Tier-1 down-tiering 18→13 recorded. Not a structural revision; clusters/claims/phases unchanged. |
 
 ---
 

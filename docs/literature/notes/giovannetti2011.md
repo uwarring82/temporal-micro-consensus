@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | Reference | V. Giovannetti, S. Lloyd, L. Maccone, *Advances in Quantum Metrology*, Nat. Photonics **5**, 222–229 (2011). DOI 10.1038/nphoton.2011.35 · arXiv:1102.2318 |
-| Cluster · Tier | D · 1 |
+| Cluster · Tier | D · 2 (down-tiered from 1 — methodological QFI background) |
 | Source PDF | `sources/giovannetti2011.pdf` — 10 pp. ✅ complete |
 | Extracted | 2026-05-26 |
 

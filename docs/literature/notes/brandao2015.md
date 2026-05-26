@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | Reference | F. G. S. L. Brandão, M. Piani, P. Horodecki, *Generic emergence of classical features in quantum Darwinism*, Nat. Commun. **6**, 7908 (2015). DOI 10.1038/ncomms8908 · arXiv:1310.8640 |
-| Cluster · Tier | B · 1 |
+| Cluster · Tier | B · 2 (down-tiered from 1 — contextual support for Claim II) |
 | Source PDF | `sources/brandao2015.pdf` — 8 pp. ✅ complete |
 | Extracted | 2026-05-26 |
 

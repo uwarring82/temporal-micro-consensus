@@ -2,27 +2,30 @@
 
 | Field | Value |
 | --- | --- |
-| Reference | H. Ollivier, D. Poulin, W. H. Zurek, *Objective Properties from Subjective Quantum States: Environment as a Witness*, Phys. Rev. Lett. **93**, 220401 (2004). DOI 10.1103/PhysRevLett.93.220401 |
+| Reference | H. Ollivier, D. Poulin, W. H. Zurek, *Objective Properties from Subjective Quantum States: Environment as a Witness*, Phys. Rev. Lett. **93**, 220401 (2004). |
+| DOI / arXiv | 10.1103/PhysRevLett.93.220401 · arXiv:quant-ph/0307229 |
 | Cluster · Tier | B · 1 |
-| Source PDF | `sources/ollivier2004.pdf` — 4 pp. ✅ complete |
-| Extracted | 2026-05-26 |
+| Source PDF | `sources/ollivier2004.pdf` — 4 pp. |
+| Annotated | 2026-05-26 (Phase 2) |
 
-## Summary
+## Core claim
+A property of an open system is *objective* iff its imprint on the environment is both complete and redundant; the authors prove that the unique observable satisfying this is the system's maximally-refined pointer observable π. Many ignorant observers reading disjoint environment fragments therefore reach consensus only about pointer states, without prior agreement and without perturbing the system.
 
-The Letter that gives the environment-as-witness idea its first rigorous information-theoretic proof. It promotes the environment from a passive sink to an active amplifier that selectively proliferates information about the system, and proves that only the system's preferred pointer states leave a redundant, easily detectable imprint. Many ignorant observers probing disjoint fragments can therefore independently agree about the system's state without perturbing it — so pointer states "exist objectively" in an operational sense.
+## Method
+Operational definition of objectivity via three requirements (simultaneous accessibility to many observers, discoverability without prior knowledge, consensus without prior agreement), translated into an information-theoretic framework using the system–environment quantum mutual information I(σ:ε). Completeness is Î_N(σ) ≈ H(σ); redundancy is quantified as R_δ(σ) = N/m_δ(σ), where m_δ is the smallest fragment carrying all but a fraction δ of the information. A uniqueness theorem proves the completely-and-redundantly imprinted observables are characterized by a single π, with Î_m(σ) = I(σ:π) for any σ. Illustrated on a spin-½ coupled to N = 50 environment subsystems (bound H₂(cos²(μ/2)) ≤ δ → |μ| < 0.23 for objectivity).
 
-## Key points
+## Relation to the five Coastline claims
+- **Claim I — emergent proper time / temporal record:** Silent on time specifically. But it supplies the configurational template the framework adapts: an "objective property" is operationally defined as a multiply-readable environmental imprint, not as the expectation of a system observable — structurally the same move Claim I makes by defining a temporal record as any DOF carrying usable info rather than as a microscopic time variable.
+- **Claim II — redundancy / stability / compressibility:** Supports the redundancy and stability legs directly, and is the precise origin of Claim II's borrowed architecture. **Redundancy:** R_δ = N/m_δ ≫ 1 is shown to be the selective criterion (completeness alone is too permissive — many observables read out of the *whole* environment). **Stability:** the paper notes the interaction action a_k sets only the *magnitude* of redundancy, not which observable becomes objective — pointer selection is robust to interaction strength/duration, the stability leg. **Compressibility:** instantiated indirectly — the optimal inference strategy is to estimate π first and deduce everything else from its correlations (Eq. 6), i.e. the objective information compresses to one variable; this is the configurational analogue the framework specializes to *temporal* compressibility.
+- **Claim III — failure mode / nuisance-discrimination:** Supports the discrimination logic at the configurational level. The completeness-vs-redundancy gap is exactly a structural-failure diagnostic: a property can be globally complete (recoverable from all of ε) yet fail objectivity because it is not redundant — e.g. Schrödinger-cat superpositions need the whole environment and so support no consensus. Translated to time, an evolution can leave a complete-but-non-redundant imprint that decoheres without supporting a temporal-consensus variable.
+- **Claim IV — operational anchors (Fisher / mutual info / cross-probe / coarse-graining):** Supports mutual-information, cross-probe, and coarse-graining anchors; silent on Fisher information. Mutual info I(σ:ε) and R_δ are the central quantities. Cross-probe consensus is the definitional payload (independent observers agree). Coarse-graining/robustness is explicit: objective info must survive *realizable*, non-optimal ("sloppy") measurements and is insensitive to interrogation strategy and tensor-decomposition choices to O(1).
+- **Claim V — positioning (PW bipartite vs quantum-Darwinism configurational vs multipartite redundancy):** This is a foundational anchor for the multipartite-redundancy pole. It is the rigorous statement of quantum-Darwinism objectivity: a *multipartite* (N-fragment) environment redundantly recording one observable. Critically it records a **configurational** property (the pointer observable of a static system), not a temporal one — so it marks precisely the gap the framework must cross to claim a TEMPORAL specialization, and is not Page–Wootters (no clock/system bipartition).
 
-- Operational objectivity = a property that is (i) simultaneously accessible to many observers, (ii) discoverable without prior knowledge, and (iii) agreed upon without prior agreement; complete *and* redundant environmental imprint is shown to be necessary and sufficient.
-- Completeness alone (Î_N(σ) ≈ H(σ)) is insufficient — many observables can be read from the *whole* environment; objectivity additionally requires *redundancy*, a far more selective criterion.
-- Central theorem: the set of observables that are completely and redundantly imprinted is characterized by a *unique* maximally-refined observable π — the pointer observable; information about any other observable obtainable from a fragment equals what its correlation with π carries.
-- Redundancy R_δ(σ) = N/m_δ(σ); the optimal inference strategy is to estimate π first, which is why observers reach consensus only about pointer states (Schrödinger-cat superpositions need the whole environment and so are not objective).
-- Robustness: objective information must be extractable by *realizable* (sloppy, non-optimal) measurements, and is insensitive to interaction details/strength and to the interrogation strategy.
+## Bearing on Ledger / Sail
+None direct. Architectural backbone: defines the redundancy/uniqueness machinery any Sail ledger entry asserting "emergent classical temporal consensus" must instantiate. The |μ| < 0.23 threshold is a model-specific illustration, not a transferable number.
 
-## Relevance to the framework
+## Lineage & citation chain
+Founds the [[zurek2003]] einselection/quantum-Darwinism program in operational form; companion to [[ollivier2005]] (extended proofs) and developed quantitatively by [[riedel2010]]/[[riedel2011]] and by the SBS/[[korbicz2014]] line. External roots: Zurek's predictability sieve and pointer-state work (Phys. Rev. D 24, 1516 (1981)); Bohr's amplification idea; Cover & Thomas information theory.
 
-Supplies the formal backbone for Claim II and Claim V (multipartite redundancy as the selection principle). The completeness-vs-redundancy distinction is exactly the kind of discrimination the framework needs in Claim III: a temporal record can be globally complete yet fail to support a classical consensus variable unless it is also redundantly imprinted. The uniqueness theorem (one maximally-refined objective observable) is the configurational analogue of the framework's claim that proper time is the singled-out emergent temporal variable; redundancy R_δ and mutual information I(σ:π) are Claim IV anchors.
-
-## Flags
-
-Title and authors confirmed. PDF complete. None.
+## Open questions / flags
+Title, authors, DOI confirmed; PDF complete (4 pp.). The uniqueness theorem is for *configurational* (commuting, time-independent) observables read from a static system; the framework needs an analogue for *temporal* records where the "observable" is elapsed evolution — non-trivial because the system itself is dynamical and π would have to be time-indexed. The tensor-product locality assumption (which decomposition of ε defines fragments) is acknowledged as a priori arbitrary; for temporal records the corresponding choice (which DOF count as independent probes of elapsed time) is unresolved.

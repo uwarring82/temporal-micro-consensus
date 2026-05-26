@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | Reference | J. Hartong, E. Have, N. A. Obers, I. Pikovski, "A coupling prescription for post-Newtonian corrections in quantum mechanics", *SciPost Phys.* **16**, 088 (2024). DOI 10.21468/SciPostPhys.16.3.088, arXiv:2308.07373. |
-| Cluster · Tier | A · 1 |
+| Cluster · Tier | A · 2 (down-tiered from 1 — methods/PN node, not relational-time) |
 | Source PDF | `sources/hartong2024.pdf` — 40 pp. ✅ complete (read front matter, §1 intro, §5 discussion) |
 | Extracted | 2026-05-26 |
 

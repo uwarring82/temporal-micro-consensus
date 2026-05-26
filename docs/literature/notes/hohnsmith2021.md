@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | Reference | P. A. Höhn, A. R. H. Smith, M. P. E. Lock, "Trinity of relational quantum dynamics", *Phys. Rev. D* **104**, 066001 (2021). DOI 10.1103/PhysRevD.104.066001, arXiv:1912.00033. |
-| Cluster · Tier | A · 1 |
+| Cluster · Tier | A · 2 (down-tiered from 1 — Claim V positioning context) |
 | Source PDF | `sources/hohnsmith2021.pdf` — 51 pp. ✅ complete (read front matter, §I intro + contributions, §II setup, §IX conclusion) |
 | Extracted | 2026-05-26 |
 
