@@ -4,62 +4,61 @@ Running tracker for the literature review ([work plan](../literature-review-plan
 
 **Clusters:** A Page–Wootters · B Quantum Darwinism · C Quantum clocks · D Fisher information · E Relativistic/gravitational decoherence · F Distributed clock networks · G Adjacent foundations.
 **Tier:** 1 load-bearing (full note) · 2 contextual (paragraph) · 3 peripheral (abstract).
-**Status:** `seed` → `verified` (bib confirmed against primary sources, Phase 1) → `src` (PDF acquired locally to [`sources/`](sources/), Phase 1) → `noted` (findings annotated, Phase 2). Source PDFs are local-only and never committed — see [work plan §4](../literature-review-plan.md#4-source-handling-policy).
+**Status:** `seed` → `verified` (bib confirmed against primary sources, Phase 1) → `src` (PDF acquired locally to [`sources/`](sources/), Phase 1) → `noted` (findings note written in [`notes/`](notes/)). Source PDFs are local-only and never committed — see [work plan §4](../literature-review-plan.md#4-source-handling-policy).
 
-**Phase 1 bibliographic verification: complete (2026-05-26).** All entries confirmed against Crossref / arXiv / ADS / publisher. PDF acquisition (`src`) and final tiering follow.
+**Phase 1 verification: complete (2026-05-26).** All entries confirmed against Crossref / arXiv / ADS / publisher.
+**Sources acquired + extraction pass: complete (2026-05-26).** 28 PDFs in `sources/` (local-only), each renamed to its citekey; one findings note per PDF in `notes/`. These are *extraction-grade* notes (summary · key points · relevance · flags) — they seed, but do not yet replace, the full per-claim Phase-2 annotation.
 
 | Citekey | Cluster | Tier | Bears on (claim / measure) | Status |
 | --- | --- | --- | --- | --- |
-| `page1983` | A | 1 | Claim V relational channel; External Constraints | verified |
-| `smith2020` | A | 1 | Claim V (bipartite); CL-2026-007 | verified |
-| `hartong2024` | A | 1 | External Constraints — ⚠ lineage flag (see below) | verified |
-| `mendes2019` | A | 2 | Claim I (time observables); Coastline cites as "2018" | verified |
-| `nambu2022` | A · D | 1 | Claim IV (Fisher information) | verified |
-| `hohnsmith2021` | A | 1 | Claim V (relational-dynamics unification) | verified |
-| `zurek2003` | B | 1 | Claim II (einselection background) | verified |
-| `zurek2009` | B | 1 | Claim II (redundancy architecture) | verified |
-| `ollivier2004` | B | 1 | Claim II (objectivity criteria) | verified |
-| `ollivier2005` | B | 2 | Claim II (2005 follow-up) | verified |
-| `riedel2010` | B | 1 | Claim II; toy-model functional | verified |
-| `riedel2011` | B | 2 | Claim II (NJP companion) | verified |
-| `korbicz2014` | B | 2 | Claim II (spectrum-broadcast structure) | verified |
-| `brandao2015` | B | 1 | Claim II (generic objectivity) | verified |
-| `giovannetti2011` | D | 1 | Claim IV (QFI / Cramér–Rao) | verified |
-| `fit2026` | D | 1 | Claim IV (Fisher); v0.3 citation — recency caveat | verified |
-| `sorci2026` | C | 1 | Claim III witness; CL-2026-006 | verified |
-| `margalit2015` | C · E | 2 | Claim III (which-path / clock) | verified |
-| `martinezlahuerta2022` | C · E | 2 | Claim III nuisance (mass defect) | verified |
-| `yudin2018` | C · E | 2 | Claim III nuisance (mass defect) | verified |
-| `ludlow2015` | C | 2 | Experimental substrate (clock review) | verified |
-| `zych2011` | E | 1 | Claim III witness lineage (Sail) | verified |
-| `pikovski2015` | E | 1 | Claim III nuisance-discrimination | verified |
-| `komar2014` | F | 1 | Claim V (multipartite) | verified |
-| `covey2025` | F | 1 | Claim V; CL-2026-008 (GR boundary) | verified |
-| `fromonteil2025` | F | 1 | Claim V; CL-2026-008 (preprint) | verified |
-| `connes1994` | G | 3 | Deferred: thermal/arrow-of-time | verified |
-| `rovelli1996` | G | 3 | Relational-QM backdrop | verified |
+| `page1983` | A | 1 | Claim V relational channel; External Constraints | noted |
+| `smith2020` | A | 1 | Claim V (bipartite); Claim IV (Fisher); CL-2026-007 | noted |
+| `hartong2024` | A | 2† | ⚠ confirmed **not** Page–Wootters — post-Newtonian coupling/methods node (cited by `sorci2026`); down-tiered 1→2 | noted |
+| `mendes2019` | A | 2 | Claim I/II (internal-coherence order parameter); Coastline cites as "2018" | noted |
+| `nambu2022` | A · D | 1 | Claim IV (Fisher); Claim III (F_Q=0 ⇔ no clock) | noted |
+| `hohnsmith2021` | A | 1 | Claim V (relational-dynamics equivalence) | noted |
+| `zurek2003` | B | 1 | Claim II (einselection background) | noted |
+| `zurek2009` | B | 1 | Claim II (redundancy architecture) | noted |
+| `ollivier2004` | B | 1 | Claim II (objectivity criteria) | noted |
+| `ollivier2005` | B | 2 | Claim II; ⚠ §VII "objective histories" = closest configurational precursor | noted |
+| `riedel2010` | B | 1 | Claim II; toy-model functional | noted |
+| `riedel2011` | B | 2 | Claim III (decoherence rate ≠ record-keeping rate) | noted |
+| `korbicz2014` | B | 2 | Claim II/III (spectrum-broadcast structure) | noted |
+| `brandao2015` | B | 1 | Claim II (generic objectivity) | noted |
+| `giovannetti2011` | D | 1 | Claim IV (QFI / Cramér–Rao) | noted |
+| `fit2026` | D | 1 | Claim IV (Fisher); kindred single-trajectory proposal | noted |
+| `sorci2026` | C | 1 | Claim III witness; Claim IV (visibility); CL-2026-006 | noted |
+| `margalit2015` | C · E | 2 | Claim III (which-path / clock) | noted |
+| `martinezlahuerta2022` | C · E | 2 | Claim III nuisance (mass defect) | noted |
+| `yudin2018` | C · E | 2 | Claim III nuisance (mass defect) | noted |
+| `ludlow2015` | C | 2 | Experimental substrate; TAI/UTC consensus-time | noted |
+| `zych2011` | E | 1 | Claim III witness lineage (Sail) | noted |
+| `pikovski2015` | E | 1 | Claim III nuisance-discrimination | noted |
+| `zych2019` | E | 1 | Claim I/III machinery; composite-system action behind `sorci2026` | verified · no PDF |
+| `komar2014` | F | 1 | Claim V (multipartite) | noted |
+| `covey2025` | F | 1 | Claim V; Claim IV (3-node cross-probe mismatch); CL-2026-008 | noted |
+| `fromonteil2025` | F | 1 | Claim V; CL-2026-008 (preprint) | noted |
+| `connes1994` | G | 3 | Claim V positioning (thermal time — non-redundancy emergent time) | noted |
+| `rovelli1996` | G | 3 | Claim V positioning (relational QM) | noted |
 
-**28 entries** (21 seeded — 3 renamed to publication year/full key — plus 7 broad-sweep additions: `hohnsmith2021`, `ollivier2005`, `riedel2011`, `korbicz2014`, `brandao2015`, `giovannetti2011`, `ludlow2015`).
+**29 entries** — 28 with PDFs + findings notes; `zych2019` added during extraction (source of the `sorci2026` Hamiltonian), bib-verified but PDF not yet acquired. † = down-tiered with rationale (see below).
 
-## Phase 1 findings & flags
+## Phase 1 findings & flags (verification)
 
-**Placeholders resolved.** All "VERIFY" placeholders are now real papers:
-- `hartong2024` → SciPost Phys. 16, 088 (2024), *A coupling prescription for post-Newtonian corrections in quantum mechanics*.
-- `mendes2019` → Proc. R. Soc. A 475, 20190470 (**2019**), *Time as a consequence of internal coherence*; first author **Leandro R. S.** Mendes (seed had "Lucas C." — corrected).
-- `nambu2022` → Universe 8, 99 (2022), *Qubit Clock in Quantum Cosmology*.
-- `sorci2026` → PRL 136, 163602 (2026), *Quantum signatures of proper time in optical ion clocks* (Sorci, Foo, Leibfried, Sanner, Pikovski).
-- `martinezlahuerta2022` → PRA 106, 032803 (2022); `yudin2018` → Laser Phys. Lett. 15, 035703 (2018).
-- `covey2025` → PRX Quantum 6, 030310 (2025); `fromonteil2025` → arXiv:2509.19501 (preprint only).
-- `fit2026` → arXiv:2605.03958 (2026), sole author J. Sumaya-Martinez — verified via arXiv API only (not yet web-indexed; re-confirm author/title against the PDF before external citation).
+All "VERIFY" placeholders resolved to real papers. Notable corrections: `mendes2019` is published **2019** (Coastline cites "2018"; first author **Leandro R. S.** Mendes); `sorci2026` = *Quantum Signatures of Proper Time in Optical Ion Clocks* (Sorci, Foo, **Leibfried**, **Sanner**, Pikovski); `fit2026` verified via arXiv API only (re-check author/title against PDF before external citation).
 
-**Lineage flags for the Phase 3 audit (do not edit artefacts now — Phase 4):**
-1. ⚠ **`hartong2024`** — Coastline External Constraints lists this among "modern developments" of Page–Wootters, but the paper is a covariant post-Newtonian (1/c²) coupling prescription, *not* a relational-time paper. The attribution needs revisiting.
-2. **`mendes2019`** — Coastline cites "Mendes & Soares-Pinto **2018**"; the published paper is **2019** (2018 is the preprint year). Minor citation-year fix.
-3. **`sorci2026`** — full author list now known: **Leibfried & Sanner are co-authors** of the subject paper. This directly informs the roadmap's pending Sail acknowledgement decision (proximity-signal risk) — they are not third parties but authors of the work being commented on.
+## Phase 2 findings (extraction)
 
-**Tiering note.** The Tier-1 set currently stands at **18 papers** — within the plan's hard cap (25) but above the 8–12 working expectation ([work plan §6](../literature-review-plan.md#6-plan-revision-protocol--scope-guards)). A steward down-tiering pass is recommended before Phase 2 (candidates to demote to Tier 2: `hartong2024`, `nambu2022`, `hohnsmith2021`, `brandao2015`, `giovannetti2011`, `fit2026`).
+- ⚠ **`hartong2024` lineage flag — confirmed and acted on.** Reading the PDF confirms it is a covariant **post-Newtonian coupling prescription** (1/c² Klein–Gordon on Newton–Cartan backgrounds, worked for Kerr), with *no* clock-conditioning or relational-time content. The Coastline External Constraints currently lists it among "modern developments" of Page–Wootters — that attribution is **wrong** and must be fixed in the Phase-4 Coastline pass. Corpus action taken: down-tiered A·1 → A·2 and re-described as a methods/lineage node (it is the source of the curved-background coupling used by `sorci2026`).
+- ⚠ **`ollivier2005` §VII "objective histories".** The 2005 PRA explicitly frames objectivity over *time-ordered* sequences of redundant records — the closest configurational precursor to the framework's temporal-records premise. Strong lineage-audit candidate (Phase 3) and a potential External-Constraints citation.
+- **`covey2025` is a clean Claim IV anchor.** Its three-node beat-note mismatch Δω (curvature residual after the leading consensus is removed) directly operationalises "cross-probe mismatch" for distributed proper-time records — the sharpest experimental instance of a Claim IV measure in the corpus.
+- **`fit2026` assessment:** sound but modest/speculative — standard reparameterisation of time by Fisher arc length, *no novel falsifiable prediction*, single-trajectory, path/model-dependent. Its record-based parameter Λ_rec = Σ D(ρ_k‖ρ_{k−1}) is the closest contact point but lacks redundancy/mutual-information/consensus. Cite as a **kindred Fisher-time proposal the framework subsumes and extends**, not a competitor.
 
-## Next in Phase 1
+## Open steward decision — Tier-1 down-tiering
 
-- Acquire PDFs into [`sources/`](sources/) (local-only). All except `page1983` are open-access on arXiv.
-- Optional broad-sweep additions still uncaptured (add only under the Cluster-G/entry-gate rules): GLM 2011 *Quantum Cramér–Rao* review (have `giovannetti2011`), Höhn–Smith–Lock follow-ups, Smith–Ahmadi 2019 *quantizing time*, Marletto–Vedral. Promote only if a Tier-1 paper cites them or they bear on a named anti-claim/deferred item.
+Tier 1 stands at **18** (within the hard cap of 25, above the 8–12 working expectation — [work plan §6](../literature-review-plan.md#6-plan-revision-protocol--scope-guards)). `hartong2024` already demoted. Further demotion candidates flagged by the extraction: `nambu2022`, `hohnsmith2021`, `brandao2015`, `giovannetti2011`, `fit2026` (each contextual rather than directly claim-/discriminant-bearing). Demoting these would land Tier 1 at ~13. **Steward call.**
+
+## Next
+
+- Acquire `zych2019` PDF (PRD 99, 104029) into `sources/`; write its note.
+- (If desired) upgrade extraction notes to full per-claim Phase-2 annotation for the final Tier-1 set, after the down-tiering decision.
