@@ -9,6 +9,7 @@ Running tracker for the literature review ([work plan](../literature-review-plan
 **Phase 1 verification: complete (2026-05-26).** All entries confirmed against Crossref / arXiv / ADS / publisher.
 **Sources acquired + extraction pass: complete (2026-05-26).** 29 PDFs in `sources/` (local-only), each renamed to its citekey; one findings note per PDF in `notes/`.
 **Tier-1 fixed at 13; Phase-2 annotation complete for Tier 1 (2026-05-26).** The 13 Tier-1 notes carry the full per-claim Phase-2 template (core claim · method · relation to all five claims · Ledger/Sail bearing · lineage · open questions); the 16 Tier-2/3 notes remain extraction-grade (summary · key points · relevance · flags).
+**Phase 3 synthesis complete (2026-05-26):** [`synthesis-v0.1.md`](synthesis-v0.1.md) — claim-by-claim, measure-by-measure, gaps/falsifications, and the lineage audit. Phase-4 routing collected there.
 
 | Citekey | Cluster | Tier | Bears on (claim / measure) | Status |
 | --- | --- | --- | --- | --- |
@@ -64,5 +65,5 @@ Tier 1 reduced from 18 to **13**, within the 8–12 working-expectation band's i
 
 ## Next
 
-- Corpus assembly + extraction complete for all 29 entries; Tier-1 (13) upgraded to full Phase-2 notes.
-- **Phase 3** not started — `synthesis-v0.1.md` to be drafted (claim-by-claim · measure-by-measure · gaps · lineage audit).
+- Phases 1–3 complete: corpus assembled/verified (29), Tier-1 (13) annotated, [`synthesis-v0.1.md`](synthesis-v0.1.md) committed.
+- **Phase 4** (artefact edits, governed by the roadmap — *not* this review): Coastline v0.3 (incl. `hartong2024` removal, `mendes2019` year fix, `ollivier2005` precursor, transplant open-problem, multipartite≠redundant); Ledger CL-2026-007 / CL-2026-008; Sail external-circulation decision (co-authorship); methodological notes. See [`synthesis-v0.1.md` §5](synthesis-v0.1.md).
