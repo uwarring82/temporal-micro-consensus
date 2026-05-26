@@ -86,3 +86,11 @@
 
 - **Actor:** Verifier review (insight) / Agent (capture). **Commit:** *(this change).*
 - Forward-looking refinement for the deferred Claim IV **measure-registration protocol** (roadmap): distinguish a *resolution anchor* (bounds what must be resolved — e.g. Fisher F[τ]) from a *classification anchor* (carries the structural content classified — e.g. cross-probe γ_Q⁻¹ or mutual information). Conflating them was the CL-2026-007 v0.1 failure mode. Recorded in the roadmap's measure-registration item so it informs the protocol when written; no Coastline change made now.
+
+## 2026-05-26 — Phase 4 step 2: Ledger CL-2026-008 opened (clock networks)
+
+- **Actor:** Steward (direction + guardrails) / Agent (source reads + drafting). **Commit:** *(this change).*
+- Per the steward's guardrails, read the defining equations in *both* PDFs first (Covey Eqs. 2–11 incl. Δω Eq. 10; Fromonteil Eqs. 1–7 incl. the redshift Hamiltonian and τ_dec) before drafting. [`ledger/CL-2026-008-clock-networks-v0.1.md`](../ledger/CL-2026-008-clock-networks-v0.1.md) issued (v0.1), classifying the **class** of distributed entanglement-enhanced clock-network proposals (Covey 2025; Fromonteil 2025) **UNDERDETERMINED** against Coastline v0.3.
+- **Framing decision (per guardrail):** class claim, not single-paper — the two diverge (Covey: curvature via 3-node W; Fromonteil: redshift/decoherence via N-atom ensembles) while sharing the entanglement-enhanced/anti-redundant structure.
+- **Firsts:** classification anchor = cross-probe mismatch (Δω), resolution anchor = QFI/coherence budget (the resolution/classification distinction applied); first exercise of v0.3 "multipartite ≠ redundant" (anti-redundancy noted but **not** held against C2, which does not claim redundancy — per guardrail); first entry to show the **GR-boundary item is load-bearing** (D1), feeding back to the roadmap (item elevated to a prerequisite).
+- **Next steps (Phase 4):** Sail re-anchor to Coastline v0.3; methodological notes (temporal-redundancy toy functional; nuisance-discrimination kit). The GR-boundary statement is now a candidate next Coastline action in its own right.

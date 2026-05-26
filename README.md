@@ -14,7 +14,7 @@ A Harbour repository for the *Consensus-Emergence of Classical Proper Time* fram
 This repository holds three related artefact families:
 
 1. **Coastline** (`coastlines/`) — versioned framework notes. The current Coastline is *Consensus-Emergence of Classical Proper Time*, a proposal that classical proper time should be treated as an emergent collective variable supported redundantly across many microscopic temporal records, in the spirit of the Page–Wootters mechanism and quantum Darwinism but distinct from both.
-2. **Ledger** (`ledger/`) — classification entries in the Breakwater Claim Analysis Ledger (schema v1.0-rc). Each entry classifies an external scientific claim against a named Harbour framework under a declared evaluating measure, with explicit discriminant conditions for upgrade or downgrade. Entries: CL-2026-006 (Sorci et al., PRL 136, 163602, 2026) and CL-2026-007 (Smith & Ahmadi, Nat. Commun. 11, 5360, 2020), both classified under the Coastline.
+2. **Ledger** (`ledger/`) — classification entries in the Breakwater Claim Analysis Ledger (schema v1.0-rc). Each entry classifies an external scientific claim against a named Harbour framework under a declared evaluating measure, with explicit discriminant conditions for upgrade or downgrade. Entries: CL-2026-006 (Sorci et al., PRL 136, 163602, 2026), CL-2026-007 (Smith & Ahmadi, Nat. Commun. 11, 5360, 2020), and CL-2026-008 (distributed entanglement-enhanced clock networks — Covey et al. 2025 + Fromonteil et al. 2025), classified under the Coastline.
 3. **Sails** (`sails/`) — commentaries and essays that translate framework-relative work into prose for broader readership. The current Sail is a commentary on Sorci et al., anchored to Coastline v0.2 and Ledger CL-2026-006 v0.2.
 
 A `docs/` subdirectory holds forward-looking documentation including the active roadmap.
@@ -35,9 +35,10 @@ harbour-temporal-consensus/
 │   └── consensus-emergence-v0.3.md   (current)
 ├── ledger/
 │   ├── CL-2026-006-sorci-v0.1.md
-│   ├── CL-2026-006-sorci-v0.2.md
+│   ├── CL-2026-006-sorci-v0.2.md          (current)
 │   ├── CL-2026-007-smith-ahmadi-v0.1.md
-│   └── CL-2026-007-smith-ahmadi-v0.2.md   (current)
+│   ├── CL-2026-007-smith-ahmadi-v0.2.md   (current)
+│   └── CL-2026-008-clock-networks-v0.1.md (current)
 ├── sails/
 │   ├── sorci-commentary-v0.1.md
 │   ├── sorci-commentary-v0.2.md
