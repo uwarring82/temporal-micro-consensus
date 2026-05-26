@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use or build on this repository, please cite it as below. Cite individual documents by their version (see README §Citation)."
+title: "Harbour — Temporal Consensus"
+abstract: >-
+  A Harbour repository for the framework "Consensus-Emergence of Classical
+  Proper Time" — the proposal that classical proper time is an emergent
+  collective variable supported redundantly across many microscopic temporal
+  records, in the spirit of the Page–Wootters mechanism and quantum Darwinism
+  but distinct from both. The repository holds versioned framework notes
+  (Coastline), claim classifications (Breakwater Ledger), commentaries (Sails),
+  and a supporting literature review.
+type: dataset
+authors:
+  - family-names: Warring
+    given-names: Ulrich
+    affiliation: "Physikalisches Institut, Albert-Ludwigs-Universität Freiburg"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add steward ORCID to complete FAIR-Findability
+repository-code: "https://github.com/uwarring82/temporal-micro-consensus"
+url: "https://github.com/uwarring82/temporal-micro-consensus"
+license:
+  - MIT
+  - CC-BY-SA-4.0
+  - CC-BY-NC-SA-4.0
+keywords:
+  - quantum proper time
+  - emergent time
+  - Page–Wootters mechanism
+  - quantum Darwinism
+  - quantum clocks
+  - trapped-ion optical clocks
+  - quantum metrology
+  - open science
+date-released: "2026-05-26"
+# A tagged release minted to a Zenodo DOI would add a persistent identifier
+# (the remaining step for full FAIR-Findability); add the DOI here as `doi:` once issued.

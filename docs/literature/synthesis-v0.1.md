@@ -110,7 +110,7 @@ Verifying every "in the spirit of / following" attribution in the Coastline and 
 
 - **§1 lineage:** "the line of work running from Page and Wootters through Zych, Pikovski, Brukner and collaborators" ✓ sound ([[page1983]], [[zych2011]], [[pikovski2015]]). "a composite-system action argument due to Zych, Rudnicki and Pikovski" ✓ — [[zych2019]] (PRD 99, 104029). The quoted Hamiltonian, `V ≃ 0.93`, and ²⁷Al⁺ parameters all match [[sorci2026]].
 - **Subject-paper citation** (Sail header and Ledger): "Sorci, Foo, Leibfried, Sanner, Pikovski, PRL 136, 163602 (2026), DOI 10.1103/qhj9-pc2b" ✓ exact match to the verified bib.
-- ⚠ **Acknowledgements / external-circulation decision — sharpened.** The Sail already discloses the author's relationships with D. Leibfried (NIST, 2010–2012) and C. Sanner and flags a proximity-disclosure decision for external circulation. The corpus verification sharpens this: **Leibfried and Sanner are co-authors of the subject paper**, not merely prior contacts. A critical commentary on a paper co-authored by acknowledged close colleagues raises an independence-of-commentary question more acute than "proximity disclosure" alone conveys. This should be foregrounded in the Phase-4 external-circulation decision (the roadmap item), beyond the Sail's current framing.
+- ⚠ **Acknowledgements / external-circulation decision — corrected 2026-05-26.** *Correction (see [`../logbook.md`](../logbook.md)):* the steward reports **no relationship with C. Sanner** (never met or directly interacted). The Sail's Acknowledgements claim "ongoing exchanges" with C. Sanner — this is **factually inaccurate** and must be corrected before any external venue. The genuine prior association is with **D. Leibfried** (discussions at NIST Boulder, 2010–2012). Both Leibfried and Sanner are **co-authors of the subject paper** (Sorci et al.), so the independence-of-commentary consideration for external circulation concerns the steward's prior association with **Leibfried** — a co-author of the critiqued paper — and not any Sanner relationship. *(This supersedes the v0.1 framing, which inferred from the Sail that both were close contacts.)*
 
 ### Ledger v0.2 (CL-2026-006)
 
@@ -135,6 +135,7 @@ Findings above, mapped to the roadmap's downstream artefact work (not executed h
 | Version | Date | Notes |
 | --- | --- | --- |
 | v0.1 | 2026-05-26 | Initial synthesis over the 29-entry corpus. Claim-by-claim (§1), measure-by-measure (§2), gaps/falsifications (§3), lineage audit (§4), Phase-4 routing (§5). Central finding: the configurational→temporal transplant (Claim II redundancy) has no temporal exemplar in the corpus; the framework's multipartite-redundancy cell sits between QD (redundant-configurational) and clock networks (multipartite-anti-redundant) and is currently empty. Lineage audit confirms the `hartong2024` mis-attribution and the `mendes2019` year slip in the Coastline, and sharpens the Sail acknowledgement decision (Leibfried/Sanner are co-authors). |
+| v0.1 — corrected 2026-05-26 | §4 acknowledgement bullet corrected: the steward reports **no relationship with C. Sanner**; the earlier "both close contacts" framing was an incorrect inference from the Sail. Genuine prior association is with Leibfried only. See [`../logbook.md`](../logbook.md). No other section affected. |
 
 ---
 

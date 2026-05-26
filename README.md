@@ -24,13 +24,15 @@ A `docs/` subdirectory holds forward-looking documentation including the active 
 ```
 harbour-temporal-consensus/
 ├── README.md
+├── CITATION.cff                      (machine-readable citation metadata)
 ├── LICENSE-MIT                       (code, scripts, configuration)
 ├── LICENSE-CC-BY-SA-4.0              (Coastlines, Ledger entries)
 ├── LICENSE-CC-BY-NC-SA-4.0           (Sails, authored prose)
 ├── .gitignore
 ├── coastlines/
 │   ├── consensus-emergence-v0.1.md
-│   └── consensus-emergence-v0.2.md
+│   ├── consensus-emergence-v0.2.md
+│   └── consensus-emergence-v0.3.md   (current)
 ├── ledger/
 │   ├── CL-2026-006-sorci-v0.1.md
 │   └── CL-2026-006-sorci-v0.2.md
@@ -38,7 +40,16 @@ harbour-temporal-consensus/
 │   ├── sorci-commentary-v0.1.md
 │   └── sorci-commentary-v0.2.md
 └── docs/
-    └── roadmap.md
+    ├── roadmap.md
+    ├── logbook.md                    (project logbook — provenance / FAIR)
+    ├── literature-review-plan.md
+    └── literature/                   (literature review)
+        ├── README.md
+        ├── references.bib            (verified bibliography)
+        ├── index.md                  (corpus triage tracker)
+        ├── synthesis-v0.1.md         (Phase-3 synthesis)
+        ├── notes/                    (per-paper findings — public)
+        └── sources/                  (original PDFs — local-only, git-ignored)
 ```
 
 ## Version conventions
@@ -60,6 +71,17 @@ For example:
 > Warring, U. *Consensus-Emergence of Classical Proper Time*, v0.2, Harbour — Temporal Consensus repository, 2026-05-23.
 
 Internal cross-references between documents in this repository use document name and version only (e.g. *Coastline v0.2*, *CL-2026-006 v0.2*).
+
+## FAIR principles
+
+This repository is maintained according to the **FAIR** principles (Findable, Accessible, Interoperable, Reusable):
+
+- **Findable** — machine-readable citation metadata in [`CITATION.cff`](CITATION.cff) (GitHub renders a "Cite this repository" button); every document carries an explicit version, and the Git history is the external audit trail; a verified, DOI/arXiv-tagged bibliography lives in [`docs/literature/references.bib`](docs/literature/references.bib). *Remaining step:* a tagged release minted to a Zenodo DOI (persistent identifier) — see the logbook.
+- **Accessible** — public repository, open licences (below), no access barriers; all content is plain-text Markdown and BibTeX, retrievable over standard HTTP(S)/Git. (Original article PDFs are *not* redistributed — they are copyrighted; the public record is our own findings notes. See [`docs/literature/sources/README.md`](docs/literature/sources/README.md).)
+- **Interoperable** — standard, tool-neutral formats (Markdown, BibTeX, Citation File Format, SPDX licence identifiers); references carry DOIs/arXiv IDs; the internal controlled vocabulary (Coastline / Ledger / Sail / Breakwater, and the framework's claim labels) is defined in-document.
+- **Reusable** — explicit split licensing, per-document *Version History* tables, end-to-end provenance via the project logbook ([`docs/logbook.md`](docs/logbook.md)) and Git, and a documented source-handling policy. Each artefact states what it does and does not claim (Endorsement Marker, Anti-Claims).
+
+The **project logbook** ([`docs/logbook.md`](docs/logbook.md)) is the append-only provenance record: it logs decisions, version issuances, phase transitions, and factual corrections, each stamped with date, actor, rationale, and resulting commit.
 
 ## Split licence
 
@@ -83,7 +105,7 @@ This repository operates within the broader Open-Science Harbour architecture ma
 
 If you are encountering this repository for the first time:
 
-1. Start with the most recent Coastline (`coastlines/consensus-emergence-v0.2.md`) to understand the framework.
+1. Start with the most recent Coastline (`coastlines/consensus-emergence-v0.3.md`) to understand the framework.
 2. Read the most recent Sail (`sails/sorci-commentary-v0.2.md`) to see how the framework is applied in a concrete case.
 3. Consult the most recent Ledger entry (`ledger/CL-2026-006-sorci-v0.2.md`) for the framework-relative classification underwriting the Sail.
 4. Consult `docs/roadmap.md` for what is in active development and what is deferred.
