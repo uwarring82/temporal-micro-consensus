@@ -16,7 +16,7 @@ authors:
     affiliation: "Physikalisches Institut, Albert-Ludwigs-Universität Freiburg"
     # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add steward ORCID to complete FAIR-Findability
 repository-code: "https://github.com/uwarring82/temporal-micro-consensus"
-url: "https://github.com/uwarring82/temporal-micro-consensus"
+url: "https://uwarring82.github.io/temporal-micro-consensus/"
 license:
   - MIT
   - CC-BY-SA-4.0

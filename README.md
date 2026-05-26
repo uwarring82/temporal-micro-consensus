@@ -8,6 +8,7 @@ A Harbour repository for the *Consensus-Emergence of Classical Proper Time* fram
 | Steward | U. Warring (Physikalisches Institut, Albert-Ludwigs-Universität Freiburg) |
 | Origin date | 2026-05-23 |
 | Scope | Framework note (Coastline), claim classifications (Ledger), commentaries (Sails) |
+| Website | <https://uwarring82.github.io/temporal-micro-consensus/> (current versions; GitHub Pages) |
 
 ## What this repository contains
 
