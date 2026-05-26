@@ -53,12 +53,12 @@ A seeded, cluster-tagged bibliography lives in [`docs/literature/references.bib`
 
 Stand up the review machinery so later phases only add content, never structure. **Phase 0 lands in two commits for an auditable boundary:** first the plan (with the boxes below *unchecked*), then the scaffolding (which ticks them).
 
-- [ ] This work plan.
-- [ ] `docs/literature/` notes area with README.
-- [ ] `references.bib` seeded from the works already named in the Coastline and roadmap, every entry flagged `VERIFY` until Phase 1 confirms it.
-- [ ] `_note-template.md` — per-paper annotation template.
-- [ ] `index.md` — triage tracker (cluster, tier, claim/measure bearing, status).
-- [ ] `sources/` (local-only, git-ignored) and `notes/` directories with the source-handling policy README (§4).
+- [x] This work plan.
+- [x] `docs/literature/` notes area with README.
+- [x] `references.bib` seeded from the works already named in the Coastline and roadmap, every entry flagged `VERIFY` until Phase 1 confirms it.
+- [x] `_note-template.md` — per-paper annotation template.
+- [x] `index.md` — triage tracker (cluster, tier, claim/measure bearing, status).
+- [x] `sources/` (local-only, git-ignored) and `notes/` directories with the source-handling policy README (§4).
 
 **Exit:** structure committed and pushed; scaffolding-commit boxes ticked.
 
