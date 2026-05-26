@@ -34,14 +34,14 @@ Running tracker for the literature review ([work plan](../literature-review-plan
 | `ludlow2015` | C | 2 | Experimental substrate; TAI/UTC consensus-time | noted |
 | `zych2011` | E | 1 | Claim III witness lineage (Sail) | noted |
 | `pikovski2015` | E | 1 | Claim III nuisance-discrimination | noted |
-| `zych2019` | E | 1 | Claim I/III machinery; composite-system action behind `sorci2026` | verified · no PDF |
+| `zych2019` | E | 1 | Claim I/III machinery; composite-system action behind `sorci2026` | noted |
 | `komar2014` | F | 1 | Claim V (multipartite) | noted |
 | `covey2025` | F | 1 | Claim V; Claim IV (3-node cross-probe mismatch); CL-2026-008 | noted |
 | `fromonteil2025` | F | 1 | Claim V; CL-2026-008 (preprint) | noted |
 | `connes1994` | G | 3 | Claim V positioning (thermal time — non-redundancy emergent time) | noted |
 | `rovelli1996` | G | 3 | Claim V positioning (relational QM) | noted |
 
-**29 entries** — 28 with PDFs + findings notes; `zych2019` added during extraction (source of the `sorci2026` Hamiltonian), bib-verified but PDF not yet acquired. † = down-tiered with rationale (see below).
+**29 entries — all with PDFs (local-only) + findings notes.** `zych2019` (source of the `sorci2026` Hamiltonian) was added during extraction and is now complete. † = down-tiered with rationale (see below).
 
 ## Phase 1 findings & flags (verification)
 
@@ -60,5 +60,5 @@ Tier 1 stands at **18** (within the hard cap of 25, above the 8–12 working exp
 
 ## Next
 
-- Acquire `zych2019` PDF (PRD 99, 104029) into `sources/`; write its note.
+- Corpus assembly + extraction is complete for all 29 entries.
 - (If desired) upgrade extraction notes to full per-claim Phase-2 annotation for the final Tier-1 set, after the down-tiering decision.
