@@ -9,6 +9,12 @@ description: >-
   framework, with Breakwater Ledger classifications and Sail commentaries.
 theme: jekyll-theme-cayman
 
+# This is a prose/documentation repo — we never intend to use Liquid templating.
+# 'lax' makes Jekyll render incidental brace sequences in the Markdown literally
+# instead of failing the whole build on them (defence against math/notation braces).
+liquid:
+  error_mode: lax
+
 # Apply the theme's layout to every page (the artefact .md files carry no front matter).
 defaults:
   - scope:
