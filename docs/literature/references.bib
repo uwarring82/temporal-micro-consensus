@@ -1,10 +1,15 @@
 % references.bib — Temporal Consensus Harbour literature corpus
 % ---------------------------------------------------------------
-% Seeded in Phase 0 from works named in Coastline v0.2 and the roadmap.
-% EVERY entry carries note = {VERIFY ...} until its bibliographic data
-% is confirmed against the primary source in Phase 1. Do not cite an
-% entry downstream while its VERIFY flag stands.
-% keywords field encodes cluster (A–G) and tentative tier.
+% Phase 1 verified (2026-05-26): all bibliographic data confirmed against
+% primary sources (Crossref, arXiv, ADS, publisher pages). No VERIFY flags
+% remain. keywords field encodes cluster (A–G) and tier (1/2/3).
+%
+% Phase 1 lineage flags carried in note fields for the Phase 3 audit:
+%   - hartong2024: Coastline cites it as a Page–Wootters development, but it
+%     is a post-Newtonian coupling prescription. Revisit attribution.
+%   - mendes2019: Coastline cites as "Mendes & Soares-Pinto 2018"; published 2019.
+%   - sorci2026: full title/authors now known; Leibfried & Sanner are co-authors
+%     (bears on the Sail acknowledgement decision).
 
 % ===== Cluster A — Emergence of time from quantum correlations (Page–Wootters) =====
 
@@ -13,10 +18,12 @@
   title   = {Evolution without evolution: Dynamics described by stationary observables},
   journal = {Physical Review D},
   volume  = {27},
-  pages   = {2885},
+  number  = {12},
+  pages   = {2885--2892},
   year    = {1983},
+  doi     = {10.1103/PhysRevD.27.2885},
   keywords = {cluster-A, tier-1},
-  note    = {VERIFY full bibliographic data. Canonical Page–Wootters source (External Constraints).}
+  note    = {Canonical Page--Wootters source (External Constraints). No preprint (predates arXiv).}
 }
 
 @article{smith2020,
@@ -26,32 +33,71 @@
   volume  = {11},
   pages   = {5360},
   year    = {2020},
+  doi     = {10.1038/s41467-020-18264-4},
+  eprint  = {1904.12390},
+  archivePrefix = {arXiv},
   keywords = {cluster-A, tier-1},
-  note    = {VERIFY. Candidate Ledger entry CL-2026-007 (bipartite, momentum-superposition protocol).}
+  note    = {Candidate Ledger CL-2026-007 (bipartite, momentum-superposition). Published title dropped ``Relativistic'' from the preprint title.}
 }
 
 @article{hartong2024,
   author  = {Hartong, Jelle and Have, Emil and Obers, Niels A. and Pikovski, Igor},
-  title   = {VERIFY title — coupling prescription, Page–Wootters},
+  title   = {A coupling prescription for post-{N}ewtonian corrections in quantum mechanics},
+  journal = {SciPost Physics},
+  volume  = {16},
+  number  = {3},
+  pages   = {088},
   year    = {2024},
+  doi     = {10.21468/SciPostPhys.16.3.088},
+  eprint  = {2308.07373},
+  archivePrefix = {arXiv},
   keywords = {cluster-A, tier-1},
-  note    = {VERIFY author list, title, venue. Cited in Coastline External Constraints.}
+  note    = {LINEAGE FLAG: Coastline External Constraints cites this as a Page--Wootters development, but it is a covariant 1/c^2 post-Newtonian coupling prescription, not a relational-time paper. Revisit attribution in the Phase 3 lineage audit.}
 }
 
-@article{mendes2018,
-  author  = {Mendes, Lucas C. and Soares-Pinto, Diogo O.},
-  title   = {VERIFY title — time observables},
-  year    = {2018},
+@article{mendes2019,
+  author  = {Mendes, Leandro R. S. and Soares-Pinto, Diogo O.},
+  title   = {Time as a consequence of internal coherence},
+  journal = {Proceedings of the Royal Society A},
+  volume  = {475},
+  number  = {2231},
+  pages   = {20190470},
+  year    = {2019},
+  doi     = {10.1098/rspa.2019.0470},
+  eprint  = {1806.09669},
+  archivePrefix = {arXiv},
   keywords = {cluster-A, tier-2},
-  note    = {VERIFY author list, title, venue. Cited in Coastline External Constraints.}
+  note    = {Coastline cites as ``Mendes \& Soares-Pinto 2018'' (preprint year); published 2019. First author is Leandro R. S. Mendes. Phase 3 lineage-audit fix.}
 }
 
 @article{nambu2022,
   author  = {Nambu, Yasusada},
-  title   = {VERIFY title — Fisher information in the Page–Wootters setting},
+  title   = {Qubit Clock in Quantum Cosmology},
+  journal = {Universe},
+  volume  = {8},
+  number  = {2},
+  pages   = {99},
   year    = {2022},
+  doi     = {10.3390/universe8020099},
+  eprint  = {2201.02770},
+  archivePrefix = {arXiv},
   keywords = {cluster-A, cluster-D, tier-1},
-  note    = {VERIFY. Bridges Cluster A and D; cited for Fisher-information anchor (Claim IV).}
+  note    = {Fisher information of the clock state in a cosmological Page--Wootters qubit-clock setting (Claim IV Fisher anchor).}
+}
+
+@article{hohnsmith2021,
+  author  = {H{\"o}hn, Philipp A. and Smith, Alexander R. H. and Lock, Maximilian P. E.},
+  title   = {Trinity of relational quantum dynamics},
+  journal = {Physical Review D},
+  volume  = {104},
+  number  = {6},
+  pages   = {066001},
+  year    = {2021},
+  doi     = {10.1103/PhysRevD.104.066001},
+  eprint  = {1912.00033},
+  archivePrefix = {arXiv},
+  keywords = {cluster-A, tier-1},
+  note    = {Unifies three approaches to relational quantum dynamics incl. Page--Wootters. Broad-sweep addition.}
 }
 
 % ===== Cluster B — Quantum Darwinism & emergence of classical objectivity =====
@@ -61,10 +107,14 @@
   title   = {Decoherence, einselection, and the quantum origins of the classical},
   journal = {Reviews of Modern Physics},
   volume  = {75},
-  pages   = {715},
+  number  = {3},
+  pages   = {715--775},
   year    = {2003},
+  doi     = {10.1103/RevModPhys.75.715},
+  eprint  = {quant-ph/0105127},
+  archivePrefix = {arXiv},
   keywords = {cluster-B, tier-1},
-  note    = {VERIFY. Foundational review; einselection.}
+  note    = {Foundational decoherence/einselection review.}
 }
 
 @article{zurek2009,
@@ -72,77 +122,199 @@
   title   = {Quantum Darwinism},
   journal = {Nature Physics},
   volume  = {5},
-  pages   = {181},
+  pages   = {181--188},
   year    = {2009},
+  doi     = {10.1038/nphys1202},
+  eprint  = {0903.5082},
+  archivePrefix = {arXiv},
   keywords = {cluster-B, tier-1},
-  note    = {VERIFY. The architecture Claim II specialises to temporal records.}
+  note    = {The architecture Claim II specialises to temporal records.}
 }
 
 @article{ollivier2004,
   author  = {Ollivier, Harold and Poulin, David and Zurek, Wojciech H.},
-  title   = {Objective properties from subjective quantum states: Environment as a witness},
+  title   = {Objective Properties from Subjective Quantum States: Environment as a Witness},
   journal = {Physical Review Letters},
   volume  = {93},
   pages   = {220401},
   year    = {2004},
+  doi     = {10.1103/PhysRevLett.93.220401},
+  eprint  = {quant-ph/0307229},
+  archivePrefix = {arXiv},
   keywords = {cluster-B, tier-1},
-  note    = {VERIFY. Redundancy/objectivity criteria — model for Claim II conditions.}
+  note    = {Redundancy/objectivity criteria --- model for the Claim II conditions. (Published title drops ``Emergence of'' from the preprint title.)}
+}
+
+@article{ollivier2005,
+  author  = {Ollivier, Harold and Poulin, David and Zurek, Wojciech H.},
+  title   = {Environment as a Witness: Selective Proliferation of Information and Emergence of Objectivity in a Quantum Universe},
+  journal = {Physical Review A},
+  volume  = {72},
+  pages   = {042113},
+  year    = {2005},
+  doi     = {10.1103/PhysRevA.72.042113},
+  eprint  = {quant-ph/0408125},
+  archivePrefix = {arXiv},
+  keywords = {cluster-B, tier-2},
+  note    = {2005 PRA follow-up to ollivier2004.}
 }
 
 @article{riedel2010,
   author  = {Riedel, C. Jess and Zurek, Wojciech H.},
-  title   = {VERIFY title — functional information / quantum Darwinism},
+  title   = {Quantum Darwinism in an Everyday Environment: Huge Redundancy in Scattered Photons},
+  journal = {Physical Review Letters},
+  volume  = {105},
+  pages   = {020404},
   year    = {2010},
+  doi     = {10.1103/PhysRevLett.105.020404},
+  eprint  = {1001.3419},
+  archivePrefix = {arXiv},
   keywords = {cluster-B, tier-1},
-  note    = {VERIFY. Roadmap: Riedel-style functional information for the temporal-redundancy toy model.}
+  note    = {Concrete redundancy computation; model for the temporal-redundancy toy functional (roadmap).}
+}
+
+@article{riedel2011,
+  author  = {Riedel, C. Jess and Zurek, Wojciech H.},
+  title   = {Redundant information from thermal illumination: quantum Darwinism in scattered photons},
+  journal = {New Journal of Physics},
+  volume  = {13},
+  pages   = {073038},
+  year    = {2011},
+  doi     = {10.1088/1367-2630/13/7/073038},
+  eprint  = {1102.3179},
+  archivePrefix = {arXiv},
+  keywords = {cluster-B, tier-2},
+  note    = {NJP companion to riedel2010.}
+}
+
+@article{korbicz2014,
+  author  = {Korbicz, J. K. and Horodecki, P. and Horodecki, R.},
+  title   = {Objectivity in a Noisy Photonic Environment through Quantum State Information Broadcasting},
+  journal = {Physical Review Letters},
+  volume  = {112},
+  pages   = {120402},
+  year    = {2014},
+  doi     = {10.1103/PhysRevLett.112.120402},
+  eprint  = {1401.1712},
+  archivePrefix = {arXiv},
+  keywords = {cluster-B, tier-2},
+  note    = {Spectrum-broadcast-structure lineage. Note: Zurek is NOT an author, contrary to a common mis-citation.}
+}
+
+@article{brandao2015,
+  author  = {Brand{\~a}o, Fernando G. S. L. and Piani, Marco and Horodecki, Pawe{\l}},
+  title   = {Generic emergence of classical features in quantum Darwinism},
+  journal = {Nature Communications},
+  volume  = {6},
+  pages   = {7908},
+  year    = {2015},
+  doi     = {10.1038/ncomms8908},
+  eprint  = {1310.8640},
+  archivePrefix = {arXiv},
+  keywords = {cluster-B, tier-1},
+  note    = {Objectivity emerges generically --- strengthens the Claim II redundancy architecture.}
+}
+
+% ===== Cluster D — Quantum metrology of time / Fisher information =====
+
+@article{giovannetti2011,
+  author  = {Giovannetti, Vittorio and Lloyd, Seth and Maccone, Lorenzo},
+  title   = {Advances in Quantum Metrology},
+  journal = {Nature Photonics},
+  volume  = {5},
+  pages   = {222--229},
+  year    = {2011},
+  doi     = {10.1038/nphoton.2011.35},
+  eprint  = {1102.2318},
+  archivePrefix = {arXiv},
+  keywords = {cluster-D, tier-1},
+  note    = {Quantum Fisher information / Cram\'er--Rao bounds --- Claim IV Fisher anchor.}
+}
+
+@article{fit2026,
+  author  = {Sumaya-Martinez, J.},
+  title   = {Fisher-Informational Time: A Causal-Geometric Framework for Emergent Clock Time Physical Distinguishability},
+  journal = {arXiv preprint},
+  eprint  = {2605.03958},
+  archivePrefix = {arXiv},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2605.03958},
+  keywords = {cluster-D, tier-1},
+  note    = {Single-trajectory layer; roadmap v0.3 citation candidate. Verified via arXiv API/abstract 2026-05-26; not yet indexed by general search engines --- re-confirm author spelling/title against the PDF before any external citation.}
 }
 
 % ===== Cluster C — Quantum clocks & clock metrology =====
 
 @article{sorci2026,
-  author  = {Sorci, VERIFY others},
-  title   = {VERIFY title},
+  author  = {Sorci, Gabriel and Foo, Joshua and Leibfried, Dietrich and Sanner, Christian and Pikovski, Igor},
+  title   = {Quantum signatures of proper time in optical ion clocks},
   journal = {Physical Review Letters},
   volume  = {136},
   pages   = {163602},
   year    = {2026},
+  doi     = {10.1103/qhj9-pc2b},
+  eprint  = {2509.09573},
+  archivePrefix = {arXiv},
   keywords = {cluster-C, tier-1},
-  note    = {VERIFY author list and title. Subject of Ledger CL-2026-006; visibility-loss witness.}
+  note    = {Subject of Ledger CL-2026-006. Full title/authors now confirmed (previously cited as ``Sorci et al.''). Leibfried \& Sanner are co-authors --- bears on the Sail acknowledgement proximity-signal decision (roadmap). DOI is the APS short-form.}
 }
 
 @article{margalit2015,
-  author  = {Margalit, Yair and others},
+  author  = {Margalit, Yair and Zhou, Zhifan and Machluf, Shimon and Rohrlich, Daniel and Japha, Yonathan and Folman, Ron},
   title   = {A self-interfering clock as a ``which path'' witness},
   journal = {Science},
+  volume  = {349},
+  number  = {6253},
+  pages   = {1205--1208},
   year    = {2015},
+  doi     = {10.1126/science.aac6498},
+  eprint  = {1505.05765},
+  archivePrefix = {arXiv},
   keywords = {cluster-C, cluster-E, tier-2},
-  note    = {VERIFY full author list, volume, pages.}
+  note    = {Self-interfering clock / which-path; Claim III witness analogue.}
 }
 
 @article{martinezlahuerta2022,
-  author  = {Mart{\'i}nez-Lahuerta, V. J. and others},
-  title   = {VERIFY title — trapped-ion mass defect},
+  author  = {Mart{\'i}nez-Lahuerta, V. J. and Eilers, S. and Mehlst{\"a}ubler, T. E. and Schmidt, P. O. and Hammerer, K.},
+  title   = {Ab initio quantum theory of mass defect and time dilation in trapped-ion optical clocks},
+  journal = {Physical Review A},
+  volume  = {106},
+  pages   = {032803},
+  year    = {2022},
+  doi     = {10.1103/PhysRevA.106.032803},
+  eprint  = {2202.10854},
+  archivePrefix = {arXiv},
   keywords = {cluster-C, cluster-E, tier-2},
-  note    = {VERIFY author list, title, venue, year.}
+  note    = {Mass-defect / time-dilation Hamiltonian for trapped-ion clocks --- nuisance-discrimination (Claim III).}
 }
 
-@article{yudin,
+@article{yudin2018,
   author  = {Yudin, V. I. and Taichenachev, A. V.},
-  title   = {VERIFY title — mass defect effects},
+  title   = {Mass defect effects in atomic clocks},
+  journal = {Laser Physics Letters},
+  volume  = {15},
+  pages   = {035703},
+  year    = {2018},
+  doi     = {10.1088/1612-202X/aa9aa5},
+  eprint  = {1703.05290},
+  archivePrefix = {arXiv},
   keywords = {cluster-C, cluster-E, tier-2},
-  note    = {VERIFY title, venue, year.}
+  note    = {Published 2018 (arXiv 2017). Mass-defect effects --- Claim III nuisance.}
 }
 
-% ===== Cluster D — Quantum metrology of time / Fisher information =====
-
-@article{fit2026,
-  author  = {VERIFY authors},
-  title   = {Fisher-Informational Time (FIT)},
-  journal = {arXiv preprint},
-  number  = {2605.03958},
-  year    = {2026},
-  keywords = {cluster-D, tier-1},
-  note    = {VERIFY authors and exact title. Single-trajectory layer; roadmap v0.3 candidate citation.}
+@article{ludlow2015,
+  author  = {Ludlow, Andrew D. and Boyd, Martin M. and Ye, Jun and Peik, E. and Schmidt, P. O.},
+  title   = {Optical atomic clocks},
+  journal = {Reviews of Modern Physics},
+  volume  = {87},
+  number  = {2},
+  pages   = {637--701},
+  year    = {2015},
+  doi     = {10.1103/RevModPhys.87.637},
+  eprint  = {1407.3493},
+  archivePrefix = {arXiv},
+  keywords = {cluster-C, tier-2},
+  note    = {Optical-clock metrology review --- experimental substrate.}
 }
 
 % ===== Cluster E — Relativistic & gravitational effects on quantum coherence =====
@@ -154,8 +326,11 @@
   volume  = {2},
   pages   = {505},
   year    = {2011},
+  doi     = {10.1038/ncomms1498},
+  eprint  = {1105.4531},
+  archivePrefix = {arXiv},
   keywords = {cluster-E, tier-1},
-  note    = {VERIFY. Proper-time-as-witness lineage for the Sail.}
+  note    = {Proper-time-as-witness lineage for the Sail.}
 }
 
 @article{pikovski2015,
@@ -163,52 +338,72 @@
   title   = {Universal decoherence due to gravitational time dilation},
   journal = {Nature Physics},
   volume  = {11},
-  pages   = {668},
+  pages   = {668--672},
   year    = {2015},
+  doi     = {10.1038/nphys3366},
+  eprint  = {1311.1095},
+  archivePrefix = {arXiv},
   keywords = {cluster-E, tier-1},
-  note    = {VERIFY. Gravitational decoherence; nuisance-discrimination (Claim III).}
+  note    = {Gravitational decoherence; nuisance-discrimination (Claim III). Correct arXiv id is 1311.1095.}
 }
 
 % ===== Cluster F — Distributed clock networks & multipartite metrology =====
 
 @article{komar2014,
-  author  = {K{\'o}m{\'a}r, P. and others},
+  author  = {K{\'o}m{\'a}r, Peter and Kessler, Eric M. and Bishof, Michael and Jiang, Liang and S{\o}rensen, Anders S. and Ye, Jun and Lukin, Mikhail D.},
   title   = {A quantum network of clocks},
   journal = {Nature Physics},
   volume  = {10},
-  pages   = {582},
+  pages   = {582--587},
   year    = {2014},
+  doi     = {10.1038/nphys3000},
+  eprint  = {1310.6045},
+  archivePrefix = {arXiv},
   keywords = {cluster-F, tier-1},
-  note    = {VERIFY full author list. Multipartite-redundancy made literal (Claim V).}
+  note    = {Multipartite-redundancy made literal (Claim V).}
 }
 
 @article{covey2025,
   author  = {Covey, Jacob P. and Pikovski, Igor and Borregaard, Johannes},
-  title   = {VERIFY title — distributed clock network},
+  title   = {Probing curved spacetime with a distributed atomic processor clock},
+  journal = {PRX Quantum},
+  volume  = {6},
+  pages   = {030310},
   year    = {2025},
+  doi     = {10.1103/q188-b1cr},
+  eprint  = {2502.12954},
+  archivePrefix = {arXiv},
   keywords = {cluster-F, tier-1},
-  note    = {VERIFY author list, title, venue. Candidate Ledger CL-2026-008.}
+  note    = {Candidate Ledger CL-2026-008. Distributed clock across a gravitational potential --- stress-tests the GR boundary. DOI is the APS short-form (correct, not a placeholder).}
 }
 
 @article{fromonteil2025,
-  author  = {Fromonteil, VERIFY others},
-  title   = {VERIFY title — distributed clock network},
+  author  = {Fromonteil, Charles and Vasilyev, Denis V. and Zache, Torsten V. and Hammerer, Klemens and Rey, Ana Maria and Ye, Jun and Pichler, Hannes and Zoller, Peter},
+  title   = {Non-local mass superpositions and optical clock interferometry in atomic ensemble quantum networks},
+  journal = {arXiv preprint},
+  eprint  = {2509.19501},
+  archivePrefix = {arXiv},
   year    = {2025},
+  doi     = {10.48550/arXiv.2509.19501},
   keywords = {cluster-F, tier-1},
-  note    = {VERIFY author list, title, venue. Candidate Ledger CL-2026-008.}
+  note    = {Candidate Ledger CL-2026-008. Preprint only --- no journal venue/volume/pages yet (re-check before external citation).}
 }
 
-% ===== Cluster G — Adjacent foundations (broad-sweep extension) =====
+% ===== Cluster G — Adjacent foundations =====
 
 @article{connes1994,
   author  = {Connes, Alain and Rovelli, Carlo},
   title   = {Von Neumann algebra automorphisms and time--thermodynamics relation in generally covariant quantum theories},
   journal = {Classical and Quantum Gravity},
   volume  = {11},
-  pages   = {2899},
+  number  = {12},
+  pages   = {2899--2917},
   year    = {1994},
+  doi     = {10.1088/0264-9381/11/12/007},
+  eprint  = {gr-qc/9406019},
+  archivePrefix = {arXiv},
   keywords = {cluster-G, tier-3},
-  note    = {VERIFY. Thermal time hypothesis; arrow-of-time deferred item.}
+  note    = {Thermal time hypothesis; arrow-of-time deferred item.}
 }
 
 @article{rovelli1996,
@@ -216,8 +411,11 @@
   title   = {Relational quantum mechanics},
   journal = {International Journal of Theoretical Physics},
   volume  = {35},
-  pages   = {1637},
+  pages   = {1637--1678},
   year    = {1996},
+  doi     = {10.1007/BF02302261},
+  eprint  = {quant-ph/9609002},
+  archivePrefix = {arXiv},
   keywords = {cluster-G, tier-3},
-  note    = {VERIFY. Relational-QM backdrop to the relational-time channel.}
+  note    = {Relational-QM backdrop to the relational-time channel.}
 }
