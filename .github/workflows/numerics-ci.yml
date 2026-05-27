@@ -24,6 +24,10 @@ jobs:
       run:
         working-directory: numerics
     steps:
+      # MAINTENANCE (by ~2026-06-02): checkout@v4 and setup-python@v5 run on Node 20,
+      # which GitHub force-migrates to Node 24 on 2026-06-02. In a maintenance pass,
+      # verify the latest action majors (checkout@v5 / setup-python@v6 or later) and
+      # bump if CI stays green. Non-urgent — deliberately not a speculative bump here.
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
