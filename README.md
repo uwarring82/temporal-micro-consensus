@@ -40,7 +40,8 @@ temporal-micro-consensus/
 │   ├── CL-2026-006-sorci-v0.1.md
 │   ├── CL-2026-006-sorci-v0.2.md
 │   ├── CL-2026-006-sorci-v0.3.md
-│   ├── CL-2026-006-sorci-v0.4.md          (current)
+│   ├── CL-2026-006-sorci-v0.4.md
+│   ├── CL-2026-006-sorci-v0.5.md          (current)
 │   ├── CL-2026-007-smith-ahmadi-v0.1.md
 │   ├── CL-2026-007-smith-ahmadi-v0.2.md
 │   ├── CL-2026-007-smith-ahmadi-v0.3.md   (current)
@@ -128,7 +129,7 @@ If you are encountering this repository for the first time:
 1. Start with the [`docs/tutorial.md`](docs/tutorial.md) for a guided introduction to the concepts, architecture, and current state.
 2. Read the most recent Coastline (`coastlines/consensus-emergence-v0.4.md`) for the authoritative framework statement.
 3. Read the most recent Sail (`sails/sorci-commentary-v0.4.md`) to see how the framework is applied in a concrete case.
-4. Consult the Sorci Ledger entry (`ledger/CL-2026-006-sorci-v0.4.md`) for the framework-relative classification underwriting the Sail.
+4. Consult the Sorci Ledger entry (`ledger/CL-2026-006-sorci-v0.5.md`) for the framework-relative classification underwriting the Sail.
 5. Consult `docs/roadmap.md` for what is in active development and what is deferred.
 
 Earlier versions are retained for transparency; readers comparing against current claims should always use the latest version.

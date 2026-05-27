@@ -16,7 +16,7 @@ title: Temporal Micro Consensus
 | --- | --- | --- |
 | **Coastline** | [Consensus-Emergence of Classical Proper Time — v0.4](coastlines/consensus-emergence-v0.4.md) | The framework: five Claims, anti-claims, Regime of Validity, falsifiability. |
 | **Sail** | [Visibility, the Right Witness — v0.4](sails/sorci-commentary-v0.4.md) | Commentary on Sorci et al. (2026). |
-| **Ledger CL-2026-006** | [Sorci et al. — v0.4](ledger/CL-2026-006-sorci-v0.4.md) | **UNDERDETERMINED** — trapped-ion visibility witness; dual classification anchor (I(C:M) + R_δ). |
+| **Ledger CL-2026-006** | [Sorci et al. — v0.5](ledger/CL-2026-006-sorci-v0.5.md) | **UNDERDETERMINED** — trapped-ion visibility witness; dual classification anchor (I(C:M) + R_δ); D1 now quantitatively grounded by the toolkit (Module 3a), verdict unchanged. |
 | **Ledger CL-2026-007** | [Smith & Ahmadi — v0.3](ledger/CL-2026-007-smith-ahmadi-v0.3.md) | **UNDERDETERMINED** — quantum time dilation. |
 | **Ledger CL-2026-008** | [Distributed clock networks — v0.2](ledger/CL-2026-008-clock-networks-v0.2.md) | **UNDERDETERMINED** — entanglement-enhanced clock networks. |
 

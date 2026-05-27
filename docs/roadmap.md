@@ -4,7 +4,7 @@
 
 | Field | Value |
 | --- | --- |
-| Version | v0.5 |
+| Version | v0.6 |
 | Date | 2026-05-27 |
 | Steward | U. Warring |
 | Status | Living document — updated as items advance or are retired |
@@ -91,3 +91,4 @@ These are noted as plausible future extensions but not committed in the current 
 | v0.3 | 2026-05-27 | Marked the temporal-redundancy toy functional **drafted at v0.1** (`docs/notes/`), with the non-toy-exemplar question carried forward toward the Coastline's principal open problem; recorded that the note's §4 supplies the bounded-vs-extensive basis for the deferred Claim IV measure-registration split. |
 | v0.4 | 2026-05-27 | Re-pointed the temporal-redundancy functional references from v0.1 to **v0.2** after a Guardian-stance review of the note (v0.1 frozen): §1.1 einselection reframed as the central deferral, anti-redundant pole derived via the Schmidt structure (new Appendix B), §3/§4/§5 tightened, and the configurational functional-information measure arXiv:2509.17775 cited as the transplant source. No roadmap item status change. |
 | v0.5 | 2026-05-27 | Recorded **Ledger CL-2026-006 v0.4** (v0.3 frozen): R_δ (MN v0.2) added as a second declared classification anchor alongside I(C:M), operationally previewing the deferred Claim IV measure-registration split in the Ledger (not the Coastline). Verdict unchanged (UNDERDETERMINED, cross-consistent). Per the Guardian decision (2026-05-27), the MN is cited from the Ledger, **not** the Sail; the instrument-vs-fitting placement of methodological notes stays deferred. |
+| v0.6 | 2026-05-27 | Recorded **Ledger CL-2026-006 v0.5** (v0.4 frozen): the numerical toolkit (Phase 0–3 complete; `numerics/`, pkg `tmc-numerics`) feeds its **Module-3a D1 nuisance budget** into the entry as quantitative grounding for Discriminant D1. **Verdict unchanged (UNDERDETERMINED)** — D1's theoretical decomposition is now produced/reproducible but *model-conditional*; D2/D3 remain experimental (Lock-Key / Anti-Claim A5: numerics inform, do **not** auto-update). CBG-note softened (CL-2026-005 computes the coherent K(t), not the Markovian D1 budget). Module 3b registered as a candidate Anti-Claim #6 exemplar under the **verbatim einselection caveat** (Anti-Claim #6 open). Toolkit-v0.2 refinement registered: a physical squeezing-prep-infidelity model (the v0.1 symmetric-depolarising model is aggressive for a high-cutoff bosonic mode). Next Phase-4: MN v0.3 (Module 3b curves), then the journal paper. |
