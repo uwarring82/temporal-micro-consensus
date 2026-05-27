@@ -53,6 +53,13 @@ dist/
 # Caches
 .cache/
 
+# Numerics toolkit — scratch/cache outputs only.
+# Final results ARE committed (numerics/results/ with metadata; work-plan Q3); the
+# patterns below cover intermediate/scratch sweep artefacts that must NOT be versioned.
+numerics/**/_cache/
+numerics/**/*.tmp.npz
+numerics/**/*.tmp.npy
+
 # Local notes that should not be versioned
 draft-notes/
 scratch/

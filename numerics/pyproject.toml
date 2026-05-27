@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmc-numerics"
+version = "0.1.0.dev0"
+description = "Numerical toolkit for the Temporal Micro Consensus framework: master-equation simulation and anchor-measure post-processors (I(C:M), F[tau], R_delta)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ulrich Warring" }]
+keywords = [
+  "quantum clocks",
+  "quantum Darwinism",
+  "open quantum systems",
+  "Lindblad master equation",
+  "quantum metrology",
+  "emergent time",
+]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "qutip>=5.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+viz = ["matplotlib>=3.7"]
+examples = ["jupyter", "matplotlib>=3.7"]
+progress = ["tqdm"]
+
+[project.urls]
+Homepage = "https://github.com/uwarring82/temporal-micro-consensus"
+"Work plan" = "https://github.com/uwarring82/temporal-micro-consensus/blob/main/workplans/toolkit-work-plan-v0.1.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

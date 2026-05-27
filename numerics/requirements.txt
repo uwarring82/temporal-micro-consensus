@@ -1,0 +1,13 @@
+# Minimum-version dependency manifest for the Temporal Micro Consensus numerical toolkit.
+#
+# The authoritative install configuration is pyproject.toml; this file restates the
+# minimum versions per work-plan §4. Pinned versions for exact reproducibility belong
+# in requirements-lock.txt (generated and committed once the toolkit has runnable code).
+
+numpy>=1.24
+scipy>=1.10
+qutip>=5.0
+
+# Recommended (declared as optional extras in pyproject.toml: viz / examples / progress)
+matplotlib>=3.7
+pytest>=7.0

@@ -36,3 +36,11 @@ date-released: "2026-05-27"
 doi: 10.5281/zenodo.20411120
 # Zenodo DOI for the framework-status-2026.05.27 release (FAIR-Findability complete).
 # Cite individual documents by version (README §Citation); cite the repository as a whole by this DOI.
+#
+# --- Code / numerical toolkit citation (numerics/) ---
+# The numerical toolkit under numerics/ (package "tmc-numerics", MIT-licensed) is part
+# of this repository and is covered by the DOI above. To cite the toolkit specifically:
+#   Warring, U., "tmc-numerics — Numerical Toolkit for Temporal Micro Consensus",
+#   version <numerics-vX.Y>, Temporal Micro Consensus repository, <date>, commit <hash>;
+#   archived at doi:10.5281/zenodo.20411120.
+# See workplans/toolkit-work-plan-v0.1.md (decision D4, versioning) and numerics/README.md.
