@@ -2,7 +2,7 @@
 
 Numerical toolkit operationalising the *Consensus-Emergence of Classical Proper Time* framework's declared anchor measures — mutual information `I(C:M)`, quantum Fisher information `F[τ]`, and the temporal-redundancy functional `R_δ` — through master-equation simulation of clock-plus-carrier systems.
 
-**Status: Phase 0 complete (scaffold + green CI); Phase 1 API contract accepted (signatures locked per D6), implementation pending.** The Phase-0 package skeleton, dependency manifest, and smoke-test harness exist; the Phase-1 core-layer *code* and the Phase-2 anchor-measure layer are not yet implemented.
+**Status: Phase 0 complete; Phase 1 core layer implemented (contract-locked signatures; 37 tests passing).** The Phase-2 anchor-measure layer (`I(C:M)`, `F[τ]`, `R_δ`) is not yet implemented.
 
 The authoritative scope, phase gates, locked architectural decisions, and the public-API contract live in the work plan: [`../workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md). This README is a scaffold and will grow with the API (the Phase 1 gate requires it to reflect committed function signatures).
 
@@ -13,7 +13,7 @@ numerics/
 ├── pyproject.toml      authoritative build + dependency config (package: tmc-numerics)
 ├── requirements.txt    minimum-version manifest (work-plan §4)
 ├── src/tmc_numerics/   package source (src-layout)
-├── tests/              pytest suite (Phase 0: smoke test only)
+├── tests/              pytest suite (smoke + Phase 1 core-layer tests)
 ├── examples/           reproducible example notebooks (Phase 3)
 └── results/            committed numerical results + reproducibility metadata (Phase 3)
 ```
@@ -34,9 +34,9 @@ pytest
 
 Continuous integration runs the suite on Python 3.10–3.12 on every push touching `numerics/` (`.github/workflows/numerics-ci.yml`). Failed tests block merges (work-plan §5).
 
-## Phase 1 — core-layer API (accepted contract; implementation pending)
+## Phase 1 — core-layer API (accepted contract; implemented)
 
-Accepted 2026-05-27. The signatures below are the **D6-locked** public surface (stable from v0.1; internal numerics free). Full contract with rationale, failure modes, and the implied test list: [`../workplans/toolkit-phase1-api-contract-v0.1.md`](../workplans/toolkit-phase1-api-contract-v0.1.md).
+Accepted and implemented 2026-05-27 (37 tests passing, QuTiP 5.2). The signatures below are the **D6-locked** public surface (stable from v0.1; internal numerics free). Full contract with rationale, failure modes, and the implied test list: [`../workplans/toolkit-phase1-api-contract-v0.1.md`](../workplans/toolkit-phase1-api-contract-v0.1.md).
 
 **Conventions.** `ℏ=1`; angular frequencies [rad/s], time [s], rates [s⁻¹]. Tensor order = `SystemLayout` subsystem order (Sorci: `clock ⊗ M₁ ⊗ … ⊗ M_N`). Quantum states are `qutip.Qobj` with layout-matching dims (the documented QuTiP boundary). **Backend scope:** this is the *full-Hilbert* QuTiP `mesolve` backend (Module 3a + small-N validation); the Module-3b factorised N≫2 backend is a separate Phase-3 component sharing these specs (D3). **Firewall:** no `R_δ` / pointer / `I(C:M)` / `F[τ]` symbol is part of Phase 1 — those are Phase 2.
 
