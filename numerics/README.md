@@ -2,7 +2,7 @@
 
 Numerical toolkit operationalising the *Consensus-Emergence of Classical Proper Time* framework's declared anchor measures — mutual information `I(C:M)`, quantum Fisher information `F[τ]`, and the temporal-redundancy functional `R_δ` — through master-equation simulation of clock-plus-carrier systems.
 
-**Status: Phase 0 + Phase 1 (core layer) + Phase 2 (anchor measures, D5 gate) implemented — 68 tests passing.** Phase 3 (protocol modules; the Module-3b factorised N≫2 backend) is not yet started.
+**Status: Phase 0–2 + Phase-3 Module 3a (Sorci protocol) implemented — 79 tests passing.** Module 3b (open temporal instrument, N≫2) is not yet started.
 
 The authoritative scope, phase gates, locked architectural decisions, and the public-API contract live in the work plan: [`../workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md). This README is a scaffold and will grow with the API (the Phase 1 gate requires it to reflect committed function signatures).
 
@@ -194,6 +194,31 @@ def temporal_redundancy(ensemble, deficit, *, mode=InfoMode.PER_CARRIER, fragmen
 ```
 
 **D5 gate (`tests/test_d5_redundancy.py`).** Product (redundant) pole via the `iid` representation matches MN Appendix A to ≤1e-9 — `R_{0.10}=64/9≈7.1` at e=0.20, **undefined** at e≥0.40 — and never builds a 2⁶⁴ state. GHZ-shadow (anti-redundant) pole via the `joint` representation at small N gives `R_δ=1` under `HOLEVO`, with `test_ghz_per_carrier_reads_zero` as the negative confirmation (per-carrier read-out sees `I(N)=0`). Cross-anchor invariants (`tests/test_cross_anchor.py`) assert the resolution/classification split: `F[τ]` extensive (`N`) vs Heisenberg (`N²`), anti-correlated with `R_δ`.
+
+## Phase 3 Module 3a — Sorci protocol (`tmc_numerics.modules.sorci`)
+
+Implemented 2026-05-27 (D6-locked contract: [`../workplans/toolkit-module3a-sorci-contract-v0.1.md`](../workplans/toolkit-module3a-sorci-contract-v0.1.md)). The CL-2026-006 **D1** nuisance-budget decomposition for the squeezed-Ramsey two-carrier protocol.
+
+Rotating frame w.r.t. the free clock (exact: σ_z commutes with the coupling). Two models: **secular dispersive** `H_sec = g_md σ_z n̂` (workhorse, any t — used for the ²⁷Al⁺ extrapolation) and **full** `ω n̂ + g_md σ_z P̂²` (scaled-parameter validation). `g_md = −ε_m ω_c/4` is **derived**; the baseline validates Sorci Eq. (12)'s coefficient (`(1−V)/(λ²sinh²2r) → 1/16` as `λ=ε_m ω_c t → 0`). Squeezing is the prepared initial state.
+
+```python
+@dataclass(frozen=True)
+class SorciParams:
+    omega_c; omega; cutoff; t; eps_m; r            # structural + signal
+    n_dot=0; gamma_phi=0; eps_prep=0; drive_phase_rate=0; eps_det=0   # the four nuisance layers
+    # .g_md = −eps_m*omega_c/4 ; .lam = eps_m*omega_c*t
+
+def build_sorci_system(params, *, secular=True, include_nuisance=True) -> MasterEquationSystem
+def sorci_initial_state(params) -> Qobj                          # clock |+> ⊗ squeezed(r)
+def sorci_visibility(result) -> np.ndarray                       # LATENT V_state = 2|ρ01^clock| (read-out-invariant)
+def sorci_observed_visibility(result, eps_det) -> np.ndarray     # OBSERVED V_obs = (1−2ε_det)·V_state
+def clock_motion_mutual_information(result) -> np.ndarray        # LATENT I(C:M), bits
+def baseline_visibility_check(params, *, lambdas=(.1,.05,.025)) -> dict   # (1−V)/(λ²sinh²2r) → 1/16
+def rwa_error(params) -> float                                   # |V_full − V_secular| (→0 as ωt→∞)
+def nuisance_budget(params, *, secular=True, sweep_ranges=None) -> NuisanceBudget
+```
+
+The budget splits **latent** (`I(C:M)`, `V_state` — read-out-invariant) from **observed** (`V_obs` — detection-degraded); the detection row's latent contributions are identically 0. Extraction = marginal-from-signal per channel + full + interaction residual (honest non-additivity). Validated against Sorci Eq. (12), full↔secular RWA agreement, and the ²⁷Al⁺ V≈0.93 extrapolation. (Benchmark-specific finding: motional dephasing is *secular-invisible* — the dispersive `σ_z n̂` coupling is insensitive to number-basis dephasing.)
 
 ## Licence
 
