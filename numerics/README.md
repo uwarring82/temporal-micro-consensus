@@ -2,7 +2,7 @@
 
 Numerical toolkit operationalising the *Consensus-Emergence of Classical Proper Time* framework's declared anchor measures — mutual information `I(C:M)`, quantum Fisher information `F[τ]`, and the temporal-redundancy functional `R_δ` — through master-equation simulation of clock-plus-carrier systems.
 
-**Status: Phase 0 complete; Phase 1 core layer implemented (contract-locked signatures; 37 tests passing).** The Phase-2 anchor-measure layer (`I(C:M)`, `F[τ]`, `R_δ`) is not yet implemented.
+**Status: Phase 0 + Phase 1 (core layer) + Phase 2 (anchor measures, D5 gate) implemented — 68 tests passing.** Phase 3 (protocol modules; the Module-3b factorised N≫2 backend) is not yet started.
 
 The authoritative scope, phase gates, locked architectural decisions, and the public-API contract live in the work plan: [`../workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md). This README is a scaffold and will grow with the API (the Phase 1 gate requires it to reflect committed function signatures).
 
@@ -149,6 +149,51 @@ def thermal_mode(*, dim, n_thermal, prep_infidelity=0.0) -> "Qobj": ...
 def fock_mode(*, dim, n, prep_infidelity=0.0) -> "Qobj": ...
 def product_state(layout, parts: Mapping[str, "Qobj"]) -> "Qobj": ...   # tensors locals; absent => ground/vacuum
 ```
+
+## Phase 2 — anchor-measure layer (`tmc_numerics.anchors`)
+
+Accepted and implemented 2026-05-27 (D6-locked; the **D5 regression gate reproduces the MN v0.2 §2 analytic poles**). Imported explicitly, so the Phase-1 core stays import-clean:
+`from tmc_numerics.anchors import mutual_information, quantum_fisher, temporal_redundancy`. Full contract: [`../workplans/toolkit-phase2-api-contract-v0.1.md`](../workplans/toolkit-phase2-api-contract-v0.1.md).
+
+**Conventions.** Information in **bits** (`log2`); QFI is dimensionful (`[τ]⁻²`). Pointer basis fixed `"computational"` (binary) for v0.1.
+
+```python
+class InfoMode(Enum):
+    PER_CARRIER   # classical MI of independent per-carrier outcomes (physical redundancy read-out; default)
+    HOLEVO        # Holevo χ; the ideal global read-out (MN §2); = PER_CARRIER on the redundant pole
+
+@dataclass(frozen=True)
+class TemporalPointer:        dim: int = 2; prior: tuple[float, ...] | None = None   # default uniform
+
+@dataclass(frozen=True)
+class TemporalRecordEnsemble:
+    pointer: TemporalPointer; n_carriers: int
+    iid_carrier_states: Mapping[int, Qobj] | None = None   # T -> single-carrier ρ^{(T)} (i.i.d. of n; any n)
+    joint_states: Mapping[int, Qobj] | None = None         # T -> full carrier-joint ρ^{(T)} (small n)
+    joint_layout: SystemLayout | None = None
+    readout: ReadoutModel | None = None                    # Phase-1 detection layer
+    pointer_basis: str = "computational"
+    @classmethod
+    def iid(cls, conditional_carrier, n_carriers, pointer=None, *, readout=None) -> "TemporalRecordEnsemble": ...
+    @classmethod
+    def from_evolution(cls, results, joint_layout, pointer=None, *, readout=None) -> "TemporalRecordEnsemble": ...
+        # results: {T: EvolutionResult | Qobj} — the composition point with Phase-1 evolve()
+
+def partial_information(ensemble, fragment, *, mode=InfoMode.PER_CARRIER) -> float   # I(T:F) in bits
+                                                # fragment: int count (iid) | carrier-index seq (joint)
+
+def mutual_information(state, partition, *, layout=None, base="bits") -> float
+                                                # quantum I(A:B); partition = (labels_or_idx_A, ..._B)
+def quantum_fisher(state, generator) -> float   # QFI for ρ(τ)=e^{-iGτ}ρe^{+iGτ}; generator = Hermitian Qobj
+
+@dataclass
+class RedundancyResult:  R_delta: float | None; m_delta: int | None; deficit: float; H_T: float; info_curve: list; mode: str
+                         # R_delta is None ("undefined") iff the threshold is never reached — distinct from R_delta == 1
+
+def temporal_redundancy(ensemble, deficit, *, mode=InfoMode.PER_CARRIER, fragment_order=None) -> RedundancyResult
+```
+
+**D5 gate (`tests/test_d5_redundancy.py`).** Product (redundant) pole via the `iid` representation matches MN Appendix A to ≤1e-9 — `R_{0.10}=64/9≈7.1` at e=0.20, **undefined** at e≥0.40 — and never builds a 2⁶⁴ state. GHZ-shadow (anti-redundant) pole via the `joint` representation at small N gives `R_δ=1` under `HOLEVO`, with `test_ghz_per_carrier_reads_zero` as the negative confirmation (per-carrier read-out sees `I(N)=0`). Cross-anchor invariants (`tests/test_cross_anchor.py`) assert the resolution/classification split: `F[τ]` extensive (`N`) vs Heisenberg (`N²`), anti-correlated with `R_δ`.
 
 ## Licence
 
