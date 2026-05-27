@@ -55,7 +55,8 @@ temporal-micro-consensus/
     ├── logbook.md                    (project logbook — provenance / FAIR)
     ├── literature-review-plan.md
     ├── notes/                        (methodological notes — instruments for the framework)
-    │   └── temporal-redundancy-functional-v0.1.md
+    │   ├── temporal-redundancy-functional-v0.1.md
+    │   └── temporal-redundancy-functional-v0.2.md  (current)
     └── literature/                   (literature review)
         ├── README.md
         ├── references.bib            (verified bibliography)

@@ -4,7 +4,7 @@
 
 | Field | Value |
 | --- | --- |
-| Version | v0.2 |
+| Version | v0.3 |
 | Date | 2026-05-27 |
 | Licence | CC BY-SA 4.0 |
 | Scope | Conceptual tutorial — no prior knowledge of the Harbour architecture assumed |
@@ -249,9 +249,9 @@ Other deferred items:
 - A **CCUF bridge** between microscopic consensus (L₀) and architectural clock agreement (L₁).
 - **Quantitative thresholds** for Claim II (mutual-information requirements, Fisher profiles, redundancy bounds).
 - **Strong-field / non-perturbative extension** (beyond the post-Newtonian regime).
-- **Methodological notes:** a temporal-redundancy toy functional (Riedel-style) — ✅ **drafted at v0.1** (see below); a platform-general nuisance-discrimination kit (still open).
+- **Methodological notes:** a temporal-redundancy toy functional (Riedel-style) — ✅ **drafted, current v0.2** (see below); a platform-general nuisance-discrimination kit (still open).
 
-The first of those methodological notes is now drafted — the **temporal-redundancy functional** ([`docs/notes/temporal-redundancy-functional-v0.1.md`](notes/temporal-redundancy-functional-v0.1.md)). Borrowing the Riedel–Zurek redundancy measure from quantum Darwinism, it re-bases the partial-information plot on a *temporal* pointer and computes the redundancy `R_δ` of a few-carrier clock. **The headline:** for `N = 64` carriers reading the same elapsed-time bin, an **independent (redundant)** record has `R_{0.10} ≈ 7.1` (a small fragment already fixes the time), while a **GHZ / squeezing-enhanced (anti-redundant)** record has `R_δ = 1` (every proper fragment carries zero) — *multipartite ≠ redundant* made numerical. The note also gives a principled basis for the resolution-anchor vs classification-anchor split (bounded mutual information plateaus; extensive Fisher information does not) and maps onto the Sorci case (CL-2026-006). It is explicitly a **toy**: it operationalises and computes the concept but does *not* close the principal open problem above — that awaits a non-toy, continuous-`τ`, many-carrier model (the natural candidate: a master-equation `R_δ` for `N` independently dephasing ions).
+The first of those methodological notes is now drafted — the **temporal-redundancy functional** ([`docs/notes/temporal-redundancy-functional-v0.2.md`](notes/temporal-redundancy-functional-v0.2.md)). Borrowing the Riedel–Zurek redundancy measure from quantum Darwinism, it re-bases the partial-information plot on a *temporal* pointer and computes the redundancy `R_δ` of a few-carrier clock. **The headline:** for `N = 64` carriers reading the same elapsed-time bin, an **independent (redundant)** record has `R_{0.10} ≈ 7.1` (a small fragment already fixes the time), while a **GHZ / squeezing-enhanced (anti-redundant)** record has `R_δ = 1` (every proper fragment carries zero) — *multipartite ≠ redundant* made numerical. The note also gives a principled basis for the resolution-anchor vs classification-anchor split (bounded mutual information plateaus; extensive Fisher information does not) and maps onto the Sorci case (CL-2026-006). It is explicitly a **toy**: it operationalises and computes the concept but does *not* close the principal open problem above — that awaits a non-toy, continuous-`τ`, many-carrier model (the natural candidate: a master-equation `R_δ` for `N` independently dephasing ions).
 
 ---
 
@@ -260,7 +260,7 @@ The first of those methodological notes is now drafted — the **temporal-redund
 | Distinction | Why it matters |
 | --- | --- |
 | **Bipartite vs. multipartite** | Page–Wootters is bipartite (clock vs. rest); consensus-emergence requires many carriers. |
-| **Multipartite vs. redundant** | Many carriers can be entangled (anti-redundant) or independent (redundant). Only the latter satisfies Claim II.1. *Now computed:* `R_{0.10} ≈ 7.1` (redundant) vs `1` (anti-redundant) — see the [temporal-redundancy functional note](notes/temporal-redundancy-functional-v0.1.md). |
+| **Multipartite vs. redundant** | Many carriers can be entangled (anti-redundant) or independent (redundant). Only the latter satisfies Claim II.1. *Now computed:* `R_{0.10} ≈ 7.1` (redundant) vs `1` (anti-redundant) — see the [temporal-redundancy functional note](notes/temporal-redundancy-functional-v0.2.md). |
 | **Configurational vs. temporal** | Quantum Darwinism proves redundancy for position/pointer records. The temporal transplant is unproven. |
 | **Sensitivity vs. discriminability** | A signal can be measurable without being isolable from nuisance channels. The Ledger's UNDERDETERMINED verdicts all rest on this gap. |
 | **Resolution anchor vs. classification anchor** | Fisher information bounds what must be resolved; cross-probe mismatch or mutual information carries the structural content. Conflating them is a failure mode. |
@@ -274,6 +274,7 @@ The first of those methodological notes is now drafted — the **temporal-redund
 | --- | --- | --- |
 | v0.1 | 2026-05-26 | Initial tutorial. Covers Harbour architecture, five Claims, Ledger system, literature-review methodology, synthesis headline, regime of validity, reading order, open problems, and key distinctions. Anchored to Coastline v0.4, Ledger entries 006 v0.3 / 007 v0.3 / 008 v0.2, Sail v0.4, synthesis v0.1. |
 | v0.2 | 2026-05-27 | Wove in the temporal-redundancy functional finding (new methodological note, `docs/notes/`): §10 updated (the toy functional is now drafted, with the `R_{0.10} ≈ 7.1` vs `1` headline and the residual non-toy open problem); §4 *multipartite ≠ redundant* caveat and §11 key-distinctions row now cross-reference the computed result. No change to the five-Claim exposition. |
+| v0.3 | 2026-05-27 | Re-pointed the methodological-note citations from v0.1 to **v0.2** (Guardian-review revision of the note: einselection reframing, Schmidt derivation, §3/§4/§5 tightening, arXiv:2509.17775 grounding). No change to the tutorial's content or the headline numbers. |
 
 ---
 

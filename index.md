@@ -33,7 +33,7 @@ The framework's **principal open problem** is whether Claim II's redundancy crit
 
 Same carriers: the entanglement-enhanced configuration buys more *joint* sensitivity yet supports no redundancy. The note also grounds the **resolution-anchor vs classification-anchor** split (bounded mutual information vs extensive Fisher information) and maps the result onto the Sorci trapped-ion case (Ledger CL-2026-006). It is a **toy** instrument — it operationalises and computes the concept but does **not** close the open problem, which awaits a non-toy, many-carrier model.
 
-→ **[Methodological note — Temporal-redundancy functional v0.1](docs/notes/temporal-redundancy-functional-v0.1.md)**
+→ **[Methodological note — Temporal-redundancy functional v0.2](docs/notes/temporal-redundancy-functional-v0.2.md)**
 
 ## Supporting material
 
