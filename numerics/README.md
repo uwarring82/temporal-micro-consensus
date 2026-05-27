@@ -2,7 +2,7 @@
 
 Numerical toolkit operationalising the *Consensus-Emergence of Classical Proper Time* framework's declared anchor measures — mutual information `I(C:M)`, quantum Fisher information `F[τ]`, and the temporal-redundancy functional `R_δ` — through master-equation simulation of clock-plus-carrier systems.
 
-**Status: Phase 0–2 + Phase-3 Module 3a (Sorci protocol) implemented — 79 tests passing.** Module 3b (open temporal instrument, N≫2) is not yet started.
+**Status: Phase 0–2 + Phase 3 (Modules 3a Sorci + 3b open instrument) implemented — 85 tests passing.** Phase-3 example notebooks and Phase-4 feed-forward (CL-2026-006 v0.5, MN v0.3) remain.
 
 The authoritative scope, phase gates, locked architectural decisions, and the public-API contract live in the work plan: [`../workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md). This README is a scaffold and will grow with the API (the Phase 1 gate requires it to reflect committed function signatures).
 
@@ -219,6 +219,25 @@ def nuisance_budget(params, *, secular=True, sweep_ranges=None) -> NuisanceBudge
 ```
 
 The budget splits **latent** (`I(C:M)`, `V_state` — read-out-invariant) from **observed** (`V_obs` — detection-degraded); the detection row's latent contributions are identically 0. Extraction = marginal-from-signal per channel + full + interaction residual (honest non-additivity). Validated against Sorci Eq. (12), full↔secular RWA agreement, and the ²⁷Al⁺ V≈0.93 extrapolation. (Benchmark-specific finding: motional dephasing is *secular-invisible* — the dispersive `σ_z n̂` coupling is insensitive to number-basis dephasing.)
+
+## Phase 3 Module 3b — open temporal instrument (`tmc_numerics.modules.open_instrument`)
+
+Implemented 2026-05-27 (D6-locked contract: [`../workplans/toolkit-module3b-open-instrument-contract-v0.1.md`](../workplans/toolkit-module3b-open-instrument-contract-v0.1.md)). The **candidate worked exemplar for Anti-Claim #6** — *within the assumed-einselection regime*: the temporal pointer is **assumed** einselected (MN v0.2 §1.1), not derived, so **Anti-Claim #6 remains open**.
+
+Dynamical bridge: a single-carrier pure-dephasing `evolve` (`|+⟩` under `(γ_φ/2)D[σ_z]`) gives `c = e^{−γ_φ t}`, and `ε(γ_φ,t) = (1−c)/2` — where the trace-distance/Helstrom, the phase-bin projective flip, and the Holevo information (`χ = 1−h₂(ε)`) all agree, so MN Appendix A's hand-fixed `e` is now *derived*. The Phase-2 `iid` ensemble + `temporal_redundancy` then give `R_δ(N, γ_φ t)` (any N, no 2ᴺ state). **D5 cross-link:** at `γ_φ t = ln(5/3)` (`ε=0.20`), `R_{0.10}=64/9` exactly.
+
+```python
+@dataclass(frozen=True)
+class OpenInstrumentParams:  gamma_phi; t; n_carriers; deficit=0.10
+
+def single_carrier_coherence(gamma_phi, t) -> float       # c = 2|ρ01| of |+> dephased (= e^{-γφ t})
+def carrier_distinguishability(gamma_phi, t) -> float     # ε = (1-c)/2
+def carrier_conditional_states(eps) -> dict[int, Qobj]    # computational MN §2 product-pole states
+def redundancy_at(params) -> RedundancyResult             # ε -> iid ensemble -> R_δ
+def redundancy_curve(*, gamma_phi, t_values, n_values, deficit=0.10) -> dict   # R_δ(N, γφ t) + boundary
+```
+
+Results (committed, Q3): [`results/open_instrument_redundancy_v0.1.json`](results/) — the `R_δ(N, γ_φ t)` grid + the undefined boundary, where **`γ_φt_crit` rises with N** (0.27 at N=4 → 1.83 at N=128: more independent carriers tolerate more per-carrier nuisance, MN §5) — and [`results/sorci_nuisance_budget_v0.1.json`](results/) (the Module 3a D1 budget; detection row confirms latent `ΔI=ΔL_state=0`; Al⁺ extrapolation `V≈0.94`).
 
 ## Licence
 

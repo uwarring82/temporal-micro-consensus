@@ -1,0 +1,105 @@
+{
+  "deliverable": "Module 3a \u2014 Sorci protocol: CL-2026-006 D1 nuisance budget (latent/observed)",
+  "columns": [
+    "layer",
+    "channel",
+    "parameter",
+    "value",
+    "dI_C_M",
+    "dL_state",
+    "dL_obs"
+  ],
+  "scaled_headline_params": {
+    "omega_c": 1000.0,
+    "omega": 100.0,
+    "cutoff": 80,
+    "t": 0.1,
+    "eps_m": 0.001,
+    "r": 1.0,
+    "n_dot": 0.5,
+    "gamma_phi": 0.5,
+    "eps_prep": 0.05,
+    "drive_phase_rate": 0.5,
+    "eps_det": 0.05
+  },
+  "model": "secular",
+  "transfer": {
+    "lambda": 0.1,
+    "g_md_over_omega": 0.0025,
+    "omega_t": 10.0
+  },
+  "signal_I_Lstate_Lobs": [
+    0.07564113063899155,
+    0.00804982943763799,
+    0.00804982943763799
+  ],
+  "full_I_Lstate_Lobs": [
+    0.14590913273380224,
+    0.11056985003496611,
+    0.19951286503146948
+  ],
+  "interaction_residual": [
+    -0.021109041801267214,
+    -0.0027842851545895053,
+    -0.013036287214322373
+  ],
+  "rows": [
+    [
+      "dynamical-Lindblad",
+      "heating",
+      "n_dot",
+      0.5,
+      -0.02116503488112273,
+      7.576010696574986e-05,
+      7.576010696574986e-05
+    ],
+    [
+      "dynamical-Lindblad",
+      "motional dephasing",
+      "gamma_phi",
+      0.5,
+      -0.03381237091176156,
+      -2.1685497841872348e-10,
+      -2.1685497841872348e-10
+    ],
+    [
+      "initial-state",
+      "prep infidelity",
+      "eps_prep",
+      0.05,
+      0.1642216417223419,
+      0.056850565236533424,
+      0.056850565236533424
+    ],
+    [
+      "stochastic-Hamiltonian",
+      "drive-phase noise",
+      "drive_phase_rate",
+      0.5,
+      -0.01786719203337972,
+      0.04837798062527343,
+      0.04837798062527343
+    ],
+    [
+      "read-out",
+      "detection infidelity",
+      "eps_det",
+      0.05,
+      0.0,
+      0.0,
+      0.09919501705623623
+    ]
+  ],
+  "al27plus_extrapolation": {
+    "r": 2.26,
+    "lambda": 0.0228079626650619,
+    "V_secular": 0.9430972593178272,
+    "note": "~0.93, matches Sorci"
+  },
+  "metadata": {
+    "generated": "2026-05-27",
+    "code_version": "0.1.0.dev0",
+    "qutip": "5.2.3",
+    "note": "Regenerate via tmc_numerics.modules; see the module contracts in workplans/."
+  }
+}
