@@ -11,6 +11,8 @@ Running tracker for the literature review ([work plan](../literature-review-plan
 **Tier-1 fixed at 13; Phase-2 annotation complete for Tier 1 (2026-05-26).** The 13 Tier-1 notes carry the full per-claim Phase-2 template (core claim · method · relation to all five claims · Ledger/Sail bearing · lineage · open questions); the 16 Tier-2/3 notes remain extraction-grade (summary · key points · relevance · flags).
 **Phase 3 synthesis complete (2026-05-26):** [`synthesis-v0.1.md`](synthesis-v0.1.md) — claim-by-claim, measure-by-measure, gaps/falsifications, and the lineage audit. Phase-4 routing collected there.
 
+**Post-synthesis addition (2026-05-27):** `tank2025` (arXiv:2509.17775) was acquired and noted *after* the synthesis above — it is the operational configurational functional-information measure (`F_QD = log₂ R_δ`) transplanted by the methodological note [`../notes/temporal-redundancy-functional-v0.2.md`](../notes/temporal-redundancy-functional-v0.2.md). The "29 PDFs / 13 Tier-1" counts and `synthesis-v0.1.md` describe the *original* corpus and are unchanged; this entry's tier is **provisional** (`1*`) and a synthesis refresh is a future literature-review action (not done here).
+
 | Citekey | Cluster | Tier | Bears on (claim / measure) | Status |
 | --- | --- | --- | --- | --- |
 | `page1983` | A | 1 | Claim V relational channel; External Constraints | noted |
@@ -27,6 +29,7 @@ Running tracker for the literature review ([work plan](../literature-review-plan
 | `riedel2011` | B | 2 | Claim III (decoherence rate ≠ record-keeping rate) | noted |
 | `korbicz2014` | B | 2 | Claim II/III (spectrum-broadcast structure) | noted |
 | `brandao2015` | B | 2† | Claim II (generic objectivity) | noted |
+| `tank2025` | B | 1* | Claim II/IV (functional information `F_QD = log₂ R_δ`, Holevo-grounded); MN transplant source · *post-synthesis 2026-05-27* | noted |
 | `giovannetti2011` | D | 2† | Claim IV (QFI / Cramér–Rao) | noted |
 | `fit2026` | D | 2† | Claim IV (Fisher); kindred single-trajectory proposal | noted |
 | `sorci2026` | C | 1 | Claim III witness; Claim IV (visibility); CL-2026-006 | noted |
