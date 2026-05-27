@@ -32,6 +32,7 @@ keywords:
   - trapped-ion optical clocks
   - quantum metrology
   - open science
-date-released: "2026-05-26"
-# A tagged release minted to a Zenodo DOI would add a persistent identifier
-# (the remaining step for full FAIR-Findability); add the DOI here as `doi:` once issued.
+date-released: "2026-05-27"
+doi: 10.5281/zenodo.20411120
+# Zenodo DOI for the framework-status-2026.05.27 release (FAIR-Findability complete).
+# Cite individual documents by version (README §Citation); cite the repository as a whole by this DOI.

@@ -9,6 +9,7 @@ A Harbour repository for the *Consensus-Emergence of Classical Proper Time* fram
 | Origin date | 2026-05-23 |
 | Scope | Framework note (Coastline), claim classifications (Ledger), commentaries (Sails) |
 | Website | <https://uwarring82.github.io/temporal-micro-consensus/> (current versions; GitHub Pages) |
+| DOI | [10.5281/zenodo.20411120](https://doi.org/10.5281/zenodo.20411120) (Zenodo archive; release `framework-status-2026.05.27`) |
 
 ## What this repository contains
 
@@ -85,13 +86,15 @@ For example:
 
 > Warring, U. *Consensus-Emergence of Classical Proper Time*, v0.2, Temporal Micro Consensus repository, 2026-05-23.
 
+To cite the repository as a whole (all artefacts at a fixed snapshot), use its Zenodo DOI: **[10.5281/zenodo.20411120](https://doi.org/10.5281/zenodo.20411120)** (release `framework-status-2026.05.27`).
+
 Internal cross-references between documents in this repository use document name and version only (e.g. *Coastline v0.2*, *CL-2026-006 v0.2*).
 
 ## FAIR principles
 
 This repository is maintained according to the **FAIR** principles (Findable, Accessible, Interoperable, Reusable):
 
-- **Findable** — machine-readable citation metadata in [`CITATION.cff`](CITATION.cff) (GitHub renders a "Cite this repository" button); every document carries an explicit version, and the Git history is the external audit trail; a verified, DOI/arXiv-tagged bibliography lives in [`docs/literature/references.bib`](docs/literature/references.bib). *Remaining step:* a tagged release minted to a Zenodo DOI (persistent identifier) — see the logbook.
+- **Findable** — machine-readable citation metadata in [`CITATION.cff`](CITATION.cff) (GitHub renders a "Cite this repository" button); every document carries an explicit version, and the Git history is the external audit trail; a verified, DOI/arXiv-tagged bibliography lives in [`docs/literature/references.bib`](docs/literature/references.bib). The repository is archived at a persistent **Zenodo DOI** ([10.5281/zenodo.20411120](https://doi.org/10.5281/zenodo.20411120); release `framework-status-2026.05.27`), completing FAIR-Findability.
 - **Accessible** — public repository, open licences (below), no access barriers; all content is plain-text Markdown and BibTeX, retrievable over standard HTTP(S)/Git. (Original article PDFs are *not* redistributed — they are copyrighted; the public record is our own findings notes. See [`docs/literature/sources/README.md`](docs/literature/sources/README.md).)
 - **Interoperable** — standard, tool-neutral formats (Markdown, BibTeX, Citation File Format, SPDX licence identifiers); references carry DOIs/arXiv IDs; the internal controlled vocabulary (Coastline / Ledger / Sail / Breakwater, and the framework's claim labels) is defined in-document.
 - **Reusable** — explicit split licensing, per-document *Version History* tables, end-to-end provenance via the project logbook ([`docs/logbook.md`](docs/logbook.md)) and Git, and a documented source-handling policy. Each artefact states what it does and does not claim (Endorsement Marker, Anti-Claims).
