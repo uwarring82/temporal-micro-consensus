@@ -95,7 +95,8 @@ class NoiseModel(Enum):  WHITE; CORRELATED          # CORRELATED deferred to v0.
 
 @dataclass(frozen=True)
 class DriveNoise:       target: str; operator: LocalOp; model: NoiseModel; effective_rate: float; label: str = ""
-    # WHITE: adds (effective_rate)·D[operator] to the Liouvillian (σ_z ⇒ dephasing at that rate)
+    # effective_rate = COHERENCE-DECAY rate (matches DEPHASING). WHITE adds (effective_rate/2)·D[operator];
+    # for σ_z this IS a DEPHASING channel at γ_φ=effective_rate (coherence ∝ e^{−effective_rate·t}).
 
 @dataclass(frozen=True)
 class ReadoutModel:     target: str; detection_infidelity: float = 0.0; correlated_with: str | None = None; label: str = ""

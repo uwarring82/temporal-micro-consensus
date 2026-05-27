@@ -1,7 +1,7 @@
 # Toolkit Phase 1 — Core-Layer API Contract (proposal)
 
-**Version:** v0.1 (proposal, 2026-05-27; **rev. 2026-05-27 — blocking review items resolved, ready to accept**)
-**Status:** **DESIGN-ONLY.** Blocking/High/Medium review findings resolved (see §13). On steward acceptance: mirror accepted signatures to `numerics/README.md`, log, commit, begin implementation.
+**Version:** v0.1 (proposal → **ACCEPTED + D6-LOCKED 2026-05-27**; two review passes — see §13)
+**Status:** **ACCEPTED — D6-LOCKED.** Public signatures stable from v0.1. Mirrored to `numerics/README.md`; Phase 1 implementation proceeds against these signatures.
 **Parent:** `workplans/toolkit-work-plan-v0.1.md` (Phase 1 deliverables; locked decisions D1–D6).
 **Scope:** the public signatures and conventions of the Phase 1 *core layer* — `MasterEquationSystem`, `evolve`, and the preparation primitives. These are the **D6-locked contract** (public signatures stable from v0.1; internal numerics free).
 
@@ -141,12 +141,14 @@ class DriveNoise:
     target: str
     operator: LocalOp        # operator the noise couples to (e.g. Op.SIGMA_Z for drive-phase noise)
     model: NoiseModel
-    effective_rate: float    # s⁻¹. WHITE: adds the dissipator (effective_rate)·D[operator] to the
-                             # Liouvillian (for operator=σ_z this IS dephasing at effective_rate).
-                             # No PSD-convention factor is hidden — the caller supplies the rate directly.
+    effective_rate: float    # s⁻¹, the COHERENCE-DECAY rate (matches ChannelKind.DEPHASING).
+                             # WHITE: adds (effective_rate/2)·D[operator] to the Liouvillian, so for
+                             # operator=σ_z it is EXACTLY a DEPHASING channel at γ_φ=effective_rate
+                             # (coherence ∝ e^{−effective_rate·t}). The /2 enforces consistency with
+                             # ChannelKind.DEPHASING; no PSD-convention factor is hidden.
     label: str = ""
 ```
-*(High-2 / O5 resolution: `effective_rate` is an explicit Lindblad rate, not a spectral density; no hidden 2π/factor convention. `CORRELATED` is named-and-deferred; its PSD spec lands in v0.2 without breaking this signature, per D6.)*
+*(O5 / drive-noise-factor resolution: `effective_rate` is the **coherence-decay rate**, consistent with `ChannelKind.DEPHASING` — WHITE adds `(effective_rate/2)·D[operator]` (for σ_z, coherence ∝ e^{−effective_rate·t}). `CORRELATED` is named-and-deferred; its PSD spec lands in v0.2 without breaking this signature, per D6.)*
 
 ### §5.4 — Readout / detection model → declared here, **applied in Phase 2**
 ```python
@@ -307,7 +309,7 @@ Two reviews: one accepted the proposal as-is; the other found four Blocking + tw
 - **Blocking — `e_ops` ambiguity:** introduced `ObservableSpec` (`{label: LocalOp}` + coefficient); bare `LocalOp` (no target) no longer accepted (§7).
 - **Blocking — full-Qobj vs N≫2:** §0.4 + §9 now state Phase 1 is the full-Hilbert QuTiP backend; the Module-3b factorised backend is a separate Phase-3 component sharing specs (D3).
 - **High — constructor dim args:** `clock_dim`/`dim` removed from `clock_and_modes`/`carriers`; `TWO_LEVEL` hard-validated == 2; qudits → future `FINITE_LEVEL` (§2).
-- **High — drive-noise rate:** `DriveNoise.effective_rate` is an explicit Lindblad rate, no hidden PSD factor (§5.3).
+- **High — drive-noise rate:** `DriveNoise.effective_rate` is the **coherence-decay rate** matching `ChannelKind.DEPHASING`; WHITE adds `(effective_rate/2)·D[operator]` (§5.3). *(Second-pass fix: the first rev. wrote `effective_rate·D[σ_z]`, which decays as `e^{−2·effective_rate·t}` — inconsistent with `DEPHASING`'s `(γ_φ/2)·D[σ_z]`. The `/2` is now explicit, so a σ_z WHITE drive noise equals a `DEPHASING` channel at `γ_φ=effective_rate`.)*
 - **Medium — truncation threshold:** `SolverOptions.fock_population_warn_threshold` added (§7).
 - **Medium — solver vs integrator:** `SolverOptions.solver: Literal["mesolve"]` added, distinct from `method` (§7).
 
