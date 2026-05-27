@@ -200,3 +200,9 @@
 - **Blocker resolved en route:** the first Zenodo attempt failed with *"Citation metadata load failed."* Diagnosed (via `cffconvert -f zenodo`, which emulates Zenodo's mapping) as the `CITATION.cff` `license:` **list** mapping to `license.id = [array]`, which Zenodo's deposition model rejects (it accepts a single SPDX id). Fixed by collapsing to the single headline licence **CC-BY-SA-4.0** (steward decision); the repository remains split-licensed (MIT / CC-BY-SA / CC-BY-NC-SA), governed per-file by the in-archive `LICENSE-*` files and documented in a `CITATION.cff` comment.
 - **Wired in:** `CITATION.cff` now carries `doi: 10.5281/zenodo.20411120` and `date-released: 2026-05-27`; README gains a DOI row, a completed FAIR-Findable bullet, and a repository-level citation pointer. **Still open (steward):** the ORCID TODO in `CITATION.cff` — provide it to fully complete the author identifier.
 - **Consequence:** the toolkit's DOI prerequisite (2026-05-27 Guardian pre-toolkit audit) is now satisfied; the remaining gate before a Toolkit Work Plan v0.1 is steward confirmation of the toolkit's scope.
+
+## 2026-05-27 — ORCID added (author identifier complete)
+
+- **Actor:** Steward (provided ORCID) / Agent (edit). **Commit:** *(this change).*
+- Resolves the *"Still open (steward): ORCID TODO"* flagged in the Zenodo-DOI entry above. Added the steward's ORCID — **0000-0001-8081-9718** (checksum-verified, ISO 7064 MOD 11-2) — to `CITATION.cff`, replacing the placeholder. CFF re-validated against schema 1.2.0; the Zenodo creator mapping now carries the ORCID. With the DOI and the ORCID both in place, the FAIR *Findable* author/identifier metadata is complete.
+- *Note:* the live Zenodo record was archived before this metadata update, so the ORCID will appear there only on the next published version (or via a manual edit in the Zenodo deposition form); `CITATION.cff` is authoritative for citation regardless.
