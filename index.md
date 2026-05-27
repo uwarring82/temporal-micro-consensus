@@ -1,5 +1,5 @@
 ---
-title: Temporal Consensus Harbour
+title: Temporal Micro Consensus
 ---
 
 *Consensus-Emergence of Classical Proper Time* — a research framework treating classical proper time as a **collective consensus variable** across many microscopic temporal records, in the spirit of the Page–Wootters mechanism and quantum Darwinism but distinct from both. This site presents the **most recent version** of each artefact.
@@ -8,7 +8,7 @@ title: Temporal Consensus Harbour
 
 ## Start here
 
-- **[Tutorial — Reading the Temporal Consensus Harbour](docs/tutorial.md)** — a guided on-ramp; no prior knowledge of the architecture assumed.
+- **[Tutorial — Reading Temporal Micro Consensus](docs/tutorial.md)** — a guided on-ramp; no prior knowledge of the architecture assumed.
 
 ## Current versions
 

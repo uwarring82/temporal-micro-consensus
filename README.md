@@ -1,4 +1,4 @@
-# Harbour — Temporal Consensus
+# Temporal Micro Consensus
 
 A Harbour repository for the *Consensus-Emergence of Classical Proper Time* framework, with associated Breakwater Ledger entries and Sails.
 
@@ -23,7 +23,7 @@ A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, li
 ## Repository structure
 
 ```
-harbour-temporal-consensus/
+temporal-micro-consensus/
 ├── README.md
 ├── CITATION.cff                      (machine-readable citation metadata)
 ├── LICENSE-MIT                       (code, scripts, configuration)
@@ -75,11 +75,11 @@ Documents in this repository are issued under **Local Stewardship**. They do not
 
 When citing a document from this repository in dependent work, use the following template:
 
-> Warring, U. *[Document title]*, version [v0.X], Harbour — Temporal Consensus repository, [date]. Commit hash: [hash].
+> Warring, U. *[Document title]*, version [v0.X], Temporal Micro Consensus repository, [date]. Commit hash: [hash].
 
 For example:
 
-> Warring, U. *Consensus-Emergence of Classical Proper Time*, v0.2, Harbour — Temporal Consensus repository, 2026-05-23.
+> Warring, U. *Consensus-Emergence of Classical Proper Time*, v0.2, Temporal Micro Consensus repository, 2026-05-23.
 
 Internal cross-references between documents in this repository use document name and version only (e.g. *Coastline v0.2*, *CL-2026-006 v0.2*).
 

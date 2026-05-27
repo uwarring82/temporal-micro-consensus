@@ -1,4 +1,4 @@
-# Roadmap — Harbour Temporal Consensus
+# Roadmap — Temporal Micro Consensus
 
 *Forward-looking documentation for active development items, deferred items, and stewardship decisions.*
 

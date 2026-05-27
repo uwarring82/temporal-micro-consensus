@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use or build on this repository, please cite it as below. Cite individual documents by their version (see README §Citation)."
-title: "Harbour — Temporal Consensus"
+title: "Temporal Micro Consensus"
 abstract: >-
   A Harbour repository for the framework "Consensus-Emergence of Classical
   Proper Time" — the proposal that classical proper time is an emergent

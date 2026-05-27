@@ -1,6 +1,6 @@
 # Project Logbook
 
-*A chronological, append-only record of substantive activities, decisions, and corrections in the Harbour — Temporal Consensus repository. It exists for **provenance and reproducibility** (the "R" of FAIR): each entry says what was done, when, by whom, why, and which artefacts/commits resulted.*
+*A chronological, append-only record of substantive activities, decisions, and corrections in the Temporal Micro Consensus repository. It exists for **provenance and reproducibility** (the "R" of FAIR): each entry says what was done, when, by whom, why, and which artefacts/commits resulted.*
 
 | Field | Value |
 | --- | --- |

@@ -1,4 +1,4 @@
-# Tutorial — Reading the Temporal Consensus Harbour
+# Tutorial — Reading Temporal Micro Consensus
 
 *A guided introduction to the concepts, architecture, and current state of the repository.*
 

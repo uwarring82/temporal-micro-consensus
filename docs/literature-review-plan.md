@@ -1,6 +1,6 @@
 # Literature Review — Work Plan
 
-*A staged plan for an extensive, broad-sweep literature review feeding the Coastline, Ledger, and Sails of the Temporal Consensus Harbour.*
+*A staged plan for an extensive, broad-sweep literature review feeding the Coastline, Ledger, and Sails of Temporal Micro Consensus.*
 
 | Field | Value |
 | --- | --- |
