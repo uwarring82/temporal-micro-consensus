@@ -2,7 +2,7 @@
 
 Numerical toolkit operationalising the *Consensus-Emergence of Classical Proper Time* framework's declared anchor measures — mutual information `I(C:M)`, quantum Fisher information `F[τ]`, and the temporal-redundancy functional `R_δ` — through master-equation simulation of clock-plus-carrier systems.
 
-**Status: Phase 0 (infrastructure scaffold).** Only the package skeleton, dependency manifest, and a smoke-test harness exist. The core layer (Phase 1) and the anchor-measure layer (Phase 2) are not yet implemented.
+**Status: Phase 0 complete (scaffold + green CI); Phase 1 API contract accepted (signatures locked per D6), implementation pending.** The Phase-0 package skeleton, dependency manifest, and smoke-test harness exist; the Phase-1 core-layer *code* and the Phase-2 anchor-measure layer are not yet implemented.
 
 The authoritative scope, phase gates, locked architectural decisions, and the public-API contract live in the work plan: [`../workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md). This README is a scaffold and will grow with the API (the Phase 1 gate requires it to reflect committed function signatures).
 
@@ -33,6 +33,121 @@ pytest
 ```
 
 Continuous integration runs the suite on Python 3.10–3.12 on every push touching `numerics/` (`.github/workflows/numerics-ci.yml`). Failed tests block merges (work-plan §5).
+
+## Phase 1 — core-layer API (accepted contract; implementation pending)
+
+Accepted 2026-05-27. The signatures below are the **D6-locked** public surface (stable from v0.1; internal numerics free). Full contract with rationale, failure modes, and the implied test list: [`../workplans/toolkit-phase1-api-contract-v0.1.md`](../workplans/toolkit-phase1-api-contract-v0.1.md).
+
+**Conventions.** `ℏ=1`; angular frequencies [rad/s], time [s], rates [s⁻¹]. Tensor order = `SystemLayout` subsystem order (Sorci: `clock ⊗ M₁ ⊗ … ⊗ M_N`). Quantum states are `qutip.Qobj` with layout-matching dims (the documented QuTiP boundary). **Backend scope:** this is the *full-Hilbert* QuTiP `mesolve` backend (Module 3a + small-N validation); the Module-3b factorised N≫2 backend is a separate Phase-3 component sharing these specs (D3). **Firewall:** no `R_δ` / pointer / `I(C:M)` / `F[τ]` symbol is part of Phase 1 — those are Phase 2.
+
+### System and operators
+
+```python
+class SubsystemKind(Enum):
+    TWO_LEVEL     # dim hard-validated == 2 (qudits → future FINITE_LEVEL)
+    BOSONIC_MODE  # dim = Fock cutoff = n_max + 1
+
+@dataclass(frozen=True)
+class Subsystem:    label: str; kind: SubsystemKind; dim: int
+
+@dataclass(frozen=True)
+class SystemLayout:
+    subsystems: tuple[Subsystem, ...]                 # tensor order = sequence order
+    @classmethod
+    def clock_and_modes(cls, n_modes, mode_cutoffs) -> "SystemLayout": ...   # clock(2) ⊗ M1 ⊗ …
+    @classmethod
+    def carriers(cls, n) -> "SystemLayout": ...                              # carrier_00 ⊗ …
+    def index(self, label) -> int: ...
+    def subsystem(self, label) -> Subsystem: ...
+    def dims(self) -> list[int]: ...
+    def validate_state(self, state: "Qobj") -> None: ...   # LayoutMismatchError on dims mismatch
+
+class Op(Enum):
+    IDENTITY; SIGMA_X; SIGMA_Y; SIGMA_Z; SIGMA_PLUS; SIGMA_MINUS   # two-level
+    NUM; DESTROY; CREATE; X_QUAD; P_QUAD                            # bosonic
+
+@dataclass(frozen=True)
+class LocalOp:      op: Op | None = None; power: int = 1; qobj: "Qobj | None" = None  # exactly one of {op, qobj}
+
+@dataclass(frozen=True)
+class HamiltonianTerm:
+    coefficient: float                 # rad·s⁻¹ (real); total H = Σ terms must be Hermitian
+    operators: Mapping[str, LocalOp]   # subsystem-label -> local op; absent labels => identity
+    label: str = ""
+```
+
+### Nuisance model (four layers; only the dynamical layer enters `evolve`)
+
+initial-state → prep `prep_infidelity` · dynamical Lindblad → `LindbladChannel` · stochastic/drive → `DriveNoise` · readout/detection → `ReadoutModel` (declared; applied in Phase 2).
+
+```python
+class ChannelKind(Enum):                    # D[c]ρ = cρc† − ½{c†c, ρ}
+    HEATING             # bosonic: ṅ·(D[a†]+D[a]);  d⟨n⟩/dt = +ṅ  (state-independent)
+    THERMAL_RELAXATION  # bosonic: κ(n̄+1)D[a] + κn̄D[a†];  d⟨n⟩/dt = −κ(⟨n⟩−n̄)  (n̄=0 ⇒ cooling)
+    MOTIONAL_DEPHASING  # bosonic: γ_φ·D[a†a]
+    DEPHASING           # two-level: (γ_φ/2)·D[σ_z];  coherence ∝ e^{−γ_φ t}
+    AMPLITUDE_DAMPING   # two-level: Γ·D[σ_−]
+
+@dataclass(frozen=True)
+class LindbladChannel:  target: str; kind: ChannelKind; rate: float; n_thermal: float | None = None; label: str = ""
+
+class NoiseModel(Enum):  WHITE; CORRELATED          # CORRELATED deferred to v0.2
+
+@dataclass(frozen=True)
+class DriveNoise:       target: str; operator: LocalOp; model: NoiseModel; effective_rate: float; label: str = ""
+    # WHITE: adds (effective_rate)·D[operator] to the Liouvillian (σ_z ⇒ dephasing at that rate)
+
+@dataclass(frozen=True)
+class ReadoutModel:     target: str; detection_infidelity: float = 0.0; correlated_with: str | None = None; label: str = ""
+    # NOT consumed by evolve(); applied in Phase 2
+```
+
+### System and evolution
+
+```python
+class MasterEquationSystem:
+    def __init__(self, layout, hamiltonian, channels=(), drive_noise=(), readout=()): ...
+    @property
+    def layout(self) -> SystemLayout: ...
+    def hamiltonian_operator(self) -> "Qobj": ...      # Hermitian; raises otherwise
+    def collapse_operators(self) -> list["Qobj"]: ...
+    def evolve(self, state, times, *, e_ops=None, options=None, store_states=True) -> "EvolutionResult": ...
+
+@dataclass(frozen=True)
+class ObservableSpec:   operators: Mapping[str, LocalOp]; coefficient: float = 1.0   # like HamiltonianTerm.operators
+
+@dataclass
+class SolverOptions:
+    solver: Literal["mesolve"] = "mesolve"      # v0.1: only mesolve; mcsolve deferred
+    method: str = "adams"; atol: float = 1e-12; rtol: float = 1e-10; nsteps: int = 10_000
+    fock_population_warn_threshold: float = 1e-6
+    qutip_options: dict | None = None           # advanced pass-through (outside D6 stability)
+
+@dataclass
+class EvolutionDiagnostics:  max_fock_population: dict[str, float]; trace_drift: float; truncation_ok: bool
+
+@dataclass
+class EvolutionResult:
+    times: "np.ndarray"; states: "list[Qobj] | None"; expect: dict[str, "np.ndarray"]
+    final_state: "Qobj"; layout: SystemLayout; solver: str; converged: bool; diagnostics: EvolutionDiagnostics
+# e_ops: Mapping[str, ObservableSpec | Qobj] | None
+# typed failures: LayoutMismatchError, NonHermitianHamiltonianError, SolverConvergenceError
+# truncation inadequacy is SOFT (diagnostics.truncation_ok=False), not an exception
+```
+
+### Preparation primitives
+
+Local primitives return a **local** `Qobj` density matrix (infidelity is local); `product_state` tensors them into the full-space state on `layout`.
+
+```python
+def clock_superposition(*, relative_phase=0.0, prep_infidelity=0.0) -> "Qobj": ...     # (|0⟩+e^{iφ}|1⟩)/√2
+def two_level_state(*, ket, prep_infidelity=0.0) -> "Qobj": ...
+def squeezed_mode(*, dim, r, theta=0.0, n_thermal=0.0, prep_infidelity=0.0) -> "Qobj": ...  # ⟨n⟩=sinh²r
+def coherent_mode(*, dim, alpha, prep_infidelity=0.0) -> "Qobj": ...
+def thermal_mode(*, dim, n_thermal, prep_infidelity=0.0) -> "Qobj": ...
+def fock_mode(*, dim, n, prep_infidelity=0.0) -> "Qobj": ...
+def product_state(layout, parts: Mapping[str, "Qobj"]) -> "Qobj": ...   # tensors locals; absent => ground/vacuum
+```
 
 ## Licence
 
