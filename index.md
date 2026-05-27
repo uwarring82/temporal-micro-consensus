@@ -31,9 +31,9 @@ The framework's **principal open problem** is whether Claim II's redundancy crit
 | **Redundant** — independent carriers | **7.1** (a small fragment already fixes the time) |
 | **Anti-redundant** — GHZ / squeezing-enhanced | **1** (every proper fragment carries *zero*) |
 
-Same carriers: the entanglement-enhanced configuration buys more *joint* sensitivity yet supports no redundancy. The note also grounds the **resolution-anchor vs classification-anchor** split (bounded mutual information vs extensive Fisher information) and maps the result onto the Sorci trapped-ion case (Ledger CL-2026-006). It is a **toy** instrument — it operationalises and computes the concept but does **not** close the open problem, which awaits a non-toy, many-carrier model.
+Same carriers: the entanglement-enhanced configuration buys more *joint* sensitivity yet supports no redundancy. The note also grounds the **resolution-anchor vs classification-anchor** split (bounded mutual information vs extensive Fisher information) and maps the result onto the Sorci trapped-ion case (Ledger CL-2026-006). It is a **toy** instrument — it operationalises and computes the concept but does **not** close the open problem. *v0.3 (§8) adds a numerical many-carrier exemplar (toolkit Module 3b) within the assumed-einselection regime; Anti-Claim #6 stays open.*
 
-→ **[Methodological note — Temporal-redundancy functional v0.2](docs/notes/temporal-redundancy-functional-v0.2.md)**
+→ **[Methodological note — Temporal-redundancy functional v0.3](docs/notes/temporal-redundancy-functional-v0.3.md)**
 
 ## Supporting material
 
