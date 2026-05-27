@@ -22,10 +22,22 @@ title: Temporal Micro Consensus
 
 All three Ledger entries are anchored to Coastline v0.4 and sit at the same place: *theory-compatible, experimental-witness-underdetermined*.
 
+## A first computed instrument
+
+The framework's **principal open problem** is whether Claim II's redundancy criterion — established for *configurational* records (quantum Darwinism) — transplants to *temporal* records. A methodological note takes the first concrete step: a **temporal-redundancy functional** `R_δ[τ]` in the Riedel–Zurek spirit, computed for a few-carrier clock. It renders the framework's *multipartite ≠ redundant* distinction **numerical** — for `N = 64` carriers reading the same elapsed-time bin:
+
+| Configuration | Temporal redundancy `R_{0.10}` |
+| --- | --- |
+| **Redundant** — independent carriers | **7.1** (a small fragment already fixes the time) |
+| **Anti-redundant** — GHZ / squeezing-enhanced | **1** (every proper fragment carries *zero*) |
+
+Same carriers: the entanglement-enhanced configuration buys more *joint* sensitivity yet supports no redundancy. The note also grounds the **resolution-anchor vs classification-anchor** split (bounded mutual information vs extensive Fisher information) and maps the result onto the Sorci trapped-ion case (Ledger CL-2026-006). It is a **toy** instrument — it operationalises and computes the concept but does **not** close the open problem, which awaits a non-toy, many-carrier model.
+
+→ **[Methodological note — Temporal-redundancy functional v0.1](docs/notes/temporal-redundancy-functional-v0.1.md)**
+
 ## Supporting material
 
 - [Literature synthesis — v0.1](docs/literature/synthesis-v0.1.md) — the cross-cutting review of the 29-paper corpus (claim-by-claim, measure-by-measure, gaps, lineage audit).
-- [Methodological note — Temporal-redundancy functional v0.1](docs/notes/temporal-redundancy-functional-v0.1.md) — a computed Riedel-style redundancy functional for Claim II; makes *multipartite ≠ redundant* numerical and grounds the resolution/classification-anchor split.
 - [Roadmap](docs/roadmap.md) · [Project logbook](docs/logbook.md) · [Literature-review plan](docs/literature-review-plan.md) · [Literature corpus index](docs/literature/index.md)
 - [Repository README](README.md) · [Full source on GitHub](https://github.com/uwarring82/temporal-micro-consensus)
 

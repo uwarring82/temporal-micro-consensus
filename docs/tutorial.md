@@ -4,8 +4,8 @@
 
 | Field | Value |
 | --- | --- |
-| Version | v0.1 |
-| Date | 2026-05-26 |
+| Version | v0.2 |
+| Date | 2026-05-27 |
 | Licence | CC BY-SA 4.0 |
 | Scope | Conceptual tutorial — no prior knowledge of the Harbour architecture assumed |
 
@@ -91,7 +91,7 @@ A classical proper-time variable τ_cl emerges only when three conditions are jo
 
 *Critical caveat — the transplant gap:* these three criteria were proven for **configurational** records (position, pointer states). The Coastline **transplants** them to **temporal** records by structural analogy. At present, **no worked exemplar** of redundant temporal records exists in the literature. This is the framework's **principal open problem**, registered explicitly as Anti-Claim #6 and in the Deferred Items.
 
-*Critical distinction — multipartite ≠ redundant:* "many carriers" is not enough. Entanglement-enhanced metrology (GHZ, W, NOON states) uses many carriers that are deliberately **anti-redundant** — tracing out one carrier destroys the joint signal. Multipartiteness is necessary but not sufficient for redundancy. This distinction, added in Coastline v0.3, guards against mis-citing clock-network papers as demonstrations of consensus.
+*Critical distinction — multipartite ≠ redundant:* "many carriers" is not enough. Entanglement-enhanced metrology (GHZ, W, NOON states) uses many carriers that are deliberately **anti-redundant** — tracing out one carrier destroys the joint signal. Multipartiteness is necessary but not sufficient for redundancy. This distinction, added in Coastline v0.3, guards against mis-citing clock-network papers as demonstrations of consensus. A methodological note now makes the distinction **numerical** — redundancy `R_δ ≈ 7.1` for independent carriers versus `1` for a GHZ-type record (see §10).
 
 ### Claim III — Failure mode
 
@@ -249,9 +249,9 @@ Other deferred items:
 - A **CCUF bridge** between microscopic consensus (L₀) and architectural clock agreement (L₁).
 - **Quantitative thresholds** for Claim II (mutual-information requirements, Fisher profiles, redundancy bounds).
 - **Strong-field / non-perturbative extension** (beyond the post-Newtonian regime).
-- **Methodological notes:** a temporal-redundancy toy functional (Riedel-style); a platform-general nuisance-discrimination kit.
+- **Methodological notes:** a temporal-redundancy toy functional (Riedel-style) — ✅ **drafted at v0.1** (see below); a platform-general nuisance-discrimination kit (still open).
 
-The next research step (per roadmap, on hold) is the **temporal-redundancy toy functional**: borrow from Functional Information in Quantum Darwinism to compute a redundancy measure for a few-ion clock with motional squeezing. This would concretise both the Coastline's Claim II and the Ledger's discriminant conditions.
+The first of those methodological notes is now drafted — the **temporal-redundancy functional** ([`docs/notes/temporal-redundancy-functional-v0.1.md`](notes/temporal-redundancy-functional-v0.1.md)). Borrowing the Riedel–Zurek redundancy measure from quantum Darwinism, it re-bases the partial-information plot on a *temporal* pointer and computes the redundancy `R_δ` of a few-carrier clock. **The headline:** for `N = 64` carriers reading the same elapsed-time bin, an **independent (redundant)** record has `R_{0.10} ≈ 7.1` (a small fragment already fixes the time), while a **GHZ / squeezing-enhanced (anti-redundant)** record has `R_δ = 1` (every proper fragment carries zero) — *multipartite ≠ redundant* made numerical. The note also gives a principled basis for the resolution-anchor vs classification-anchor split (bounded mutual information plateaus; extensive Fisher information does not) and maps onto the Sorci case (CL-2026-006). It is explicitly a **toy**: it operationalises and computes the concept but does *not* close the principal open problem above — that awaits a non-toy, continuous-`τ`, many-carrier model (the natural candidate: a master-equation `R_δ` for `N` independently dephasing ions).
 
 ---
 
@@ -260,7 +260,7 @@ The next research step (per roadmap, on hold) is the **temporal-redundancy toy f
 | Distinction | Why it matters |
 | --- | --- |
 | **Bipartite vs. multipartite** | Page–Wootters is bipartite (clock vs. rest); consensus-emergence requires many carriers. |
-| **Multipartite vs. redundant** | Many carriers can be entangled (anti-redundant) or independent (redundant). Only the latter satisfies Claim II.1. |
+| **Multipartite vs. redundant** | Many carriers can be entangled (anti-redundant) or independent (redundant). Only the latter satisfies Claim II.1. *Now computed:* `R_{0.10} ≈ 7.1` (redundant) vs `1` (anti-redundant) — see the [temporal-redundancy functional note](notes/temporal-redundancy-functional-v0.1.md). |
 | **Configurational vs. temporal** | Quantum Darwinism proves redundancy for position/pointer records. The temporal transplant is unproven. |
 | **Sensitivity vs. discriminability** | A signal can be measurable without being isolable from nuisance channels. The Ledger's UNDERDETERMINED verdicts all rest on this gap. |
 | **Resolution anchor vs. classification anchor** | Fisher information bounds what must be resolved; cross-probe mismatch or mutual information carries the structural content. Conflating them is a failure mode. |
@@ -273,6 +273,7 @@ The next research step (per roadmap, on hold) is the **temporal-redundancy toy f
 | Version | Date | Notes |
 | --- | --- | --- |
 | v0.1 | 2026-05-26 | Initial tutorial. Covers Harbour architecture, five Claims, Ledger system, literature-review methodology, synthesis headline, regime of validity, reading order, open problems, and key distinctions. Anchored to Coastline v0.4, Ledger entries 006 v0.3 / 007 v0.3 / 008 v0.2, Sail v0.4, synthesis v0.1. |
+| v0.2 | 2026-05-27 | Wove in the temporal-redundancy functional finding (new methodological note, `docs/notes/`): §10 updated (the toy functional is now drafted, with the `R_{0.10} ≈ 7.1` vs `1` headline and the residual non-toy open problem); §4 *multipartite ≠ redundant* caveat and §11 key-distinctions row now cross-reference the computed result. No change to the five-Claim exposition. |
 
 ---
 
