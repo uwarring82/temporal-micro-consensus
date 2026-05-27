@@ -19,7 +19,7 @@ This repository holds three related artefact families:
 2. **Ledger** (`ledger/`) — classification entries in the Breakwater Claim Analysis Ledger (schema v1.0-rc). Each entry classifies an external scientific claim against a named Harbour framework under a declared evaluating measure, with explicit discriminant conditions for upgrade or downgrade. Entries: CL-2026-006 (Sorci et al., PRL 136, 163602, 2026), CL-2026-007 (Smith & Ahmadi, Nat. Commun. 11, 5360, 2020), and CL-2026-008 (distributed entanglement-enhanced clock networks — Covey et al. 2025 + Fromonteil et al. 2025), classified under the Coastline.
 3. **Sails** (`sails/`) — commentaries and essays that translate framework-relative work into prose for broader readership. The current Sail (v0.4) is a commentary on Sorci et al., anchored to Coastline v0.4, with its Ledger anchor kept at CL-2026-006 v0.2 (a mixed anchor noted in the Sail).
 
-A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, literature-review plan) and the [`tutorial`](docs/tutorial.md) — a guided on-ramp for first-time visitors. Authored **methodological notes** (instruments for the framework — e.g. the temporal-redundancy functional) live in [`docs/notes/`](docs/notes/).
+A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, literature-review plan) and the [`tutorial`](docs/tutorial.md) — a guided on-ramp for first-time visitors. Authored **methodological notes** (instruments for the framework — e.g. the temporal-redundancy functional) live in [`docs/notes/`](docs/notes/). Forward-looking **work plans** for prospective workstreams (e.g. the numerical toolkit at `numerics/`) live in [`workplans/`](workplans/).
 
 ## Repository structure
 
@@ -51,7 +51,7 @@ temporal-micro-consensus/
 │   ├── sorci-commentary-v0.2.md
 │   ├── sorci-commentary-v0.3.md
 │   └── sorci-commentary-v0.4.md     (current)
-└── docs/
+├── docs/
     ├── tutorial.md                   (guided on-ramp for first-time visitors)
     ├── roadmap.md
     ├── logbook.md                    (project logbook — provenance / FAIR)
@@ -66,6 +66,8 @@ temporal-micro-consensus/
         ├── synthesis-v0.1.md         (Phase-3 synthesis)
         ├── notes/                    (per-paper findings — public)
         └── sources/                  (original PDFs — local-only, git-ignored)
+└── workplans/
+    └── toolkit-work-plan-v0.1.md     (numerical toolkit work plan — current)
 ```
 
 ## Version conventions
@@ -109,7 +111,7 @@ This repository uses a three-part split licence following the T(h)reehouse conve
 - **CC BY-SA 4.0** — Coastline framework notes and Breakwater Ledger entries (`coastlines/`, `ledger/`). These are the framework infrastructure; they are shareable and adaptable under attribution and share-alike. See `LICENSE-CC-BY-SA-4.0`.
 - **CC BY-NC-SA 4.0** — Sails and other authored prose (`sails/`). These are commentaries and essays where authorial voice is load-bearing; they are shareable for non-commercial use under attribution and share-alike. See `LICENSE-CC-BY-NC-SA-4.0`.
 
-When in doubt about which licence applies to a particular file, the document type indicated by its directory placement governs. The `docs/` directory contains documentation and planning artefacts (`tutorial.md`, `roadmap.md`, `logbook.md`, `literature-review-plan.md`) under the same **CC BY-SA 4.0** licence as Coastlines and Ledgers; authored methodological notes or prose essays in `docs/` would fall under **CC BY-NC-SA 4.0** if authorial voice is load-bearing. A future consolidation into a single CC BY-SA 4.0 licence may be considered if multi-licence compilation downstream becomes the dominant use case; this question is registered in the roadmap.
+When in doubt about which licence applies to a particular file, the document type indicated by its directory placement governs. The `docs/` directory contains documentation and planning artefacts (`tutorial.md`, `roadmap.md`, `logbook.md`, `literature-review-plan.md`) under the same **CC BY-SA 4.0** licence as Coastlines and Ledgers, as does the `workplans/` directory (planning artefacts); authored methodological notes or prose essays in `docs/` would fall under **CC BY-NC-SA 4.0** if authorial voice is load-bearing. A future consolidation into a single CC BY-SA 4.0 licence may be considered if multi-licence compilation downstream becomes the dominant use case; this question is registered in the roadmap.
 
 ## Relationship to other Harbour artefacts
 
