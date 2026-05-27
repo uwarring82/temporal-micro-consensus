@@ -18,7 +18,7 @@ This repository holds three related artefact families:
 2. **Ledger** (`ledger/`) — classification entries in the Breakwater Claim Analysis Ledger (schema v1.0-rc). Each entry classifies an external scientific claim against a named Harbour framework under a declared evaluating measure, with explicit discriminant conditions for upgrade or downgrade. Entries: CL-2026-006 (Sorci et al., PRL 136, 163602, 2026), CL-2026-007 (Smith & Ahmadi, Nat. Commun. 11, 5360, 2020), and CL-2026-008 (distributed entanglement-enhanced clock networks — Covey et al. 2025 + Fromonteil et al. 2025), classified under the Coastline.
 3. **Sails** (`sails/`) — commentaries and essays that translate framework-relative work into prose for broader readership. The current Sail (v0.4) is a commentary on Sorci et al., anchored to Coastline v0.4, with its Ledger anchor kept at CL-2026-006 v0.2 (a mixed anchor noted in the Sail).
 
-A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, literature-review plan) and the [`tutorial`](docs/tutorial.md) — a guided on-ramp for first-time visitors.
+A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, literature-review plan) and the [`tutorial`](docs/tutorial.md) — a guided on-ramp for first-time visitors. Authored **methodological notes** (instruments for the framework — e.g. the temporal-redundancy functional) live in [`docs/notes/`](docs/notes/).
 
 ## Repository structure
 
@@ -54,6 +54,8 @@ temporal-micro-consensus/
     ├── roadmap.md
     ├── logbook.md                    (project logbook — provenance / FAIR)
     ├── literature-review-plan.md
+    ├── notes/                        (methodological notes — instruments for the framework)
+    │   └── temporal-redundancy-functional-v0.1.md
     └── literature/                   (literature review)
         ├── README.md
         ├── references.bib            (verified bibliography)

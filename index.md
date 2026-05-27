@@ -25,6 +25,7 @@ All three Ledger entries are anchored to Coastline v0.4 and sit at the same plac
 ## Supporting material
 
 - [Literature synthesis — v0.1](docs/literature/synthesis-v0.1.md) — the cross-cutting review of the 29-paper corpus (claim-by-claim, measure-by-measure, gaps, lineage audit).
+- [Methodological note — Temporal-redundancy functional v0.1](docs/notes/temporal-redundancy-functional-v0.1.md) — a computed Riedel-style redundancy functional for Claim II; makes *multipartite ≠ redundant* numerical and grounds the resolution/classification-anchor split.
 - [Roadmap](docs/roadmap.md) · [Project logbook](docs/logbook.md) · [Literature-review plan](docs/literature-review-plan.md) · [Literature corpus index](docs/literature/index.md)
 - [Repository README](README.md) · [Full source on GitHub](https://github.com/uwarring82/temporal-micro-consensus)
 
