@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
+     font-family="Helvetica, Arial, sans-serif" font-size="16">
+  <title>Many carriers, one effective proper time</title>
+  <desc>Schematic (type a) for the first Harbour View, executive overview. N microscopic carriers F_1, F_2, F_3, ..., F_{N-1}, F_N each couple to a single shared effective proper-time variable tau. The Page-Wootters bipartite-correlation channel is shown as the N=2 slice — carrier F_1 and its arrow to tau are highlighted. Source-file-pinned vector graphic; no operating-point claim; no parameter values.</desc>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/>
+    </marker>
+    <marker id="arrow-pw" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f6feb"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="19" font-weight="bold">
+    Many carriers, one effective proper time
+  </text>
+
+  <g stroke="#222" stroke-width="1.5" fill="#f8f8f8">
+    <circle cx="100" cy="125" r="30"/>
+    <circle cx="240" cy="125" r="30"/>
+    <circle cx="380" cy="125" r="30"/>
+    <circle cx="620" cy="125" r="30"/>
+    <circle cx="760" cy="125" r="30"/>
+  </g>
+  <circle cx="100" cy="125" r="30" stroke="#1f6feb" stroke-width="3.5" fill="none"/>
+
+  <g font-size="16" text-anchor="middle">
+    <text x="100" y="131" fill="#1f6feb" font-weight="bold">
+      F<tspan baseline-shift="sub" font-size="11">1</tspan>
+    </text>
+    <text x="240" y="131">
+      F<tspan baseline-shift="sub" font-size="11">2</tspan>
+    </text>
+    <text x="380" y="131">
+      F<tspan baseline-shift="sub" font-size="11">3</tspan>
+    </text>
+    <text x="500" y="133" font-size="24">···</text>
+    <text x="620" y="131">
+      F<tspan baseline-shift="sub" font-size="11">N&#8722;1</tspan>
+    </text>
+    <text x="760" y="131">
+      F<tspan baseline-shift="sub" font-size="11">N</tspan>
+    </text>
+  </g>
+
+  <ellipse cx="430" cy="340" rx="72" ry="46"
+           stroke="#222" stroke-width="2" fill="#fef3c7"/>
+  <text x="430" y="352" text-anchor="middle"
+        font-size="34" font-style="italic" font-weight="bold">&#964;</text>
+  <text x="430" y="408" text-anchor="middle" font-size="13" fill="#444">
+    shared effective proper time
+  </text>
+
+  <line x1="120" y1="148" x2="378" y2="305" stroke="#1f6feb" stroke-width="3.5"
+        marker-end="url(#arrow-pw)"/>
+  <line x1="250" y1="152" x2="402" y2="300" stroke="#444" stroke-width="1.5"
+        marker-end="url(#arrow-gray)"/>
+  <line x1="382" y1="155" x2="423" y2="295" stroke="#444" stroke-width="1.5"
+        marker-end="url(#arrow-gray)"/>
+  <line x1="610" y1="152" x2="458" y2="300" stroke="#444" stroke-width="1.5"
+        marker-end="url(#arrow-gray)"/>
+  <line x1="740" y1="148" x2="482" y2="305" stroke="#444" stroke-width="1.5"
+        marker-end="url(#arrow-gray)"/>
+
+  <text x="100" y="180" text-anchor="middle" font-size="13" fill="#1f6feb">
+    Page&#8211;Wootters
+  </text>
+  <text x="100" y="196" text-anchor="middle" font-size="13" fill="#1f6feb">
+    slice (N = 2)
+  </text>
+
+  <text x="400" y="463" text-anchor="middle" font-size="12" fill="#666" font-style="italic">
+    Structural schematic &#8212; no operating points, no parameter values.
+  </text>
+</svg>
