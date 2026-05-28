@@ -1,6 +1,11 @@
 # Open Call for Pilot-Reader Feedback — Harbour View v0.1 (§1 + §2 draft)
 
+> **CALL CLOSED 2026-05-28** *(archived for transparency).* The open call ran on 2026-05-28; the responses received did not yield a confirmed-human foundations-metrology physicist outside the Freiburg–NIST orbit, and direct invitation was also attempted without yield. The substantive feedback received has been folded into the current draft. The route to satisfying the artefact-category specification's first-instance pilot-reader requirement is now under separate stewardship consideration. This document is retained as the audit record of the call as posted; **no further feedback is being solicited via this channel**. The draft itself remains accessible at [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md).
+
+---
+
 **Posted:** 2026-05-28
+**Closed:** 2026-05-28 *(same day; no qualifying yield)*
 **Posted by:** U. Warring (steward), Physikalisches Institut, Albert-Ludwigs-Universität Freiburg.
 **Contact:** [u.j.warring@gmail.com](mailto:u.j.warring@gmail.com).
 **Document under review:** [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) — §1 *Executive overview* + §2 *Framework* only. §§3–5 and the reference apparatus are held until feedback is folded.

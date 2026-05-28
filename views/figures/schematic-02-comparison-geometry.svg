@@ -47,12 +47,19 @@
   <text x="225" y="402" text-anchor="middle" font-size="18" font-style="italic" fill="#a52a2a">
     &#936;<tspan baseline-shift="sub" font-size="12">total</tspan>
   </text>
-  <g stroke="#a52a2a" stroke-width="1" fill="#fff">
-    <circle cx="125" cy="438" r="14"/>
-    <circle cx="170" cy="450" r="14"/>
-    <circle cx="225" cy="456" r="14"/>
-    <circle cx="280" cy="450" r="14"/>
-    <circle cx="325" cy="438" r="14"/>
+  <g stroke="#a52a2a" stroke-width="1.6" stroke-dasharray="4,3" fill="#fff">
+    <circle cx="125" cy="438" r="17"/>
+    <circle cx="170" cy="450" r="17"/>
+    <circle cx="225" cy="456" r="17"/>
+    <circle cx="280" cy="450" r="17"/>
+    <circle cx="325" cy="438" r="17"/>
+  </g>
+  <g font-size="13" text-anchor="middle" fill="#a52a2a" font-weight="bold">
+    <text x="125" y="443">&#10007; R</text>
+    <text x="170" y="455">&#10007; R</text>
+    <text x="225" y="461">&#10007; R</text>
+    <text x="280" y="455">&#10007; R</text>
+    <text x="325" y="443">&#10007; R</text>
   </g>
   <text x="225" y="510" text-anchor="middle" font-size="13" fill="#444">
     no proper fragment carries R
