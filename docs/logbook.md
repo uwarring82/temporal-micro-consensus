@@ -829,3 +829,16 @@ The Block 4 Figure 1 entry previously cited `2503c07` (the pre-Guardian-figure-c
 - Logbook preserves the full audit trail: `a6518a7` → `938b0a6` → `15f444f` recorded across the chain of integrity-condition-verified figure-citing commits.
 - **Tag remains held.** The steward's figure refinements were directed as pre-release polish; no sign-off has been issued on the post-refinement state. The figures' visual layout has changed (Figure 3 legend removed; Figure 4 anti-sweet label repositioned; Figure 4 colorbar gains explicit ticks); a quick visual check or sign-off is appropriate before tagging.
 - **Lock-Key held throughout.** Coastline / Ledger / MN / Sail / results-JSON / committed-JSON files all untouched in this refinement pass.
+
+## 2026-05-28 — Figure 4 anti-sweet annotation removed (steward direction: "now in the top left corner. Just remove it"); figure-citing commit `15f444f` → `7d1f774`
+
+The previous-pass repositioning of Figure 4's "anti-sweet region" text annotation to `(0.55, 60.0)` rendered to a top-left location rather than the intended pink-region interior — likely a matplotlib coordinate-system artefact under the log_2 N-axis (the data-coordinate `(0.55, 60)` falls into a visually upper-left position on the log_2 plot). Steward direction: remove the annotation entirely. The anti-sweet region remains visually encoded by the **light-pink `cmap.set_bad` fill** + the **labelled undefined-boundary curve**; no free-floating text annotation is needed for the reader to locate it. Boundary-curve legend label enhanced from *"undefined boundary `γ_φ t_crit(N)`"* to *"undefined boundary `γ_φ t_crit(N)` — anti-sweet region above"* so the anti-sweet region is still named in the figure, just via the legend rather than free-floating text.
+
+**Three Guardian integrity conditions verified at commit `7d1f774`:**
+- **(i) Results JSONs byte-identical.** `git diff --stat numerics/results/` empty after notebook execution.
+- **(ii) Pin propagation.** `15f444f` → `7d1f774` updated across all references in the View + outline in a single pass (the global-replace pattern from prior turns).
+- **(iii) 85-test re-run.** 85/85 pass in 17.53 s at `7d1f774`.
+
+The commit was amended once to include figure-03's metadata-only churn (matplotlib regenerates `<dc:date>` timestamps and `clip-path` IDs on every render; the *content* of Figure 3 is unchanged from `15f444f`). Both data figures now share the same figure-citing commit `7d1f774`, simplifying Block 4 bookkeeping.
+
+**Audit chain to date:** `a6518a7` → `938b0a6` → `15f444f` → `7d1f774` for the data figures; `d9aae87` for the schematics. **Tag still held** pending steward visual sign-off on the post-removal Figure 4 layout. Lock-Key held: Coastline / Ledger / MN / Sail / committed JSONs / results-JSON files all untouched.
