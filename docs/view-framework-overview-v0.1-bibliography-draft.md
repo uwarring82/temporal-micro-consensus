@@ -6,7 +6,7 @@
 
 **Status:** Draft worksheet. Folded into the View's reference apparatus at prose stage (spec §12 next-move 7 → 8). Acknowledgements & COI (Q11c) remain in a **separate** block (Block 5 of the apparatus), never conflated with citations here.
 
-**Source corpus:** [`docs/literature/references.bib`](literature/references.bib) (Phase-1-verified Tier-1/Tier-2 entries) + the Coastline v0.4 External Constraints section + steward-confirmed canonical-text anchors for the external-endorsed coastlines (A1–A5 below; these textbook anchors are **not** currently in `references.bib` — they are introduced at the View bibliography per Q11a discipline. Folding into `references.bib` at View-issue time is a registered drafter task — BibTeX entries added for any external-constraint anchor that survives the §2/§3 prose stage).
+**Source corpus:** [`docs/literature/references.bib`](literature/references.bib) (Phase-1-verified Tier-1/Tier-2 entries) + the Coastline v0.4 *External Constraints* section + steward-confirmed canonical-text anchors for the externally-validated physical frameworks (A1–A3 below) + the QIT method-source anchor (A4). These textbook anchors are **not** currently in `references.bib`; they are introduced at the View bibliography per Q11a discipline. Folding into `references.bib` at View-issue time is a registered drafter task — `@book` BibTeX entries added for any anchor that survives the §2/§3 prose stage.
 
 **Conventions:**
 - Role annotation from the controlled vocabulary: *external-constraint* / *prior-art* / *method-source* / *contrast-contested*.
@@ -28,7 +28,7 @@ The Coastline does not pin a specific canonical text for QM, SR, or weak-field G
 - **Role:** *external-constraint*.
 - **Endorsement-scope marker:** constraint-only; no parity claimed. The View operates within unitary quantum mechanics as established; it does not derive, extend, or revise it.
 - **Surfaced where:** §1 (Endorsement-Marker sentence), §2 (Coastline anchoring), §3 (master-equation framework).
-- **Steward note:** Nielsen & Chuang is the canonical QIT-canon choice and double-counts for QIT (A4 below) — the Coastline names QM and QIT as separate constraints but they share a canonical reference; this consolidation is honest.
+- **Steward note:** Nielsen & Chuang is the canonical QIT-canon choice and double-counts for A4's QIT method-source role below — the Coastline names QM in *External Constraints* item 1 and separately names QIT as constraint-only background in its Endorsement-Marker paragraph, but the same canonical reference serves both; this consolidation is honest.
 
 ### A2 — Special relativity  **LOCKED 2026-05-28**
 
@@ -222,15 +222,15 @@ For every sentence in the View body of the form "consistent with X," "compatible
 
 - [x] **Steward confirmation on A1–A4 canonical-text anchors — LOCKED 2026-05-28** (A5 thermodynamics removed; see Block A intro). Nielsen & Chuang 2010 (A1 QM, A4 QIT-as-method-source); MTW 1973 (A2 SR, A3 weak-field GR, with Carroll 2004 as pilot-reader-conditional accessibility alternative for A3). A4 reclassified from *external-constraint* to *method-source* (Coastline v0.4 places QIT in the Endorsement Marker paragraph, not in *External Constraints*).
 - [ ] **Drafter resolves item-7 (cross-View pointers):** include F1 + F2 + B3, or omit all three.
-- [ ] **Drafter resolves A5 (thermodynamics) surfacing at §2:** keep only if a body sentence references it; otherwise remove.
+- [x] **A5 (thermodynamics) resolved 2026-05-28:** entry removed; thermodynamics is not surfaced by Coastline v0.4.
 - [ ] **Drafter resolves A4 (Hayashi 2017) secondary anchor at §3:** fold in only if §3 leans on rigorous Helstrom/Holevo machinery beyond Nielsen & Chuang.
 - [ ] **Drafter resolves C5, C6, B4 surfacing at prose stage:** keep only if a body sentence references them; otherwise remove.
 - [ ] **Q11b audit pass** on every "consistent with" / "compatible with" / "respects" sentence in §§2–4 — at least the §2 GR-regime sentence and the §4 Sorci-visibility claim must be explicit ledger-or-Coastline-anchored.
 - [ ] **Audit acknowledgements & COI (Block 5) is separate** — no entry in this bibliography mentions Leibfried or Sanner as acknowledgements.
 - [ ] **Final ordering:** A (external constraints) → B (PW lineage) → C (QD lineage) → D (worked exemplar) → E (structural-match anchor) → F (cross-View pointers, optional). Each entry retains its three Q11a fields in the rendered View.
 - [ ] **Pilot-reader audit point (for schematic figures, not the bibliography itself):** colourblind accessibility and greyscale-print viability of the §1 and §2 SVG schematics. Standard figure-honesty check at the pilot-reader stage.
-- [ ] **BibTeX fold-back to `references.bib`:** for any external-constraint anchor that survives the §2/§3 prose stage (default: A1/A4 Nielsen & Chuang; A2/A3 MTW; conditional A3 Carroll; conditional A4 Hayashi; conditional A5 Callen), add a `@book` BibTeX entry to `docs/literature/references.bib` so the corpus reflects the final commitment.
+- [ ] **BibTeX fold-back to `references.bib`:** for any external-constraint or method-source anchor that survives the §2/§3 prose stage (default: A1 + A4 Nielsen & Chuang as a single shared `@book` entry; A2/A3 MTW; conditional A3 Carroll; conditional A4 Hayashi), add a `@book` BibTeX entry to `docs/literature/references.bib` so the corpus reflects the final commitment. (A5 Callen no longer in the set — entry removed 2026-05-28.)
 
 ---
 
-*End of bibliography draft. Awaiting steward confirmation on A1–A5 canonical anchors; remainder is body-surfaced and ready to fold into the View's reference apparatus at prose stage.*
+*End of bibliography draft. A1–A4 canonical anchors LOCKED 2026-05-28 (A5 thermodynamics entry removed; not surfaced by Coastline v0.4); remainder is body-surfaced and ready to fold into the View's reference apparatus at next-move 10.*
