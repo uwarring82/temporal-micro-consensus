@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
      font-family="Helvetica, Arial, sans-serif" font-size="16">
   <title>Many carriers, one effective proper time</title>
-  <desc>Schematic (type a) for the first Harbour View, executive overview. N microscopic carriers F_1, F_2, F_3, ..., F_{N-1}, F_N each couple to a single shared effective proper-time variable tau. The Page-Wootters bipartite-correlation channel is shown as the N=2 slice — carrier F_1 and its arrow to tau are highlighted. Source-file-pinned vector graphic; no operating-point claim; no parameter values.</desc>
+  <desc>Schematic (type a) for the first Harbour View, executive overview. N microscopic carriers F_1, F_2, F_3, ..., F_{N-1}, F_N each couple to a single shared effective proper-time variable tau. The Page-Wootters bipartite-correlation channel is shown as the highlighted slice — carrier F_1 and its arrow to tau are emphasised with a thicker stroke, a dashed enclosure around F_1, and an explicit "Page-Wootters slice (bipartite)" label. (The label avoids the numeral N to prevent a symbol collision with the carrier-count N used elsewhere in the figure; bipartite means the two-party configuration carrier+tau, which is one carrier here.) Source-file-pinned vector graphic; no operating-point claim; no parameter values.</desc>
 
   <defs>
     <marker id="arrow-gray" viewBox="0 0 10 10" refX="10" refY="5"
@@ -72,7 +72,7 @@
     Page&#8211;Wootters
   </text>
   <text x="100" y="216" text-anchor="middle" font-size="13" fill="#1f6feb">
-    slice (N = 2)
+    slice (bipartite)
   </text>
 
   <text x="400" y="463" text-anchor="middle" font-size="12" fill="#666" font-style="italic">

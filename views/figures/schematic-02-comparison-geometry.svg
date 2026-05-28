@@ -1,103 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290"
      font-family="Helvetica, Arial, sans-serif" font-size="15">
-  <title>Comparison geometry; multipartite is not redundancy</title>
-  <desc>Schematic (type a) for the first Harbour View, framework section. Top panel: nested spatial hierarchy of the consensus reading (L_source inside L_apparatus inside L_comparison). Bottom panels: side-by-side contrast of an anti-redundant entanglement-enhanced state, in which no proper fragment carries the record R, against a redundant consensus state in which many fragments each carry R. Source-file-pinned vector graphic; no operating-point claim; no parameter values.</desc>
+  <title>Multipartite is not redundancy</title>
+  <desc>Schematic (type a) for the first Harbour View, framework section. Side-by-side contrast of an anti-redundant entanglement-enhanced state, in which no proper fragment carries the record R (fragments drawn with dashed borders and an explicit "no R" marker), against a redundant consensus state in which many fragments each carry R (fragments drawn with solid borders and an explicit "carries R" marker). The contrast is encoded by colour, shape/line-style, and explicit marker so the figure remains legible under colourblindness and in greyscale. Source-file-pinned vector graphic; no operating-point claim; no parameter values.</desc>
 
-  <text x="450" y="32" text-anchor="middle" font-size="19" font-weight="bold">
-    Comparison geometry; multipartite &#8800; redundant
+  <text x="450" y="30" text-anchor="middle" font-size="19" font-weight="bold">
+    Multipartite &#8800; redundant
   </text>
 
-  <text x="42" y="68" font-size="13" fill="#444" font-style="italic">
-    Spatial hierarchy of the consensus reading
+  <text x="450" y="58" text-anchor="middle" font-size="14" fill="#444" font-style="italic">
+    Which fragments carry the record R?
   </text>
 
-  <rect x="40" y="82" width="820" height="150" fill="#eef5ff" stroke="#1f6feb"
-        stroke-width="1.5" rx="6"/>
-  <text x="56" y="105" font-size="14" fill="#1f6feb" font-weight="bold">
-    L<tspan baseline-shift="sub" font-size="11">comparison</tspan>
-  </text>
-
-  <rect x="160" y="118" width="580" height="98" fill="#fff" stroke="#0a7f3f"
-        stroke-width="1.5" rx="6"/>
-  <text x="176" y="138" font-size="14" fill="#0a7f3f" font-weight="bold">
-    L<tspan baseline-shift="sub" font-size="11">apparatus</tspan>
-  </text>
-
-  <rect x="370" y="148" width="200" height="58" fill="#fef3c7" stroke="#b45309"
-        stroke-width="1.5" rx="4"/>
-  <text x="470" y="184" text-anchor="middle" font-size="14" fill="#b45309" font-weight="bold">
-    L<tspan baseline-shift="sub" font-size="11">source</tspan>
-  </text>
-
-  <line x1="40" y1="262" x2="860" y2="262" stroke="#ccc" stroke-width="1"/>
-
-  <text x="450" y="295" text-anchor="middle" font-size="14" fill="#444" font-style="italic">
-    Multipartite &#8800; redundant: which fragments carry the record R?
-  </text>
-
-  <text x="225" y="330" text-anchor="middle" font-size="15" font-weight="bold">
+  <text x="225" y="90" text-anchor="middle" font-size="15" font-weight="bold">
     Anti-redundant
   </text>
-  <text x="225" y="350" text-anchor="middle" font-size="13" fill="#444">
+  <text x="225" y="110" text-anchor="middle" font-size="13" fill="#444">
     (e.g., entanglement-enhanced)
   </text>
-  <ellipse cx="225" cy="430" rx="170" ry="62" stroke="#a52a2a" stroke-width="2"
+  <ellipse cx="225" cy="180" rx="170" ry="62" stroke="#a52a2a" stroke-width="2"
            fill="#fce4e4"/>
-  <text x="225" y="402" text-anchor="middle" font-size="18" font-style="italic" fill="#a52a2a">
+  <text x="225" y="152" text-anchor="middle" font-size="18" font-style="italic" fill="#a52a2a">
     &#936;<tspan baseline-shift="sub" font-size="12">total</tspan>
   </text>
   <g stroke="#a52a2a" stroke-width="1.6" stroke-dasharray="4,3" fill="#fff">
-    <circle cx="125" cy="438" r="17"/>
-    <circle cx="170" cy="450" r="17"/>
-    <circle cx="225" cy="456" r="17"/>
-    <circle cx="280" cy="450" r="17"/>
-    <circle cx="325" cy="438" r="17"/>
+    <circle cx="125" cy="188" r="17"/>
+    <circle cx="170" cy="200" r="17"/>
+    <circle cx="225" cy="206" r="17"/>
+    <circle cx="280" cy="200" r="17"/>
+    <circle cx="325" cy="188" r="17"/>
   </g>
   <g font-size="13" text-anchor="middle" fill="#a52a2a" font-weight="bold">
-    <text x="125" y="443">&#10007; R</text>
-    <text x="170" y="455">&#10007; R</text>
-    <text x="225" y="461">&#10007; R</text>
-    <text x="280" y="455">&#10007; R</text>
-    <text x="325" y="443">&#10007; R</text>
+    <text x="125" y="193">&#10007; R</text>
+    <text x="170" y="205">&#10007; R</text>
+    <text x="225" y="211">&#10007; R</text>
+    <text x="280" y="205">&#10007; R</text>
+    <text x="325" y="193">&#10007; R</text>
   </g>
-  <text x="225" y="510" text-anchor="middle" font-size="13" fill="#444">
+  <text x="225" y="260" text-anchor="middle" font-size="13" fill="#444">
     no proper fragment carries R
   </text>
 
-  <line x1="450" y1="312" x2="450" y2="520" stroke="#ccc" stroke-width="1"/>
+  <line x1="450" y1="80" x2="450" y2="270" stroke="#ccc" stroke-width="1"/>
 
-  <text x="675" y="330" text-anchor="middle" font-size="15" font-weight="bold">
+  <text x="675" y="90" text-anchor="middle" font-size="15" font-weight="bold">
     Redundant
   </text>
-  <text x="675" y="350" text-anchor="middle" font-size="13" fill="#444">
+  <text x="675" y="110" text-anchor="middle" font-size="13" fill="#444">
     (consensus state)
   </text>
 
   <g font-size="11" text-anchor="middle">
-    <circle cx="540" cy="430" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
-    <text x="540" y="427" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
-    <text x="540" y="465">F<tspan baseline-shift="sub" font-size="9">1</tspan></text>
+    <circle cx="540" cy="180" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
+    <text x="540" y="177" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
+    <text x="540" y="215">F<tspan baseline-shift="sub" font-size="9">1</tspan></text>
 
-    <circle cx="603" cy="430" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
-    <text x="603" y="427" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
-    <text x="603" y="465">F<tspan baseline-shift="sub" font-size="9">2</tspan></text>
+    <circle cx="603" cy="180" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
+    <text x="603" y="177" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
+    <text x="603" y="215">F<tspan baseline-shift="sub" font-size="9">2</tspan></text>
 
-    <circle cx="666" cy="430" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
-    <text x="666" y="427" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
-    <text x="666" y="465">F<tspan baseline-shift="sub" font-size="9">3</tspan></text>
+    <circle cx="666" cy="180" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
+    <text x="666" y="177" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
+    <text x="666" y="215">F<tspan baseline-shift="sub" font-size="9">3</tspan></text>
 
-    <text x="720" y="434" font-size="20">···</text>
+    <text x="720" y="184" font-size="20">···</text>
 
-    <circle cx="775" cy="430" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
-    <text x="775" y="427" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
-    <text x="775" y="465">F<tspan baseline-shift="sub" font-size="9">N</tspan></text>
+    <circle cx="775" cy="180" r="24" fill="#dcfce7" stroke="#0a7f3f" stroke-width="1.5"/>
+    <text x="775" y="177" font-weight="bold" fill="#0a7f3f" font-size="12">&#10003; R</text>
+    <text x="775" y="215">F<tspan baseline-shift="sub" font-size="9">N</tspan></text>
   </g>
-  <text x="675" y="510" text-anchor="middle" font-size="13" fill="#444">
+  <text x="675" y="260" text-anchor="middle" font-size="13" fill="#444">
     many fragments each carry R
   </text>
 
-  <text x="450" y="532" text-anchor="middle" font-size="12" fill="#666" font-style="italic">
+  <text x="450" y="283" text-anchor="middle" font-size="12" fill="#666" font-style="italic">
     Structural schematic &#8212; no operating points, no parameter values.
   </text>
 </svg>

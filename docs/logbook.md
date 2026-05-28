@@ -744,3 +744,55 @@ The steward's second-pass message contained, in order: (i) the *"I would not tag
   - **(a) "Tag now":** the residuals were trivially-foldable precision items and the sign-off carries; this commit removes the only obstacles named in the residual findings, and the steward issues a one-word *"tag"* go-ahead. The tagged-release commit (Block 6 citation-metadata + Jekyll permalink + Colab verification) follows.
   - **(b) "One more pass":** the residual findings represent a substantive change in the draft and a fresh second-pass review on this commit is warranted before tagging. The agent runs a self-audit pass and surfaces any further precision items, or the steward runs the pass themselves.
 - The agent recommends **(a)** with the note that the residual fixes are uncontroversial; but the recommendation is held under the steward's call. **Lock-Key held throughout** the correction pass: Coastline / Ledger / MN / Sail / notebook / committed-JSON / results-JSON files all untouched.
+
+## 2026-05-28 — Guardian figure-check pass: Schematic 2 top panel imported CCUF structure (Anti-Claim #5 violation); top panel dropped; Schematic 1 N-symbol collision fixed; palette item deferred
+
+A focused Guardian pass on the SVG figures (read directly from the file source on GitHub raw, since the Pages render is outside the bash allowlist) yielded a blocking cross-artefact-anchoring finding plus two precision items.
+
+### Blocking finding — Schematic 2 top panel imports CCUF structure (Anti-Claim #5 violation + Q1 anchoring violation; resolved by dropping the top panel)
+
+The Schematic-2 top panel drew the three-length nesting `L_source ⊂ L_apparatus ⊂ L_comparison` (geometrically: source innermost, comparison outermost — correct as drawn) and labelled it "comparison geometry / spatial hierarchy of the consensus reading". The §2 figure caption + the SVG `<desc>` field both anchored that hierarchy to Coastline v0.4. **A direct grep of Coastline v0.4 returned zero occurrences of `L_source`, `L_apparatus`, or `L_comparison`.** The closest references in the Coastline are:
+
+- *Regime of Validity* (carried into §2 of the View): "a well-defined inter-worldline comparison protocol" — a general proviso, not a three-length nesting.
+- *Anti-Claims §7*: settings absent a "well-defined inter-worldline comparison protocol" are out of scope — same general proviso, not a three-length structure.
+- *Deferred Items* (CCUF-bridge bullet): names "L₀ consensus-emergence (microscopic temporal records)" and "L₁ architectural agreement (CCUF η-parameter, comparison-geometry boundary)" as a *two-layer* structural-analogy at distinct scales, and **explicitly defers the bridge** to a future coastline note pending independent maturation. Anti-Claim §5 reinforces: "A bridge to the Causal Clock Unification Framework (CCUF) or to any other Harbour framework. Such bridges may exist (see Deferred Items) but are not committed at v0.4."
+
+The three-length `L_source ⊂ L_apparatus ⊂ L_comparison` nesting is therefore **CCUF-architectural structure** that the Coastline names only in its Deferred-Items CCUF-bridge bullet (and as a two-layer L₀/L₁ analogy, not three lengths). Importing it into the View — and anchoring it to the Coastline — is **simultaneously** a Q1 violation (the View introduces structure not on record in the underlying notes) **and** an Anti-Claim #5 violation (the View imports CCUF-style structure when no CCUF bridge is committed at Coastline v0.4) **and** an internal inconsistency (the View's own §2 anti-claim list says no CCUF bridge, while Figure 2's top panel was drawing precisely a CCUF-style scale-layer hierarchy).
+
+**Resolution: top panel dropped.** Reanchoring is not available — the true source (CCUF) is explicitly deferred, so any reanchoring path violates Anti-Claim #5 in a different wording. The clean honest move is to remove the top panel and let Figure 2 carry only the *multipartite-vs-redundant* content, which IS directly anchored to Coastline v0.4 (Claim V + the v0.3+ *many vs redundant* terminology note). Spec §6's first-instance figure plan reads "*one schematic of the comparison geometry / framework structure*" (or, not and); the framework-structure reading is fully covered by the multipartite-vs-redundant panel.
+
+Concrete changes folded:
+
+- **`views/figures/schematic-02-comparison-geometry.svg`**: rewritten from `viewBox="0 0 900 540"` to `viewBox="0 0 900 290"`. Top-panel content removed (three nested rectangles, three `L_*` labels, the "Spatial hierarchy of the consensus reading" italic caption, the horizontal divider, and the top-panel title text). The remaining content — title *"Multipartite ≠ redundant"*, italic "Which fragments carry the record R?", left anti-redundant panel (Ψ_total ellipse + 5 dashed-bordered fragments with ✗ R markers), right redundant panel (4 solid-bordered fragments with ✓ R + ellipsis + F_N), vertical divider, two captions, and the footer — was repositioned vertically to fit the shorter viewBox. The SVG `<title>` and `<desc>` were rewritten to describe only the contrast content. Filename retained for repository stability; XML re-validated (46 elements).
+- **View §2 figure subsection.** Heading renamed from *"A vantage point on the geometry"* to *"A vantage point on multipartite ≠ redundant"*. Figure 2 alt-text + caption rewritten to describe only the multipartite-vs-redundant contrast; all `L_source`, `L_apparatus`, `L_comparison` mentions removed. The §2 *Regime of validity* paragraph is unchanged — its references to the Coastline's "inter-worldline comparison protocol" remain anchored to the actual Coastline content.
+- **Block 4 Figure 2 entry**: description updated to "*Type (a) schematic; multipartite-vs-redundant contrast*"; the filename-vs-content mismatch (the SVG is named `schematic-02-comparison-geometry.svg` but no longer contains comparison-geometry content) noted explicitly with the audit-trail explanation that the v0.1 of this View carries only the multipartite-vs-redundant contrast after a Guardian-cross-artefact-anchoring check. Filename retained for repository stability; renaming would propagate to git-blame and source-file pin records without epistemic gain.
+
+### Precision finding — Schematic 1 N-symbol collision (Q12; resolved by relabel)
+
+The Schematic-1 PW-slice label *"Page–Wootters slice (N = 2)"* used the symbol `N` to mean *two parties* (carrier + τ); the rest of the figure uses `N` to mean *carrier count* (F_1 … F_N). A foundations-metrology reader sees "N = 2 against the carrier labels" and reads "two carriers", then finds only one highlighted. Symbol `N` was doing two jobs.
+
+**Resolution:** label changed to *"Page–Wootters slice (bipartite)"* in the SVG, in the Figure 1 alt-text + caption, and in the Block 4 Figure 1 entry. *bipartite* refers unambiguously to the two-party configuration *carrier + τ* (the canonical Page–Wootters reading). The Figure 1 caption now also includes a parenthetical: *"(The label avoids the numeral `N = 2` because `N` is the carrier count throughout the figure; bipartite refers to the two-party configuration carrier + τ, not to two carriers.)"* The §4.1 reference *"at `N = 2`"* in the Module 3a context is **unchanged and correct** — in the Sorci two-carrier setup `N` IS the carrier count and `N = 2` literally means two carriers; that usage and the Page–Wootters bipartite slice are distinct, and the relabel sharpens the distinction. The SVG `<desc>` field was also updated to explain the relabel choice for archival audit.
+
+### Deferred to next View version — Schematic 2 palette valence (G3, not load-bearing)
+
+The Schematic-2 anti-redundant/redundant contrast uses red (#a52a2a) and green (#0a7f3f); these colours carry a faint bad/good valence that the body prose deliberately does not assert (anti-redundant entanglement-enhanced metrology is genuinely useful, just not what the redundancy criterion selects). The figure's contrast is **already triple-encoded** (colour + dashed/solid line-style + explicit ✗R/✓R markers), so the valence-loaded colour is not load-bearing — a colourblind or greyscale reader gets the contrast from the shape/marker channels. **Registered as a next-View-version refinement** (a neutral palette would match the body's even-handed framing); not folded in this version because (a) the refinement is aesthetic, not load-bearing, and (b) the SVG was just rewritten for the top-panel removal and a further palette change would compound diffs without gain.
+
+### Positives the Guardian banked (worth recording so they are not lost in future revisions)
+
+- Both figures carry an explicit footer text *"Structural schematic — no operating points, no parameter values."*, repeated in the SVG `<desc>` — self-documenting Q10b compliance.
+- Both figures have `<title>` + `<desc>` for accessibility tooling.
+- The Schematic-2 triple encoding (colour + line-style + marker) is beyond what the spec strictly required; carries through colour-blindness and greyscale rendering.
+- Both `<desc>` fields name "Source-file-pinned vector graphic" — honouring the Q10c carve-out for type-(a) schematics.
+- No axes, no parameter values, nowhere in either figure — neither has silently drifted into type-(b)/type-(c) territory.
+
+### Why this is exactly the right kind of late-stage catch
+
+The CCUF-import finding is the kind of *cross-artefact anchoring violation* that only surfaces when a careful reader checks the figures against the actual Coastline text (not against the View's own prose, which had drifted with the figure). The Guardian's discipline — *"verify against the Coastline before the two-pass sign-off"* — is exactly the cadence that catches this class of defect. A tagged release with the top panel in place would have published a CCUF-imported structure under a Coastline anchor that does not support it; Anti-Claim #5 would have been silently violated. The fix is small (drop the top panel; keep the bottom; relabel the heading) but the *finding* is load-bearing for the View's own internal honesty.
+
+### Operational state after this entry
+
+- Schematic 2 no longer contains the three-length nesting; the SVG, the View body, and Block 4 all agree.
+- Schematic 1's PW-slice label no longer collides with the carrier-count `N`.
+- The palette refinement is registered for the next View version, not held against tagging.
+- The previous-turn message-internal contradiction (residuals + "Go" sign-off) is **now compounded** by this new blocking finding: even if the prior sign-off had been operative, this finding is independently blocking. The agent's hold on the tag is reinforced; the residuals folded in commit `e2c1d22` stand; this commit adds the CCUF-import correction; tagging remains held pending steward direction.
+- **Lock-Key held throughout.** Coastline v0.4 / Ledger / MN / Sail / notebook / committed-JSON / results-JSON files all untouched in this correction pass; the SVG and the View prose are the only objects edited.
