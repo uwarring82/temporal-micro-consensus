@@ -10,6 +10,15 @@ title: Temporal Micro Consensus
 
 - **[Tutorial — Reading Temporal Micro Consensus](docs/tutorial.md)** — a guided on-ramp; no prior knowledge of the architecture assumed.
 
+## Open call for pilot-reader feedback *(active, posted 2026-05-28)*
+
+A new artefact category — the **Harbour View**, a presentational vantage-point document — is in preparation. The first View's *Executive overview* and *Framework* section (§1 + §2 only) are posted as a **pre-pilot-review public draft**. Feedback is invited from foundations-metrology physicists who match the independence criteria laid out in the open-call brief — outside the Freiburg–NIST orbit, no prior familiarity with this project's vocabulary. **No technical verification is required**; the questions are about external readability, density, and figure accessibility.
+
+→ **[Open-call brief — criteria, four feedback questions, and how to respond](docs/view-framework-overview-v0.1-pilot-reader-brief.md)**
+→ **[Pre-pilot-review draft — Harbour View v0.1 (§1 + §2)](views/view-framework-overview-v0.1.md)**
+
+Feedback by email to U. Warring ([u.j.warring@gmail.com](mailto:u.j.warring@gmail.com)). §§3–5 and the reference apparatus follow once §1 + §2 feedback has been received and folded.
+
 ## Current versions
 
 | Artefact | Current | What it is |
