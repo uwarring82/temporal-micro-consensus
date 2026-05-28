@@ -10,11 +10,11 @@ title: Temporal Micro Consensus
 
 - **[Tutorial — Reading Temporal Micro Consensus](docs/tutorial.md)** — a guided on-ramp; no prior knowledge of the architecture assumed.
 
-## Harbour View v0.1 — pre-release draft *(open call closed 2026-05-28; pilot-reader gate reclassified)*
+## Harbour View v0.1 — pre-release full draft *(open call closed 2026-05-28; pilot-reader gate reclassified; awaiting tagged release)*
 
-A new artefact category — the **Harbour View**, a presentational vantage-point document — is in preparation. §1 + §2 of the first View are committed; §§3–5 and the reference apparatus are drafted in the next pass. An open call for pilot-reader feedback ran on 2026-05-28 and closed the same day; direct invitation to qualifying readers was also attempted without yield. Substantive feedback received has been folded. Per Guardian determination (2026-05-28), the artefact-category specification's first-instance pilot-reader requirement is reclassified from *mandatory pre-release, no omission* to *best-effort pre-release with disclosed limitation*: the audience the gate assumed does not yet exist (the View itself is the recruitment mechanism). The omission is documented in the View's status line and in the project logbook, not held silent. A Q12 self-audit (logbook 2026-05-28) substitutes for the missing pilot read on §1 + §2. **Reader feedback remains invited and is foldable via supersession at the next View version.**
+A new artefact category — the **Harbour View**, a presentational vantage-point document — is in preparation. The first View is fully drafted (§§1–5 plus the reference apparatus) and awaits tagged release. An open call for pilot-reader feedback on §1 + §2 ran on 2026-05-28 and closed the same day; direct invitation to qualifying readers was also attempted without yield. Substantive feedback received has been folded. Per Guardian determination (2026-05-28), the artefact-category specification's first-instance pilot-reader requirement is reclassified from *mandatory pre-release, no omission* to *best-effort pre-release with disclosed limitation*: the audience the gate assumed does not yet exist (the View itself is the recruitment mechanism). The omission is documented in the View's status line and in the project logbook, not held silent. A Q12 self-audit (logbook 2026-05-28) substitutes for the missing pilot read. **Reader feedback on any version remains invited and is foldable via supersession at the next View version.**
 
-→ **[Pre-release draft — Harbour View v0.1 (§1 + §2)](views/view-framework-overview-v0.1.md)**
+→ **[Pre-release full draft — Harbour View v0.1 (§§1–5 + apparatus)](views/view-framework-overview-v0.1.md)**
 → **[Open-call brief — closed 2026-05-28 (archived for transparency)](docs/view-framework-overview-v0.1-pilot-reader-brief.md)**
 
 ## Current versions
