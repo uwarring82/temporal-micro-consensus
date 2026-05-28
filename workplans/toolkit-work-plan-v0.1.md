@@ -1,6 +1,6 @@
 # Toolkit Work Plan — Numerical Toolkit for Temporal Micro Consensus
 
-**Version:** v0.1 (draft, 2026-05-27; post-review rev. 2026-05-27)
+**Version:** v0.1 (draft, 2026-05-27; post-review revs. (a)–(c) 2026-05-27; rev. (d) 2026-05-28 registers a toolkit-v0.2 toolchain-hygiene backlog item)
 **Endorsement Marker:** Local Stewardship (Ulrich Warring, Physikalisches Institut, Albert-Ludwigs-Universität Freiburg). Authority from use, not endorsement.
 **Lineage:** Coastline v0.4 (Consensus-Emergence of Classical Proper Time) → Ledger CL-2026-006 v0.4 (Sorci et al. classification, D1 nuisance-decomposition forward target) → MN v0.2 (Temporal-Redundancy Functional R_δ, §2 analytic poles, §6c open-temporal-instrument sketch) → this plan.
 **Placement:** Within `temporal-micro-consensus` repository, at `numerics/`.

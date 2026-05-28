@@ -1,6 +1,14 @@
 # Harbour View — Report on Temporal Redundancy and Emergent Proper Time
 
-**Document type:** Harbour View. A presentational vantage-point document under Local Stewardship — neither a peer-reviewed publication nor an authoritative version of any of the framework artefacts it presents. A brief glossary of *Harbour View*, *Coastline*, *Breakwater Ledger*, *Methodological Note*, and *Sail* appears in the reference apparatus at the foot of this document.
+**Document type:** Harbour View. A presentational vantage-point document under Local Stewardship — neither a peer-reviewed publication nor an authoritative version of any of the framework artefacts it presents. A brief glossary of *Harbour View*, *Coastline*, *Breakwater Ledger*, *Methodological Note*, and *Sail* is included immediately below for the §1 + §2 pilot-reader draft; the full reference apparatus (commented bibliography, Toolkit Provenance, Figure Provenance, Acknowledgements & Conflict-of-Interest, citation metadata) is assembled at next-move 10 after pilot-reader feedback is folded.
+
+**Tiny glossary (for the §1 + §2 pilot draft):**
+
+- **Harbour View** — this document's artefact category. A presentational, externally-readable, citable document that surveys a body of project work from one declared vantage point; presents adapted content from the underlying notes but is not authoritative over them.
+- **Coastline** — a versioned, falsifiable framework proposal under Local Stewardship. The present View is anchored to *Coastline v0.4 — Consensus-Emergence of Classical Proper Time.*
+- **Breakwater Ledger** — the project's claim-status classifications: each Ledger entry classifies a specific external proposal (e.g. an experimental paper, a theoretical model) as *compatible*, *underdetermined*, or *inconsistent* with the Coastline at a declared version.
+- **Methodological Note (MN)** — an instrument-and-measure document defining a specific operational tool used by the framework. The present View is anchored to *MN v0.3 — The Temporal-Redundancy Functional.*
+- **Sail** — a commentary or essay document; the project's explanatory-register channel, distinct from the framework artefacts above. Sails are out of scope for the present View.
 **Version:** v0.1
 **Date:** 2026-05-28 (drafting; §1 + §2 only)
 **Endorsement Marker:** Local Stewardship (Ulrich Warring, Physikalisches Institut, Albert-Ludwigs-Universität Freiburg). Authority from use, not endorsement; the externally validated physical theories cited below — quantum mechanics, special relativity, general relativity in its weak-field regime, the established results of quantum information theory — are referenced only as *constraints* on the framework, not as objects of derivation or as endorsers of the work.

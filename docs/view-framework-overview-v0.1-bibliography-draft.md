@@ -18,7 +18,9 @@
 
 ## A. External constraints (constraint-only; no parity claimed)
 
-The Coastline v0.4 names five externally-endorsed coastlines in its "External Constraints" section. Each must appear with an explicit constraint-only marker (Q11a / A4 mirror). The Coastline does not pin a specific canonical text for **quantum mechanics**, **special relativity**, **general relativity**, **quantum information theory**, or **thermodynamics** — anchors **LOCKED 2026-05-28** by steward call.
+**The five items Coastline v0.4 names in its *External Constraints (citation only)* section are: (1) quantum mechanics, (2) special relativity, (3) the Page–Wootters mechanism, (4) quantum Darwinism, (5) general relativity in the weak-field / post-Newtonian regime.** The Q11 *external-constraint* role — with the load-bearing constraint-only / no-parity marker (A4 + Q7 mirror) — applies to the three of these that are externally-validated physical frameworks: **quantum mechanics (A1), special relativity (A2), and weak-field general relativity (A3)**. The other two items the Coastline names — Page–Wootters and quantum Darwinism — are theoretical frameworks within quantum mechanics that the Coastline structurally inherits from rather than treats as boundary conditions; in the Q11 controlled vocabulary they are *prior-art*, and they are recorded in Blocks B and C below (page1983, mendes2019, smith2020 for Page–Wootters; zurek2003, zurek2009, ollivier2004, ollivier2005 for quantum Darwinism). **Quantum information theory** appears in the Coastline's Endorsement Marker paragraph as constraint-only background but is **not** in the *External Constraints* section; in this bibliography it is handled as a *method-source* (the §3 measures — trace distance, Helstrom, Holevo, mutual information — are QIT techniques the View adopts), recorded at A4 below under that revised role. **Thermodynamics** is not surfaced by Coastline v0.4 at all and has no entry in this bibliography.
+
+The Coastline does not pin a specific canonical text for QM, SR, or weak-field GR — anchors for A1–A3 **LOCKED 2026-05-28** by steward call (A4's method-source anchor consolidates with A1's).
 
 ### A1 — Quantum mechanics  **LOCKED 2026-05-28**
 
@@ -44,20 +46,17 @@ The Coastline v0.4 names five externally-endorsed coastlines in its "External Co
 - **Endorsement-scope marker:** constraint-only; no parity claimed. The View operates within GR's **weak-field (post-Newtonian) regime** only; strong-field, non-perturbative, and quantum-gravitational regimes are explicitly out of scope (Coastline Anti-Claim #7 + Regime of Validity).
 - **Surfaced where:** §2 (GR-regime boundary statement; the Q11b anchor for any "consistent with weak-field GR" sentence MUST cite Coastline v0.4 External Constraints item 5 + Anti-Claim #7 + Regime of Validity — this is the load-bearing Q11b/A7 enforcement point).
 
-### A4 — Quantum information theory  **LOCKED 2026-05-28**
+### A4 — Quantum information theory (method-source)  **REVISED 2026-05-28**
 
-- **Anchor:** Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary Edition) (as A1).
+- **Anchor:** Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary Edition) (same volume as A1).
   - **Conditional secondary anchor (drafter decision at §3 prose stage):** Hayashi, M. (2017). *Quantum Information Theory: Mathematical Foundation* (2nd ed.). Springer. ISBN 978-3-662-49723-4. Folded in **only if §3 prose leans on rigorous Helstrom / Holevo / distinguishability machinery** beyond what Nielsen & Chuang covers; otherwise omit.
-- **Role:** *external-constraint*.
-- **Endorsement-scope marker:** constraint-only; no parity claimed. The View uses the established results of QIT (trace distance, Helstrom bound, Holevo information, mutual information) as background; it does not derive, extend, or revise them.
+- **Role:** ***method-source*** *(revised from earlier external-constraint mis-classification).* QIT is not in the Coastline's *External Constraints* section; it appears in the Coastline's Endorsement Marker paragraph as constraint-only background. The bibliographic role best matching the View's usage is *method-source* — the §3 distinguishability machinery (trace distance, Helstrom bound, Holevo information, mutual information) is a set of techniques adopted from QIT.
+- **Endorsement-scope marker:** *not applicable* (the constraint-only / no-parity marker is reserved for *external-constraint* role; QIT's constraint-only status at the Coastline's Endorsement-Marker level is honoured by the View's own top-of-document Endorsement Marker, not duplicated here).
 - **Surfaced where:** §3 (the four-way coincidence trace-distance / Helstrom / projective / Holevo for `ε`); §4 (model-conditional findings phrased in `I(C:M)`).
 
-### A5 — Thermodynamics  **CONDITIONAL LOCK 2026-05-28**
+### A5 — Thermodynamics  **REMOVED 2026-05-28**
 
-- **Anchor (if retained):** Callen, H. B. (1985). *Thermodynamics and an Introduction to Thermostatistics* (2nd ed.). Wiley. ISBN 978-0-471-86256-7.
-- **Role:** *external-constraint*.
-- **Endorsement-scope marker:** constraint-only; no parity claimed.
-- **Condition:** **keep only if** the View body surfaces a thermodynamics relationship claim at §2 prose stage (e.g. "consistent with the second law"). **If no such claim appears, remove the entry** per Q11 discipline — a reference not surfaced in the body has no business in the bibliography. Drafter decides at §2 prose stage.
+Not surfaced by Coastline v0.4. The earlier *conditional-on-body-surfacing* lock was made on the false premise that thermodynamics was in the Coastline's *External Constraints* set; correction recorded 2026-05-28 (steward Finding 1). Entry removed; no anchor needed.
 
 ---
 
@@ -208,20 +207,20 @@ If the drafter exercises the item-7 resolution at prose stage and includes the o
 
 For every sentence in the View body of the form "consistent with X," "compatible with X," "respects X," or any equivalent relationship claim about external physics, audit:
 
-1. **Is X an external coastline named in the Coastline v0.4 External Constraints section?** (QM, SR, weak-field GR, QIT, thermodynamics.) If not — the sentence is making a relationship claim not licensed by the Coastline; **delete or reroute**.
+1. **Is X an externally-validated physical framework named in Coastline v0.4 *External Constraints*, items 1, 2, or 5?** Strict Q11 *external-constraint* role applies to **quantum mechanics, special relativity, and weak-field general relativity** (A1–A3 in this bibliography). Sentences of the form "consistent with X" anchor to those entries plus the corresponding Coastline section. The Coastline's *External Constraints* items 3 and 4 (Page–Wootters, quantum Darwinism) are theoretical frameworks the Coastline structurally inherits from; relationship statements about them are *positioning* claims, not external-constraint claims, and anchor to Coastline v0.4 Claim V plus the relevant prior-art entry in Blocks B or C. If X is not in either set — the sentence is making a relationship claim not licensed by the underlying artefacts; **delete or reroute**.
 2. **Is the sentence anchored to a Breakwater Ledger entry or a Coastline section?** Per Q11b (load-bearing), a relationship claim with no Ledger or Coastline anchor is an **A7 violation** (the View asserting more than the underlying artefacts support). **Anchor or delete.**
-3. **Does the entry in this bibliography carry the constraint-only / no-parity marker?** If A1–A5, yes; if a prior-art entry, the relationship claim is misclassified (the framework's relationship is to a *constraint*, not to prior-art work). Re-classify.
+3. **Does the cited bibliography entry carry the constraint-only / no-parity marker?** Only A1–A3 do (the three externally-validated physical frameworks). If the relationship statement points at a prior-art entry (Blocks B–F) or at the method-source A4, the constraint-only marker does not apply; the sentence is a positioning or methodology statement, not an external-constraint statement. Re-frame if mis-classified.
 
 **Specific load-bearing audit points already identified in the outline:**
 
-- **§2 GR-regime sentence.** Must anchor to **A3 (GR weak-field) + Coastline v0.4 External Constraints item 5 + Anti-Claim #7 + Regime of Validity**. Three-way anchor; no anchor → delete.
+- **§2 GR-regime sentence.** Must anchor to **A3 (GR weak-field) + Coastline v0.4 *External Constraints* item 5 + Coastline v0.4 *Regime of Validity* + Coastline v0.4 *Anti-Claims* §7**. Three-way Coastline anchor; no anchor → delete. *(Verified in the 2026-05-28 §1+§2 prose draft.)*
 - **§4 "consistent with Sorci visibility" or similar.** Must anchor to **Ledger CL-2026-006 v0.5** (not directly to D1 / Sorci 2026 — the relationship is the Ledger's classification, not the paper itself).
 
 ---
 
 ## Drafter checklist before folding into the View's apparatus
 
-- [x] **Steward confirmation on A1–A5 canonical-text anchors — LOCKED 2026-05-28.** Nielsen & Chuang 2010 (A1, A4); MTW 1973 (A2, A3, with Carroll 2004 as pilot-reader-conditional accessibility alternative for A3); Callen 1985 (A5, conditional on body surfacing).
+- [x] **Steward confirmation on A1–A4 canonical-text anchors — LOCKED 2026-05-28** (A5 thermodynamics removed; see Block A intro). Nielsen & Chuang 2010 (A1 QM, A4 QIT-as-method-source); MTW 1973 (A2 SR, A3 weak-field GR, with Carroll 2004 as pilot-reader-conditional accessibility alternative for A3). A4 reclassified from *external-constraint* to *method-source* (Coastline v0.4 places QIT in the Endorsement Marker paragraph, not in *External Constraints*).
 - [ ] **Drafter resolves item-7 (cross-View pointers):** include F1 + F2 + B3, or omit all three.
 - [ ] **Drafter resolves A5 (thermodynamics) surfacing at §2:** keep only if a body sentence references it; otherwise remove.
 - [ ] **Drafter resolves A4 (Hayashi 2017) secondary anchor at §3:** fold in only if §3 leans on rigorous Helstrom/Holevo machinery beyond Nielsen & Chuang.
