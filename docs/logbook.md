@@ -796,3 +796,36 @@ The CCUF-import finding is the kind of *cross-artefact anchoring violation* that
 - The palette refinement is registered for the next View version, not held against tagging.
 - The previous-turn message-internal contradiction (residuals + "Go" sign-off) is **now compounded** by this new blocking finding: even if the prior sign-off had been operative, this finding is independently blocking. The agent's hold on the tag is reinforced; the residuals folded in commit `e2c1d22` stand; this commit adds the CCUF-import correction; tagging remains held pending steward direction.
 - **Lock-Key held throughout.** Coastline v0.4 / Ledger / MN / Sail / notebook / committed-JSON / results-JSON files all untouched in this correction pass; the SVG and the View prose are the only objects edited.
+
+## 2026-05-28 — Steward figure refinements (Figure 3 + Figure 4); notebook regenerated; integrity verified; figure-citing commit advanced `938b0a6` → `15f444f`
+
+Two presentational refinements directed by the steward ahead of tagged release. Both edits are at the matplotlib-rendering layer (not the data layer); both required notebook regeneration, so the figure-citing commit advances by one tick. The three Guardian integrity conditions were re-run.
+
+### Figure 3 refinement (steward direction: "Legend for N can be removed. it is redundant and locking direct labels near the thresholds (dashed lines)")
+
+Notebook cell 13 edited: the `ax_b.legend(loc='lower left', ...)` line was removed, and the matplotlib `label=...` keyword in each `ax_b.plot(...)` call was dropped (no labels means no legend even if `legend()` were called). The previous-pass bottom-of-axes per-N labels (small, at y = 5% of log-range) were replaced with **direct end-of-curve N labels**: for each `N ∈ {4, 32, 128}`, a label of the form `f'N = {n}'` is placed at the last well-defined `(x, y)` point of that N's curve, in the curve's colour, at `fontsize=11` `fontweight='bold'`. Since each curve terminates at its own undefined-boundary `γ_φ t_crit(N)` and the boundary is also marked by a dashed vertical line in the same colour, the label visually attaches to the curve and to the boundary line at once. The N labels are now the primary identification of each trace; the legend is gone.
+
+### Figure 4 refinements (steward direction: "anti-sweet region label is partially blocked by the color scale – move into the grey region. add more tick labels to the color scale – 3 or 5 scale values should be shown")
+
+Notebook cell 15 edited in two places:
+
+- **Anti-sweet annotation moved.** The previous position `(b_t_arr[-1] + 0.05, n_grid_c[-1] * 0.55) = (1.88, 70)` placed the label at the right-hand edge of the axes, partially overlapping the colorbar. The new position `(0.55, 60.0)` puts the label squarely inside the light-pink `cmap.set_bad`-shaded anti-sweet region, well clear of the colorbar; font size also bumped from 11 → 12 for readability.
+- **Explicit colorbar ticks.** The previous `cbar` used matplotlib's auto-ticks under `LogNorm`, which yielded too few visible tick labels. The new code adds `from matplotlib.ticker import LogLocator; cbar.locator = LogLocator(base=10.0, subs=[1.0, 2.0, 5.0], numticks=6); cbar.update_ticks()` — log-spaced ticks at the 1/2/5 decades within the data range, matching the steward's "3 or 5 scale values" requirement.
+
+### Three Guardian integrity conditions — VERIFIED at commit `15f444f`
+
+- **(i) Results JSONs byte-identical.** `git diff --stat numerics/results/` is empty after notebook execution. The presentational-only cell-13 + cell-15 edits do not touch the data-generating cells (3, 5, 7, 9, 11), and the notebook does not write the results JSONs (cell 11 only *reads* and asserts).
+- **(ii) Pin propagation, one pass.** `938b0a6` → `15f444f` updated in **35 locations** across the View + the TOC outline in a single pass: pinned-source table, Toolkit Provenance Block 3, Figure Provenance Block 4 (data figures only — schematics 1 & 2 are independently pinned at `d9aae87`, the post-Guardian-figure-check commit, and *not* affected by this refinement pass), §4 live Colab link, §5.2 reproduction pointer, plus all the consistency mentions across the document. The logbook stays append-only — historical `938b0a6` references in the logbook are preserved as the audit record (the figure-citing-commit advance is recorded here, not retroactively rewritten).
+- **(iii) 85-test re-run.** `PYTHONPATH=src python3 -m pytest -q` from `numerics/` returned `85 passed in 23.67s` at commit `15f444f` (under the registered `tmc-python313` kernel + QuTiP 5.2.3 + Python 3.13.7). No regression from the cell-13/15 edits.
+
+### Block 4 schematic pinning also corrected (clean-up of earlier sloppy wording)
+
+The Block 4 Figure 1 entry previously cited `2503c07` (the pre-Guardian-figure-check commit), and the Figure 2 entry previously had the transitional wording *"e2c1d22 or later"*. Both schematics were actually last edited in commit `d9aae87` (the Guardian-figure-check pass: top-panel drop + N-symbol relabel). Block 4 now correctly pins both schematics to **`d9aae87`** with the explicit `git log` retrieval command. Data figures (Figure 3, Figure 4) carry the **`15f444f`** pin.
+
+### Net state after this pass
+
+- View + outline reference `15f444f` for all data-figure pins and the Toolkit Provenance commit.
+- View Block 4 pins schematics at `d9aae87` (correctly) and data figures at `15f444f` (correctly). Two pinning regimes, two distinct commits — matches the Q10c carve-out (source-file-pinned schematics; notebook-pinned data figures).
+- Logbook preserves the full audit trail: `a6518a7` → `938b0a6` → `15f444f` recorded across the chain of integrity-condition-verified figure-citing commits.
+- **Tag remains held.** The steward's figure refinements were directed as pre-release polish; no sign-off has been issued on the post-refinement state. The figures' visual layout has changed (Figure 3 legend removed; Figure 4 anti-sweet label repositioned; Figure 4 colorbar gains explicit ticks); a quick visual check or sign-off is appropriate before tagging.
+- **Lock-Key held throughout.** Coastline / Ledger / MN / Sail / results-JSON / committed-JSON files all untouched in this refinement pass.
