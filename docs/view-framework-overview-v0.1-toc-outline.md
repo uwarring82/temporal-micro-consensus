@@ -6,7 +6,7 @@
 
 **Target file (post-lock):** `views/view-framework-overview-v0.1.md` (placement per O2, pending steward confirmation; this TOC outline stays in `docs/` as a pre-View artefact).
 
-**Status:** **LOCKED 2026-05-28** (Guardian sign-off held by steward; one substantive amendment — the Q10c carve-out for schematics — recorded as a first-instance figure-handling note below). No prose begins until §12 next-moves 5–7 cleared (Jekyll versioned-subpath check → figure generation → commented-bibliography assembly).
+**Status:** **LOCKED 2026-05-28** (Guardian sign-off held by steward; one substantive amendment — the Q10c carve-out for schematics — recorded as a first-instance figure-handling note below). Pre-prose scaffolding **complete** as of the 2026-05-28 6c completion: next-move 5 (Jekyll permalink) deferred to release; next-move 6 (figure generation) DONE (schematics + data figures + three integrity conditions verified at commit `938b0a6`); next-move 7 (commented bibliography) DRAFTED with A1–A5 anchors locked. **Cleared: prose drafting for §1 + §2 only** (next-move 8); pilot-reader review on §1 + §2 before deeper-section drafting (Scout EC-5).
 
 ---
 
@@ -22,7 +22,7 @@ Sign-off reviewer: U. Warring (Guardian stance held by steward), per task-card H
 
 **Seven open items resolved** (detail at the foot under "Resolutions at TOC-lock call"). Briefly: (1) schematics handled as authored vector sources per the carve-out above; (2) type-(b) N-set = {4, 32, 128} confirmed; (3) notebook caveat surfacing — verify first, update only if absent; (4) pilot reader — steward's call, foundations-metrology physicist outside the Freiburg–NIST orbit, mandatory no omission; (5) concordance paragraph N/A confirmed; (6) post-lock placement `views/` confirmed; (7) cross-View pointers — drafter's choice at prose stage, Guardian leans §5.
 
-**Cleared next step:** spec §12 next-moves 5 → 6 → 7 in order: Jekyll versioned-subpath check → figure generation (source-file-pinned schematics + notebook-pinned data figures, with notebook caveat verification) → commented-bibliography assembly. Prose for §1 + §2 begins **after** that; pilot-reader review on §1 + §2 before deeper-section drafting (Scout EC-5).
+**Cleared next step (post-6c, 2026-05-28):** prose drafting for §1 + §2 only (next-move 8). Pre-prose scaffolding complete: next-move 5 (Jekyll permalink) deferred to release; next-move 6 (figures) DONE — schematic-01, schematic-02 source-file-pinned, plus figure-03 (type-(b)) + figure-04 (type-(c)) notebook-pinned at commit `938b0a6`; next-move 7 (commented bibliography) DRAFTED with A1–A5 locked. Pilot-reader review on §1 + §2 before deeper-section drafting (Scout EC-5).
 
 **Lock-Key held throughout:** Coastline / Ledger / MN / Sail untouched.
 
@@ -373,7 +373,7 @@ Outline locked 2026-05-28. Build status per spec §12:
      - **(iii) Test suite re-run.** Run the 85-test suite on the new commit; must remain green before any figure is cited.
    - **6d — Colab live-link verification.** Pending tagged release; the View's §4 live Colab link must resolve `https://colab.research.google.com/github/uwarring82/temporal-micro-consensus/blob/938b0a6/numerics/examples/open_instrument_module.ipynb` (commit-pinned form, where Colab supports it). Documented fallback already drafted: "if this link is unavailable, the notebook at commit `938b0a6` reproduces all figures." Verification is a release-time visual check; not a blocker.
 3. **§12 next-move 7 — commented-bibliography assembly (Q11).** ✅ **DRAFTED 2026-05-28.** Worksheet [`view-framework-overview-v0.1-bibliography-draft.md`](view-framework-overview-v0.1-bibliography-draft.md) with all entries carrying anchor + role annotation + endorsement-scope marker. A1–A5 canonical-text anchors **LOCKED 2026-05-28** (steward call): Nielsen & Chuang 2010 (A1/A4), MTW 1973 (A2/A3), Callen 1985 (A5, conditional on body surfacing). Q11b enforcement checklist appended; two load-bearing audit points pre-identified (§2 GR-regime; §4 Sorci-visibility). Folded into View apparatus at prose stage.
-4. **§12 next-move 8 — prose drafting for §1 + §2 only.** Pending 6c completion + pin propagation.
+4. **§12 next-move 8 — prose drafting for §1 + §2 only.** 🟡 **GO 2026-05-28** (Guardian sign-off after 6c integrity-condition verification). Target file: [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) (created at drafting; placement per O2). Scope strictly §1 + §2; §3–§5 prose held until §1+§2 has passed pilot-reader review and any resulting TOC revisions are folded.
 5. **§12 next-move 9 — pilot-reader review of §1 + §2** (steward-selected foundations-metrology physicist outside the Freiburg–NIST orbit; mandatory, no omission). Pilot-reader audit also covers schematic colourblind/greyscale accessibility per 6b. TOC revision admissible per Scout EC-5 if pilot-reader feedback identifies a section-level need.
 6. **§12 next-moves 10–12 — remaining-section prose; two-pass steward + Guardian review** (figure-honesty Q10b, bibliography audit Q11, language/readability audit Q12); **tagged release** with O6 citation locator (`{Zenodo version DOI} / views/view-framework-overview-v0.1.md`). Jekyll permalink + redirect stub (next-move 5 resolution) applied here.
 

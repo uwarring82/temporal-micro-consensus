@@ -82,13 +82,14 @@ Cluster A from the literature corpus. Each is *prior-art* in the Q11 controlled 
 - **Surfaced where:** §2 (Claim V positioning; Page–Wootters modern lineage).
 - **Note:** The Coastline v0.4 cites this as "2019" (publication year), fixing the v0.3+ lineage correction (preprint year 2018 was used in earlier versions).
 
-### B3 — Smith & Ahmadi (2020)  **OPTIONAL (item 7)**
+### B3 — Smith & Ahmadi (2020)  **MANDATORY (promoted 2026-05-28)**
 
 - **BibTeX key:** `smith2020`.
 - **Citation:** Smith, A. R. H., & Ahmadi, M. (2020). Quantum clocks observe classical and quantum time dilation. *Nature Communications*, 11, 5360.
 - **Anchor (DOI):** [10.1038/s41467-020-18264-4](https://doi.org/10.1038/s41467-020-18264-4). Preprint: arXiv:1904.12390.
-- **Role:** *prior-art* (Page–Wootters modern development; Coastline External Constraints item 3; subject of Ledger CL-2026-007 v0.2).
-- **Surfaced where:** §2 *or* §5 (item-7 resolution; one-bullet cross-View pointer to CL-2026-007 v0.2; Guardian leans §5.1).
+- **Role:** *prior-art* (Page–Wootters modern development; Coastline External Constraints item 3; also the subject of Ledger CL-2026-007 v0.2).
+- **Surfaced where:** §2 Claim V positioning (cited directly alongside Page & Wootters 1983 and Mendes & Soares-Pinto 2019 as the modern Page–Wootters lineage; §1+§2 prose draft 2026-05-28). The Ledger CL-2026-007 v0.2 cross-View pointer (item-7 resolution) is a separate, additional surfacing in §2's regime-of-validity paragraph + §5 (drafter's prose-stage choice).
+- **Note:** Promoted from OPTIONAL → MANDATORY after the §1+§2 prose draft directly cited the paper in Claim V.
 
 ### B4 — Nambu (2022)  **OPTIONAL**
 
