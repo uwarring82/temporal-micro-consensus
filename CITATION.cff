@@ -32,10 +32,18 @@ keywords:
   - trapped-ion optical clocks
   - quantum metrology
   - open science
-date-released: "2026-05-27"
+date-released: "2026-05-29"
 doi: 10.5281/zenodo.20411120
-# Zenodo DOI for the framework-status-2026.05.27 release (FAIR-Findability complete).
-# Cite individual documents by version (README §Citation); cite the repository as a whole by this DOI.
+# DOI above is the version DOI for the *prior* release `framework-status-2026.05.27`.
+# The current release is `framework-status-2026.05.29` (first to include the Harbour
+# View artefact category and the first Harbour View, v0.1). Its Zenodo version DOI is
+# minted automatically when Zenodo picks up the GitHub release; the new value is
+# folded back into this file in a post-mint commit (and into README §Citation, README
+# header table, View Block 6, and View Block 2's reference-apparatus link as needed).
+# Until the post-mint update lands, the prior version DOI above is the authoritative
+# Zenodo pointer; the framework-status-2026.05.29 tag is the citation anchor.
+# Cite individual documents by version (README §Citation); cite the repository as a
+# whole by the Zenodo version DOI at the relevant release.
 #
 # --- Code / numerical toolkit citation (numerics/) ---
 # The numerical toolkit under numerics/ (package "tmc-numerics", MIT-licensed) is part

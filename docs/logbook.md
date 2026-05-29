@@ -1041,3 +1041,26 @@ The tutorial at [`docs/tutorial.md`](tutorial.md) was audited against the post-V
 **No claim revision, no headline-number change.** The five-Claim exposition, the load-bearing sentence, the Regime-of-Validity statement, the `R_{0.10} ≈ 7.1` vs `1` redundancy headline, and all downstream pointers to Coastline / Ledger / MN / Sail versions are unchanged. Anchored to Coastline v0.4, Ledger CL-2026-006 v0.5.1 / CL-2026-007 v0.3 / CL-2026-008 v0.2, MN v0.3, Sail v0.4, Harbour View v0.1 (pre-release draft).
 
 **Lock-Key held throughout.** Only `docs/tutorial.md` and this logbook addendum are edited.
+
+### Release prep — `framework-status-2026.05.29` (first release including the Harbour View)
+
+Pre-tag prep commit for the next repository release. Naming follows the existing convention (`framework-status-YYYY.MM.DD`); this is the first release to include the Harbour View artefact category and the first Harbour View, v0.1. The release sits at the head of the consolidated 2026-05-29 work: HV-DRAFT-001 consistency pass (`f616e9d`) + B4/F1 closure (`5f51611`) + cd-rules in-house style adoption (`4770d8c` + `a4aa52a`) + tutorial v0.4 (`dbdb5f2`) + this prep commit.
+
+**Files updated:**
+
+- [`CITATION.cff`](../CITATION.cff): `date-released: "2026-05-27"` → `"2026-05-29"`; the prior-DOI comment block extended to document the Zenodo post-mint workflow explicitly (the prior version DOI `10.5281/zenodo.20411120` for `framework-status-2026.05.27` is retained as the authoritative pointer until Zenodo mints the new version DOI for `framework-status-2026.05.29`, at which point a post-mint commit folds the new DOI in).
+- [`README.md`](../README.md): the header *DOI* row replaced with two rows — *Latest release* (current: `framework-status-2026.05.29`, DOI-pending) and *Prior release* (`framework-status-2026.05.27`, DOI `10.5281/zenodo.20411120`). §Citation reworked to a two-bullet snapshot pointer; §FAIR Findable reworded to describe the per-release DOI chain. The README's existing structural narrative (four artefact families + supporting families + tree + licence + reading guide) is unchanged.
+- [`index.md`](../index.md): the *Harbour View v0.1 — pre-release full draft* heading replaced with *released 2026-05-29 as part of `framework-status-2026.05.29`*; the body paragraph rewritten in past tense for the open-call / pilot-reader history and present tense for the released state; the lead link text changed from *Pre-release full draft* to *Harbour View v0.1 (§§1–5 + apparatus)*.
+- [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md):
+  - **Date** line: *"2026-05-28 (full draft complete; awaiting tagged release)"* → *"2026-05-28 (full draft complete); released 2026-05-29 as part of `framework-status-2026.05.29`"*.
+  - **New Release line** inserted between Lineage and Status, summarising the release identity, the Zenodo post-mint workflow, and the citation guidance for the interim period.
+  - **Status** line: *"Pre-release draft. §§1–5 and reference apparatus complete."* → *"§§1–5 and reference apparatus complete."* (the historical pilot-reader / Q12 self-audit prose is preserved verbatim as the audit record of the open-call + reclassification sequence).
+  - **Block 6 (Citation-metadata stub)** populated with: a one-sentence prose citation for the View; the O6-regime-(ii) citation locator with the Zenodo-DOI placeholder named explicitly; a `CITATION.cff`-compatible YAML block containing the View's title, abstract, author, version, date-released, licence, repository-code, url, and keywords (the `doi:` line is commented out pending the post-mint update). A closing sentence directs readers to the repository-level `CITATION.cff` for the broader citation pointer.
+  - **Block 2 (Version-pinning appendix)** is NOT modified — its CL-2026-006 v0.5.1 pin remains the authoritative authoritative-at-issue-time pointer; the View's substantive content date (2026-05-28) is unchanged.
+- This logbook entry.
+
+**Zenodo workflow.** Standard Zenodo-GitHub integration: pushing the annotated tag `framework-status-2026.05.29` (after this prep commit lands on `main`) triggers Zenodo to create a new version under the existing concept (Zenodo auto-deposit). Zenodo mints a new *version* DOI for this release; the concept DOI (which always resolves to the latest version) is unchanged. The mint typically completes within minutes of the tag push. The follow-up *post-mint commit* (untagged) folds the new DOI into `CITATION.cff`, the README header table, the README §Citation list, the README §FAIR Findable bullet, and View Block 6's commented `doi:` line.
+
+**Lock-Key held throughout this pre-tag prep.** No edits to Coastline / Ledger entries / MN / Sail / committed JSONs / results-JSON / notebooks. The View's substantive content (§§1–5, reference apparatus Blocks 1–5) is unchanged from the consistency-pass + B4/F1 closure state; only the metadata header lines (Date, new Release line, Status) and the Block 6 citation stub are populated.
+
+**Next step (per the standing queue).** Tag `framework-status-2026.05.29` (annotated) locally; verify the tag points at this prep commit; push `main` and the tag together. Zenodo deposit follows automatically. Post-mint update follows in a separate commit.
