@@ -1074,3 +1074,45 @@ Steward parked a research-direction memorandum at [`docs/memos/anti-claim-6-anal
 **Origin.** Brainstormed during the 2026-05-28 Integrator-stance deliberation following Harbour View v0.1 §§1+2 publication and the discovery-campaign decision; placed in the repo on 2026-05-29 after the release-prep commit `16d3a29` and the local `framework-status-2026.05.29` tag were already in place. The memo is therefore **not** part of the tagged release — it lands as fresh post-release content. The release identity stays clean (a release of public framework artefacts; not a release of pre-development research notes).
 
 **Repository structure.** [`README.md`](../README.md) tree updated with a one-line entry for `docs/memos/` immediately after `docs/notes/`. No other repository edits — Lock-Key fully held: Coastline / Ledger / MN / Sail / View / committed JSONs / results-JSON / notebooks all untouched. The View at `framework-status-2026.05.29` makes no reference to this memo (would have been an Anti-Claim #4 / Q1 violation); the memo links *into* Coastline v0.4 / MN v0.3 / View v0.1 as motivation anchors but is anchored *from* them, never *into* them.
+
+### Post-mint commit — `framework-status-2026.05.29` Zenodo version DOI folded back
+
+Zenodo auto-deposit picked up the GitHub release `framework-status-2026.05.29` on 2026-05-29 and minted the version DOI **`10.5281/zenodo.20447175`** for it. The release prep commit `16d3a29` and every downstream pointer surface explicitly carried a "DOI minted post-tag; folded back at the post-mint commit" placeholder. This entry records the fold-back.
+
+**Confirmed via Zenodo API at post-mint time:**
+
+| Field | Value |
+| --- | --- |
+| Title | Temporal Micro Consensus |
+| Version label | `framework-status-2026.05.29` |
+| Date | 2026-05-29 |
+| Version DOI | `10.5281/zenodo.20447175` |
+| Concept DOI | `10.5281/zenodo.20411119` *(always resolves to the latest version)* |
+| Latest in series | yes |
+| Related identifier | `isSupplementTo` → `https://github.com/uwarring82/temporal-micro-consensus/tree/framework-status-2026.05.29` |
+
+**Files updated (six small edits + this logbook entry; Lock-Key safe):**
+
+- [`CITATION.cff`](../CITATION.cff): `doi: 10.5281/zenodo.20411120` → `10.5281/zenodo.20447175`; the surrounding comment block rewritten in past tense (mint completed; concept-DOI and prior-version pointers preserved as cross-references).
+- [`README.md`](../README.md) — three surfaces:
+  - Header table *Latest release* row replaced with the actual version DOI; a new *Concept DOI* row added below the *Prior release* row.
+  - §Citation list reframed as a three-bullet snapshot pointer (current version DOI; prior version DOI; concept DOI).
+  - §FAIR Findable bullet rewritten to enumerate both per-release version DOIs and the concept DOI, all as hyperlinked references.
+- [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) — three surfaces:
+  - **Top metadata Release line** rewritten in past tense with the actual version DOI inline + the concept DOI cross-reference; future-tense "*will be folded back*" wording removed.
+  - **Block 6 prose citation** updated with the version DOI inline; "*minted post-tag*" wording removed.
+  - **Block 6 O6-regime-(ii) citation locator** updated: placeholder `{Zenodo version DOI of framework-status-2026.05.29}` replaced with the literal `10.5281/zenodo.20447175`.
+  - **Block 6 surrounding prose** rewritten in past tense, with the concept DOI named and the prior-release DOI preserved as a cross-reference for citations that anchor to that snapshot.
+  - **Block 6 CITATION.cff-compatible YAML block** — the commented `# doi:` line replaced with the live `doi: 10.5281/zenodo.20447175` line, plus a short comment block naming the auto-deposit date, the post-mint-commit lineage, and the concept DOI.
+
+**Not changed at this pass.** Block 2 (Version-pinning appendix) is unchanged — its CL-2026-006 v0.5.1 pin remains the authoritative-at-issue-time pointer; no Zenodo DOI lives in Block 2 by design (the DOI is a repository-level pointer, not a per-artefact pin). The GitHub Release description on the Releases page is not edited (GitHub releases are immutable history; the live page's *"Zenodo version DOI: TBD post-mint"* wording remains as the post-mint-time record of the release as published).
+
+**Net state after the post-mint commit.** Citation infrastructure is closed for the `framework-status-2026.05.29` release. Every citation surface that previously promised a fold-back delivers it. The Zenodo concept-DOI pointer is now exposed wherever the per-release DOI is named, giving citers a stable always-latest pointer alongside the per-release pinned ones. **Lock-Key fully held**: Coastline / Ledger entries / MN / Sail / committed JSONs / results-JSON / notebooks / View Block 2 / View Blocks 1+3+4+5 all untouched. The only edits are to citation-metadata surfaces and this logbook entry.
+
+This closes the agent-doable items on the standing release queue. Remaining open items (deferred-by-design):
+- Path-B follow-up: demonstrator-grade `index.html` (§10 / §11 cd-rules patterns); per-folder LICENCE files in each content folder; CI hash-check on `assets/` pin (only required once consuming repos > 5).
+- D-queue items kept-as-is by steward: D1 (Sail v0.2 mixed-anchor — deferred to Phase-4 Sail re-anchor pass); D6 (Coastline *Successor: (none yet)*); D7 (pilot-reader brief title-question — preserved as archived audit record).
+- Toolkit v0.2 refinements registered in [`workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md) §10 rev. (d): physically faithful squeezing-prep model (r-jitter / thermal admixture); single-environment reproducibility (pinned `requirements.txt`, editable install).
+- Anti-Claim #6 analytical route memo at [`docs/memos/anti-claim-6-analytical-route.md`](memos/anti-claim-6-analytical-route.md): parked 2026-05-28 for later pickup.
+
+The framework's standing experimental + Coastline-level open problems carry forward unchanged: Anti-Claim #6 (principal open problem); D2/D3 experimental discriminants for CL-2026-006/007/008; the deferred measure-registration protocol; the deferred strong-field / non-perturbative extension (Anti-Claim #7).

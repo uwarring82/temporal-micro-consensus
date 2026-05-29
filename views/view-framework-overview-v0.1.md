@@ -5,7 +5,7 @@
 **Date:** 2026-05-28 (full draft complete); released 2026-05-29 as part of `framework-status-2026.05.29`.
 **Endorsement Marker:** Local Stewardship (Ulrich Warring, Physikalisches Institut, Albert-Ludwigs-Universität Freiburg). Authority from use, not endorsement; the externally validated physical theories cited below — quantum mechanics, special relativity, and general relativity in its weak-field regime — are referenced only as *constraints* on the framework, not as objects of derivation or as endorsers of the work.
 **Lineage:** Coastline v0.4 (*Consensus-Emergence of Classical Proper Time*) + Methodological Note v0.3 (*The Temporal-Redundancy Functional*) + Breakwater Ledger entries CL-2026-006 v0.5, CL-2026-007 v0.3, CL-2026-008 v0.2 + the temporal-micro-consensus numerics toolkit at commit `7d1f774`. Presented as a single window onto this body of work; the underlying artefacts remain the authoritative versions of every claim and result reported here.
-**Release:** **Released 2026-05-29 as part of `framework-status-2026.05.29`** — the first repository release that includes the Harbour View artefact category. The Zenodo version DOI for this release is minted post-tag (Zenodo auto-deposit) and will be folded back into [`CITATION.cff`](../CITATION.cff) and into Block 6 below at the post-mint commit. Cite this View by version (v0.1) and by the `framework-status-2026.05.29` tag until the Zenodo version DOI is available.
+**Release:** **Released 2026-05-29 as part of `framework-status-2026.05.29`** — the first repository release that includes the Harbour View artefact category. Zenodo version DOI: [10.5281/zenodo.20447175](https://doi.org/10.5281/zenodo.20447175) (minted by Zenodo auto-deposit on 2026-05-29; concept DOI [10.5281/zenodo.20411119](https://doi.org/10.5281/zenodo.20411119) always resolves to the latest version). Cite this View by version (v0.1), by the `framework-status-2026.05.29` tag, or by the Zenodo version DOI above; see Block 6 below for the structured citation block.
 **Status:** **§§1–5 and reference apparatus complete.** An external pilot read was sought for §1 + §2 — through an open call (2026-05-28; see the [closed-call brief](../docs/view-framework-overview-v0.1-pilot-reader-brief.md) for the audit record) and through direct invitation. Both routes closed on 2026-05-28 without a qualifying (human, foundations-metrology, outside the Freiburg–NIST orbit) reader. Per Guardian determination (logged 2026-05-28), the artefact-category specification's first-instance pilot-reader requirement is reclassified from *mandatory pre-release, no omission* to *best-effort pre-release with disclosed limitation*: the audience the gate assumed does not yet exist (the View is what creates it). The omission is documented here rather than held silent. A Q12 self-audit (logged 2026-05-28) substitutes for the missing pilot read on §1 + §2. Reader feedback on any version remains invited and is foldable via supersession (Q9) at the next View version.
 **Primary audience:** Physicists working at the interface of foundations and metrology. The §1 executive overview is intended to be followable by such a reader with no prior familiarity with this project's vocabulary; specialist terms are anchored briefly on first use, and a short glossary appears immediately below.
 
@@ -346,13 +346,13 @@ This block is **separate** from Block 1 by the artefact-category specification's
 
 **Citation for this View** (v0.1, released 2026-05-29 as part of `framework-status-2026.05.29`):
 
-> Warring, U. (2026). *Harbour View — Temporal Redundancy and Emergent Proper Time*, v0.1. Temporal Micro Consensus repository, release `framework-status-2026.05.29`. Available at <https://github.com/uwarring82/temporal-micro-consensus/blob/framework-status-2026.05.29/views/view-framework-overview-v0.1.md>. Zenodo version DOI: *minted post-tag; see the repository's [`CITATION.cff`](../CITATION.cff) for the current value once the post-mint commit lands.*
+> Warring, U. (2026). *Harbour View — Temporal Redundancy and Emergent Proper Time*, v0.1. Temporal Micro Consensus repository, release `framework-status-2026.05.29`. Zenodo version DOI: [10.5281/zenodo.20447175](https://doi.org/10.5281/zenodo.20447175). Available at <https://github.com/uwarring82/temporal-micro-consensus/blob/framework-status-2026.05.29/views/view-framework-overview-v0.1.md>.
 
 **O6-regime-(ii) citation locator** (per the artefact-category specification §6, regime O6):
 
-> `{Zenodo version DOI of framework-status-2026.05.29} / views/view-framework-overview-v0.1.md`
+> `10.5281/zenodo.20447175 / views/view-framework-overview-v0.1.md`
 
-The Zenodo version DOI is assigned automatically when Zenodo picks up the GitHub release; it is folded back into [`CITATION.cff`](../CITATION.cff), into this Block 6, and into the README at the post-mint commit. Until then, the `framework-status-2026.05.29` tag is the authoritative citation anchor; the prior release's Zenodo DOI [10.5281/zenodo.20411120](https://doi.org/10.5281/zenodo.20411120) (release `framework-status-2026.05.27`) remains valid for any citation that anchors to that prior snapshot rather than to this one.
+The Zenodo version DOI above was assigned automatically by Zenodo auto-deposit on 2026-05-29 when the GitHub release was picked up; the always-latest pointer to the repository is the Zenodo concept DOI [10.5281/zenodo.20411119](https://doi.org/10.5281/zenodo.20411119). The prior release's version DOI [10.5281/zenodo.20411120](https://doi.org/10.5281/zenodo.20411120) (`framework-status-2026.05.27`) remains valid for any citation that anchors to that prior snapshot rather than to this one.
 
 **CITATION.cff-compatible block** (per the artefact-category specification §6 Q11a):
 
@@ -389,10 +389,11 @@ keywords:
   - quantum Darwinism
   - temporal redundancy
   - foundations metrology
-# doi: 10.5281/zenodo.<assigned-post-tag>
-# The Zenodo version DOI for the framework-status-2026.05.29 release is minted
-# automatically when Zenodo picks up the GitHub release; it is folded into this
-# block and into the repository-level CITATION.cff at the post-mint commit.
+doi: 10.5281/zenodo.20447175
+# Zenodo version DOI for the framework-status-2026.05.29 release; minted by Zenodo
+# auto-deposit on 2026-05-29 when the GitHub release was picked up, folded back into
+# this block in the 2026-05-29 post-mint commit. Concept DOI (always resolves to the
+# latest version): 10.5281/zenodo.20411119.
 ```
 
 Cite the repository as a whole — including the data, the numerical toolkit, and the framework artefacts — via the repository-level [`CITATION.cff`](../CITATION.cff). The per-View citation form above refines the repository pointer to this specific file at the specific release.

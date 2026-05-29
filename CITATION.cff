@@ -33,22 +33,26 @@ keywords:
   - quantum metrology
   - open science
 date-released: "2026-05-29"
-doi: 10.5281/zenodo.20411120
-# DOI above is the version DOI for the *prior* release `framework-status-2026.05.27`.
-# The current release is `framework-status-2026.05.29` (first to include the Harbour
-# View artefact category and the first Harbour View, v0.1). Its Zenodo version DOI is
-# minted automatically when Zenodo picks up the GitHub release; the new value is
-# folded back into this file in a post-mint commit (and into README §Citation, README
-# header table, View Block 6, and View Block 2's reference-apparatus link as needed).
-# Until the post-mint update lands, the prior version DOI above is the authoritative
-# Zenodo pointer; the framework-status-2026.05.29 tag is the citation anchor.
+doi: 10.5281/zenodo.20447175
+# Zenodo version DOI for the `framework-status-2026.05.29` release — the first to
+# include the Harbour View artefact category and the first Harbour View, v0.1. Minted
+# by Zenodo auto-deposit on 2026-05-29; folded back into this file (and into README
+# header table, README §Citation, README §FAIR Findable, and View Block 6) in the
+# 2026-05-29 post-mint commit.
+# Concept DOI: 10.5281/zenodo.20411119 — the always-latest pointer; resolves to the
+# most recent version.
+# Prior release: `framework-status-2026.05.27`, version DOI 10.5281/zenodo.20411120.
 # Cite individual documents by version (README §Citation); cite the repository as a
-# whole by the Zenodo version DOI at the relevant release.
+# whole by the Zenodo version DOI at the relevant release, or by the concept DOI for
+# the always-latest pointer.
 #
 # --- Code / numerical toolkit citation (numerics/) ---
 # The numerical toolkit under numerics/ (package "tmc-numerics", MIT-licensed) is part
-# of this repository and is covered by the DOI above. To cite the toolkit specifically:
+# of this repository and is covered by the per-release DOIs above. To cite the toolkit
+# specifically, use the version DOI of the release that archives the toolkit version
+# in question, or the concept DOI for an always-latest pointer:
 #   Warring, U., "tmc-numerics — Numerical Toolkit for Temporal Micro Consensus",
 #   version <numerics-vX.Y>, Temporal Micro Consensus repository, <date>, commit <hash>;
-#   archived at doi:10.5281/zenodo.20411120.
+#   archived at doi:10.5281/zenodo.20447175  (current; framework-status-2026.05.29)
+#   or, for the always-latest archive, doi:10.5281/zenodo.20411119  (concept DOI).
 # See workplans/toolkit-work-plan-v0.1.md (decision D4, versioning) and numerics/README.md.
