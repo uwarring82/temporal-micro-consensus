@@ -6,6 +6,10 @@
 
 **Status:** Draft worksheet. Folded into the View's reference apparatus at prose stage (spec §12 next-move 7 → 8). Acknowledgements & COI (Q11c) remain in a **separate** block (Block 5 of the apparatus), never conflated with citations here.
 
+> **FROZEN 2026-05-29 — superseded by Block 1 of [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) at HEAD.**
+>
+> The drafter-resolution checkboxes at the foot of this worksheet (item-7 cross-View pointers; A4 Hayashi; C5/C6/B4 prose-stage surfacing; BibTeX fold-back) and the §B3 / §F1 / §F2 *MANDATORY/OPTIONAL/STEWARD-CONFIRM* markers are resolved as follows in the View at HEAD: **B3** (Smith & Ahmadi 2020) MANDATORY — surfaced in §2 Claim V positioning and §5.2 CL-2026-007 cross-View pointer; **C5** (Riedel & Zurek 2010) MANDATORY — added at the consistency fix-up pass (logbook 2026-05-29) after the §3 body citation surfaced it; **F1** (Covey–Pikovski–Borregaard 2025) and **F2** (Fromonteil et al. 2025) MANDATORY — also added at the consistency fix-up pass; **A4 Hayashi** not folded (Nielsen & Chuang sufficient for §3's distinguishability machinery); **C6** (alternate Riedel & Zurek) not folded (C5 covers the §3 surface). Worksheet-internal references to *CL-2026-007 v0.2* are stale (current Ledger anchor is v0.3) and are retained as the audit record of the worksheet as drafted on 2026-05-28. See the 2026-05-29 logbook entry for the Step-3 D-queue pass that registered this banner.
+
 **Source corpus:** [`docs/literature/references.bib`](literature/references.bib) (Phase-1-verified Tier-1/Tier-2 entries) + the Coastline v0.4 *External Constraints* section + steward-confirmed canonical-text anchors for the externally-validated physical frameworks (A1–A3 below) + the QIT method-source anchor (A4). These textbook anchors are **not** currently in `references.bib`; they are introduced at the View bibliography per Q11a discipline. Folding into `references.bib` at View-issue time is a registered drafter task — `@book` BibTeX entries added for any anchor that survives the §2/§3 prose stage.
 
 **Conventions:**

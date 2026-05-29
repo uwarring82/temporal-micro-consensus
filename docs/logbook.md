@@ -842,3 +842,100 @@ The previous-pass repositioning of Figure 4's "anti-sweet region" text annotatio
 The commit was amended once to include figure-03's metadata-only churn (matplotlib regenerates `<dc:date>` timestamps and `clip-path` IDs on every render; the *content* of Figure 3 is unchanged from `15f444f`). Both data figures now share the same figure-citing commit `7d1f774`, simplifying Block 4 bookkeeping.
 
 **Audit chain to date:** `a6518a7` → `938b0a6` → `15f444f` → `7d1f774` for the data figures; `d9aae87` for the schematics. **Tag still held** pending steward visual sign-off on the post-removal Figure 4 layout. Lock-Key held: Coastline / Ledger / MN / Sail / committed JSONs / results-JSON files all untouched.
+
+## 2026-05-29 — HV-DRAFT-001 consolidated consistency fix-up: Block 5 streamlining (commit `1da0090`, 2026-05-28, retrospective entry) + cross-reviewer fix-up pass + Step-2 repo hygiene (README, spec status, this logbook entry)
+
+A retrospective + same-turn entry consolidating one missed prior-day commit, a consistency-check fix-up pass on the View, and the Step-2 repo hygiene that lands with it. Three steward-direction "Go"s, three sub-passes.
+
+### (1) Retrospective record — commit `1da0090` (2026-05-28, missed in the same-day logbook)
+
+The acknowledgment section in [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) (Block 5) was streamlined on 2026-05-28 to a tightened three-bullet form: D. Leibfried (prior-association acknowledgment + Sorci co-author disclosure), institutional acknowledgment (Freiburg, no-endorsement), and no-funding/no-commercial-conflict declaration. The earlier C. Sanner explicit-non-acknowledgment line was dropped from Block 5 in the same edit. The streamlining was directionally fine; the audit-trail consequence is that two cross-references in §4.3 and Block 1 D1 still described Block 5 as if it explicitly disclaimed Sanner — i.e. the three-way internal contradiction surfaced in this turn's cross-reviewer consistency check (see (2) below). Recorded here retrospectively; subsequent fix-up resolves the contradiction in either direction the steward chooses, and the steward chose option (b) — strike "Sanner explicitly not" from the cross-references rather than restore it in Block 5.
+
+### (2) Cross-reviewer consistency-check fix-up on the View (this turn)
+
+Three independent consistency reports were produced and consolidated into a six-item action plan (released steward as A1–A3 + B1–B2; A1 carried two alternatives). The steward accepted the plan with `A1: option (b)`. Five edits landed on `views/view-framework-overview-v0.1.md`:
+
+- **A1(b) — Sanner cross-references brought back into agreement with Block 5.** The phrase "Leibfried acknowledged; Sanner explicitly not, per the 2026-05-26 logbook correction" in §4.3 and the matching COI cross-link sentence in Block 1 D1 were both struck; the author line of D1 (which lists Sanner as a Sorci co-author for citation completeness) is preserved. Net: Block 5 reads as it did after `1da0090`; the cross-references no longer reference an absent Sanner disclaimer.
+- **A2 — Block 4 Figure 3 sweet/anti-sweet interval brackets inverted at both endpoints.** Block 4 previously wrote sweet `γ_φ t ∈ (0, 0.273]` and anti-sweet `γ_φ t ∈ (1.827, 2.0]`. The JSON's `undefined_boundary` field has `R_δ` *undefined* at `γ_φ t = 0.273` for `N = 4` and *undefined* at `γ_φ t = 1.827` for `N = 128` — i.e. each per-N first-undefined point is itself an undefined point. Brackets corrected to sweet `[0.1, 0.273)` and anti-sweet `[1.827, 2.0]`, with a one-sentence bracket-convention note appended for the reader.
+- **A3 — Reproduction pointer no longer mis-cites `pyproject.toml` as the source of the exact env.** The reproduction-pointer paragraph in §5.3 previously said "The QuTiP 5.2.3 / Python 3.13 environment is recorded in `numerics/pyproject.toml`"; in fact `pyproject.toml` records *lower bounds* (Python ≥ 3.10, QuTiP ≥ 5.0, NumPy ≥ 1.24, SciPy ≥ 1.10), and the exact env is pinned in Block 3 (Toolkit Provenance) at QuTiP 5.2.3 / Python 3.13.7 / NumPy 2.4.4 / matplotlib 3.10.8 / pytest 9.0.3. Pointer corrected to direct readers to Block 3 for the exact pin and to `pyproject.toml` for the install-time lower bounds.
+- **B1 — Bibliography gaps closed.** Three body-cited author–year references previously had no Block 1 entry: Riedel & Zurek (2010), Covey et al. (2025), and Fromonteil et al. (2025). Added **C5** (Riedel, C. J. & Zurek, W. H. 2010, PRL 105, 020404; the concrete configurational redundancy computation MN v0.3 §1 transplants onto the temporal pointer) and a new **§F — Clock-network dossier subjects (CL-2026-008)** containing **F1** (Covey, Pikovski & Borregaard 2025, PRX Quantum 6, 030310, DOI 10.1103/q188-b1cr) and **F2** (Fromonteil et al. 2025, arXiv:2509.19501). F1's title is a bracketed paraphrase placeholder pending the steward filling in the actual published title from the DOI before tagging — CL-2026-008 v0.2 cites the source by venue+volume+DOI without the title string. F2's title is taken from the arXiv preprint as quoted in CL-2026-008 v0.2.
+- **B2 — `D5 cross-link` label glossed at first use.** §4.2 previously read "The §3 D5 cross-link is satisfied …" without defining `D5` (the label is the toolkit's `tests/test_d5_redundancy.py` regression-gate name, used in MN v0.3 §8.3 and in the toolkit README, but not introduced in the View body). Reworded to "The §3 analytic cross-link (MN v0.3 §8.3; the toolkit's `D5` regression gate) is satisfied …" — `D5` is now glossed inline.
+
+Two items from the action plan were *not* folded at this pass and remain on record:
+
+- **B3 (cosmetic two-reds in Figure 4 wording)** — deferred as cosmetic; no action.
+- **B4 (Sorci paper title verification against DOI 10.1103/qhj9-pc2b)** — flagged for the steward; no web access at agent end. The View's Block 1 D1 title and the CL-2026-006 v0.5 descriptive title disagree (descriptive form vs PRL form); pre-tag confirmation against the DOI requested.
+
+The plan also surfaced cross-artefact propagation items (D1–D7: Sail at CL-2026-006 v0.2, tutorial at CL-2026-006 v0.3, Ledger CL-2026-006 v0.5 still cites MN v0.2, work plan lineage at Ledger v0.4 / MN v0.2, companion drafts at CL-2026-007 v0.2, Coastline "Successor" field, pilot-reader-brief title verify). These are *Lock-Key* territory or separate-steward-call territory; none is folded at this pass. Recorded as the queue for the next steward call.
+
+### (3) Step-2 repo hygiene (this commit)
+
+- **README.md** brought up to current repo shape:
+  - "Three related artefact families" → "four", with **Views** added as item 4 (presentational vantage-points; pointer to the artefact-category spec and the first View).
+  - New paragraph below the artefact-families list introducing the two *supporting* families that sit alongside: the **numerical toolkit** (`numerics/`) and **work plans** (`workplans/`); the 85-test suite mentioned explicitly.
+  - Repository-structure tree expanded to include `views/` (with the `figures/` subdirectory), `numerics/` (with `src/`, `tests/`, `examples/`, `results/`, `pyproject.toml`, `README.md`), the Views-category specification and pilot-reader brief under `docs/`, and the four D6-locked toolkit contract files under `workplans/` alongside the work plan itself.
+  - Split-licence paragraph extended to name `views/` (CC BY-SA 4.0; presentational, derived from CC BY-SA framework material), `numerics/` (MIT per `pyproject.toml`), and the new Views-category spec + pilot-reader brief (CC BY-SA 4.0 with the rest of `docs/`).
+  - "How to read this repository" step 1 extended to point foundations-metrology readers with no prior project background at the first Harbour View as an alternative on-ramp to the tutorial.
+- **Harbour-View structural deliberation note v0.6** status flipped from "Lock candidate" to "Locked 2026-05-27 (treated-as-locked in downstream artefacts since 2026-05-28 — HV-DRAFT-001 task-card and View built on it without further architectural revision; this status update records the lock retroactively)". See (4) below.
+- **This logbook entry** — the trailing audit gap closed: the chain now runs `7d1f774` (data-figure refinement) → `1da0090` (Block 5 streamlining, retrospectively recorded above) → this commit (consistency fix-up + Step-2 hygiene).
+
+### (4) Spec status flip — note on authority
+
+The Harbour-View structural deliberation note v0.6 said *"Lock candidate. All architectural questions resolved; all open decisions (O1–O12) carry recommendations awaiting explicit steward confirmation at a single lock call. No item blocks lockability."* Downstream artefacts — the HV-DRAFT-001 task card, the TOC outline, the bibliography draft, and the View itself — have all been built on v0.6 without architectural revision since 2026-05-27. The spec was effectively locked in use. The status line is now flipped to reflect that. The flip is reversible by reverting the status line in a future commit; no architectural commitment is added or removed by it.
+
+### Net state after this commit (Steps 1+2)
+
+- View (`views/view-framework-overview-v0.1.md`) consistency-clean against the three cross-reviewer reports modulo the two flagged items (B3 cosmetic, B4 Sorci-title verification).
+- README current to the four-artefact-family / numerics + workplans shape of the repo.
+- Spec status flipped from "Lock candidate" to "Locked" with provenance.
+- Cross-artefact propagation queue (D1–D7) recorded above; no propagation folded as part of Steps 1+2 — those require separate Lock-Key consideration. *(See Step-3 addendum below.)*
+- **Tag remains held.** Two release-time tasks are queued (CITATION.cff date-released bump, View Block 6 citation-metadata stub population); two pre-tag confirmations are open (B4 Sorci-title verification; F1 Covey title fill-in).
+
+### Step 3 addendum — same-day D-queue partial fold (Lock-Key-safe items)
+
+Following the steward's same-day "go" on Step 3, the Lock-Key-safe subset of the D-queue was folded in this commit:
+
+- **D2 — Tutorial.** [`docs/tutorial.md`](tutorial.md) §10 Sail-mixed-anchor sentence updated from *"the Ledger entry is itself now at v0.3"* to *"now at v0.5"* (verdict UNDERDETERMINED has stood throughout, so the Sail's v0.2 anchor remains valid mixed-anchor); reading-list file link at the foot of §10 updated from `CL-2026-006-sorci-v0.3.md` to `CL-2026-006-sorci-v0.5.md` (file actually exists; v0.3 link was broken). Tutorial version history extended with a v0.3 rev. (a) entry recording the propagation pass.
+- **D4 — Toolkit work plan.** [`workplans/toolkit-work-plan-v0.1.md`](../workplans/toolkit-work-plan-v0.1.md) header *Lineage* line refreshed to record both the planning-time anchors (Ledger v0.4, MN v0.2) and the current anchors (Ledger v0.5, MN v0.3). The in-text "MN v0.2 §2", "MN v0.2 §6c", "CL-2026-006 v0.4 D1" cross-references throughout §§3 / 5 / 6 are deliberately preserved as planning-time pointers — the §-numbering at MN v0.3 / CL-2026-006 v0.5 differs from v0.2 / v0.4, and a global rewrite would falsify the planning audit trail. Work-plan §10 version history extended with v0.1 rev. (e) recording the lineage-block refresh.
+- **D5 — Companion drafts.** Frozen-superseded banners added to [`docs/view-framework-overview-v0.1-toc-outline.md`](view-framework-overview-v0.1-toc-outline.md) and [`docs/view-framework-overview-v0.1-bibliography-draft.md`](view-framework-overview-v0.1-bibliography-draft.md). Both worksheets served the pre-prose stage; the View at HEAD is now the authoritative artefact. Banner content (i) declares the freeze + the supersession pointer; (ii) for the bibliography draft, resolves the OPTIONAL/MANDATORY/STEWARD-CONFIRM drafter checkboxes by reporting what the View at HEAD actually folded (B3, C5, F1, F2 all MANDATORY; A4 Hayashi and C6 alternate Riedel & Zurek not folded); (iii) for the TOC outline, notes the dropped Schematic 2 top-panel description and the stale CL-2026-007 v0.2 references as audit-record-only, not current. Worksheet bodies left intact as the audit record of the drafts as posted on 2026-05-28.
+- **D7 — Pilot-reader brief title check.** Verified: the brief's question 3 does ask about *"Report on Temporal Redundancy and Emergent Proper Time"* — a working title preceding the current *"Harbour View — Temporal Redundancy and Emergent Proper Time"*. **Not edited.** The brief is an archived closed-call audit record (top-of-file CALL CLOSED 2026-05-28 banner); rewriting question text inside the archive would falsify the as-posted record. The title-question wording is preserved as the audit record of what the steward asked the pilot reader; if the steward wants a forward-looking pointer note added (without editing question 3), that would be a separate steward-direction call.
+
+### Step 3 — held items: steward decisions returned same-day
+
+The steward returned decisions on the three Lock-Key-held items same-day:
+
+- **D1 — keep as is.** The Sail's v0.2→v0.4 Coastline + v0.2 Ledger mixed anchor stands; Phase-4 Sail re-anchor pass remains the right forum. **No agent action; no edit to [`sails/sorci-commentary-v0.4.md`](../sails/sorci-commentary-v0.4.md).**
+- **D3 — v0.5.1 rev. authorised.** Issue a patch revision of CL-2026-006 to correct the stale "MN v0.2" cross-references the View's consistency check surfaced.
+- **D6 — keep as is.** Coastline v0.4's "Successor: (none yet)" is correct; the View is a derived presentational artefact, not a Coastline successor. **No agent action; no edit to [`coastlines/consensus-emergence-v0.4.md`](../coastlines/consensus-emergence-v0.4.md).**
+
+### D3 fold — CL-2026-006 v0.5.1 (patch revision; supersedes v0.5)
+
+New file [`ledger/CL-2026-006-sorci-v0.5.1.md`](../ledger/CL-2026-006-sorci-v0.5.1.md) issued 2026-05-29 as a copy of v0.5 with the MN cross-reference corrections folded. v0.5 (2026-05-27) is retained alongside as the prior version, per the Ledger's per-file versioning convention.
+
+**Scope of the patch (steward-authorised, agent-executed):**
+
+- Three "MN v0.2" pointers updated to **MN v0.3** (current methodological note, issued 2026-05-27 same-day as v0.5; v0.3 carries §§1–7 + Appendices A/B verbatim from v0.2, so § cross-references resolve identically):
+  - Front-matter *Declared evaluating measures* row;
+  - *Declared Evaluating Measure* quote-block;
+  - *Engagement under the R_δ anchor* §3 cross-reference.
+- Two "MN v0.2 §1.1" pointers **preserved** as historical origin markers — the preamble before the verbatim einselection-caveat block and the verbatim block itself. MN v0.3 §8.6 itself reproduces the verbatim caveat with the same "MN v0.2 §1.1" pointer (the assumption was *originally* introduced in MN v0.2 §1.1 and is carried verbatim into v0.3 §1.1 / §8.6); changing the pointer in the Ledger would break verbatim-ness with MN v0.3.
+- Front-matter Date 2026-05-27 → 2026-05-29 (issuance date of v0.5.1; v0.5 content date noted in parentheses). Version v0.5 → v0.5.1; Predecessor v0.4 → v0.5.
+- New v0.5.1 row added to the version-history table at the foot of the file.
+- Footer line updated to reflect v0.5.1 issuance + the no-content-change scope.
+
+**No substantive content change.** Classification stays UNDERDETERMINED. The D1 quantitative grounding (Module 3a budget; ²⁷Al⁺ V≈0.943; the three model-conditional findings — channel/regime-specific signs, latent-invariant detection layer, secular-invisible motional dephasing + non-additive residual −0.021), the *Quantitative grounding of D1* section, the discriminant conditions D1–D3 / D−1, the CBG-note softening, and the *R_δ forward target* statement are all unchanged from v0.5.
+
+**Downstream pointer propagation (4 files):**
+
+- [`README.md`](../README.md): tree updated to add `CL-2026-006-sorci-v0.5.1.md` as (current); v0.5 stays in the listing as the prior version. *How to read this repository* step 4 updated to point at v0.5.1 with the patch-scope note.
+- [`docs/tutorial.md`](tutorial.md): §10 Sail-mixed-anchor sentence updated from "now at v0.5" to "now at v0.5.1"; reading-list file link updated from `v0.5.md` to `v0.5.1.md`; the v0.3 rev. (a) version-history entry I added earlier today (Step-3 D2 pass) consolidated to record the final v0.5.1 result rather than the intermediate v0.5 state — same calendar day, same rev. (a), no audit-trail split.
+- [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md): Block 2 (version-pinning appendix) Ledger CL-2026-006 pointer updated from v0.5 to v0.5.1. **In-text §1 / §4 / §5 references to "CL-2026-006 v0.5" are deliberately preserved** as references to the substantive issuance (which v0.5.1 inherits unchanged) — only the *Block 2 authoritative-file pointer* moves. A one-sentence note in Block 2 explains the v0.5 / v0.5.1 lineage and the citation convention.
+- [`docs/logbook.md`](logbook.md): this entry.
+
+**Sail intentionally not updated.** The Sail's CL-2026-006 v0.2 anchor stays per D1 = "keep as is" and the Sail's own documented Phase-4 re-anchor pass.
+
+### Net state after Step 3 (including the D3 fold)
+
+- D-queue fully addressed at the agent level: D2, D4, D5 folded (Step 3 main pass); D7 verified and reported; D1 + D6 confirmed no-action by steward; D3 = v0.5.1 patch revision issued and propagated.
+- Tag still held. The release-time tasks and pre-tag confirmations listed above are unchanged.
+- **Lock-Key released for D3 only** (steward-authorised Ledger edit); Coastline / MN / Sail / committed JSONs / results-JSON files all untouched. This commit's full file set is now: View prose; README; Views-category spec status line; this logbook entry; tutorial; toolkit work plan; TOC-outline + bibliography-draft companion-doc banners; new Ledger file `CL-2026-006-sorci-v0.5.1.md` (v0.5 retained alongside, unchanged).

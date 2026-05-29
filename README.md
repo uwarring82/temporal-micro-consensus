@@ -7,19 +7,25 @@ A Harbour repository for the *Consensus-Emergence of Classical Proper Time* fram
 | Status | Draft — Local Stewardship |
 | Steward | U. Warring (Physikalisches Institut, Albert-Ludwigs-Universität Freiburg) |
 | Origin date | 2026-05-23 |
-| Scope | Framework note (Coastline), claim classifications (Ledger), commentaries (Sails) |
+| Scope | Framework note (Coastline), claim classifications (Ledger), commentaries (Sails), presentational vantage-points (Views); supported by methodological notes (`docs/notes/`), a numerical toolkit (`numerics/`), and work plans (`workplans/`) |
 | Website | <https://uwarring82.github.io/temporal-micro-consensus/> (current versions; GitHub Pages) |
 | DOI | [10.5281/zenodo.20411120](https://doi.org/10.5281/zenodo.20411120) (Zenodo archive; release `framework-status-2026.05.27`) |
 
 ## What this repository contains
 
-This repository holds three related artefact families:
+This repository holds four related artefact families:
 
 1. **Coastline** (`coastlines/`) — versioned framework notes. The current Coastline is *Consensus-Emergence of Classical Proper Time*, a proposal that classical proper time should be treated as an emergent collective variable supported redundantly across many microscopic temporal records, in the spirit of the Page–Wootters mechanism and quantum Darwinism but distinct from both.
 2. **Ledger** (`ledger/`) — classification entries in the Breakwater Claim Analysis Ledger (schema v1.0-rc). Each entry classifies an external scientific claim against a named Harbour framework under a declared evaluating measure, with explicit discriminant conditions for upgrade or downgrade. Entries: CL-2026-006 (Sorci et al., PRL 136, 163602, 2026), CL-2026-007 (Smith & Ahmadi, Nat. Commun. 11, 5360, 2020), and CL-2026-008 (distributed entanglement-enhanced clock networks — Covey et al. 2025 + Fromonteil et al. 2025), classified under the Coastline.
 3. **Sails** (`sails/`) — commentaries and essays that translate framework-relative work into prose for broader readership. The current Sail (v0.4) is a commentary on Sorci et al., anchored to Coastline v0.4, with its Ledger anchor kept at CL-2026-006 v0.2 (a mixed anchor noted in the Sail).
+4. **Views** (`views/`) — presentational vantage-points: externally-readable, citable consolidations of a body of project work derived from but *not authoritative over* the underlying Coastline / Ledger / Sail notes. The artefact category is specified by [`docs/harbour-view-structural-deliberation-note-v0.6.md`](docs/harbour-view-structural-deliberation-note-v0.6.md). The first View is *Harbour View — Temporal Redundancy and Emergent Proper Time* ([`views/view-framework-overview-v0.1.md`](views/view-framework-overview-v0.1.md)).
 
-A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, literature-review plan) and the [`tutorial`](docs/tutorial.md) — a guided on-ramp for first-time visitors. Authored **methodological notes** (instruments for the framework — e.g. the temporal-redundancy functional) live in [`docs/notes/`](docs/notes/). Forward-looking **work plans** for prospective workstreams (e.g. the numerical toolkit at `numerics/`) live in [`workplans/`](workplans/).
+Two supporting families sit alongside the four artefact families above:
+
+- A **numerical toolkit** ([`numerics/`](numerics/)) — the `tmc-numerics` package implementing the framework's declared anchor measures (`I(C:M)`, `F[τ]`, `R_δ`) under a master-equation backbone, with two priority modules: Module 3a (Sorci D1 nuisance budget) and Module 3b (the open temporal instrument). Backed by an 85-test suite ([`numerics/README.md`](numerics/README.md)).
+- Forward-looking **work plans** ([`workplans/`](workplans/)) — the toolkit work plan and the D6-locked Phase-1 / Phase-2 API contracts and per-module contracts (Module 3a, Module 3b).
+
+A `docs/` subdirectory holds forward-looking documentation (roadmap, logbook, literature-review plan) and the [`tutorial`](docs/tutorial.md) — a guided on-ramp for first-time visitors. Authored **methodological notes** (instruments for the framework — e.g. the temporal-redundancy functional) live in [`docs/notes/`](docs/notes/).
 
 ## Repository structure
 
@@ -41,7 +47,8 @@ temporal-micro-consensus/
 │   ├── CL-2026-006-sorci-v0.2.md
 │   ├── CL-2026-006-sorci-v0.3.md
 │   ├── CL-2026-006-sorci-v0.4.md
-│   ├── CL-2026-006-sorci-v0.5.md          (current)
+│   ├── CL-2026-006-sorci-v0.5.md
+│   ├── CL-2026-006-sorci-v0.5.1.md        (current; patch revision — stale MN cross-refs)
 │   ├── CL-2026-007-smith-ahmadi-v0.1.md
 │   ├── CL-2026-007-smith-ahmadi-v0.2.md
 │   ├── CL-2026-007-smith-ahmadi-v0.3.md   (current)
@@ -52,24 +59,41 @@ temporal-micro-consensus/
 │   ├── sorci-commentary-v0.2.md
 │   ├── sorci-commentary-v0.3.md
 │   └── sorci-commentary-v0.4.md     (current)
+├── views/                            (presentational vantage-points — Harbour Views)
+│   ├── view-framework-overview-v0.1.md     (current; first View)
+│   └── figures/                      (View-resident figures: schematics + data figures)
+├── numerics/                         (tmc-numerics toolkit — master-equation backbone + anchor measures)
+│   ├── README.md
+│   ├── pyproject.toml                (dependency lower bounds; exact env pinned per Toolkit Provenance in views/)
+│   ├── requirements.txt
+│   ├── src/                          (tmc_numerics package)
+│   ├── tests/                        (85-test suite)
+│   ├── examples/                     (notebooks regenerating committed results)
+│   └── results/                      (committed JSON results — Module 3a + Module 3b)
 ├── docs/
-    ├── tutorial.md                   (guided on-ramp for first-time visitors)
-    ├── roadmap.md
-    ├── logbook.md                    (project logbook — provenance / FAIR)
-    ├── literature-review-plan.md
-    ├── notes/                        (methodological notes — instruments for the framework)
-    │   ├── temporal-redundancy-functional-v0.1.md
-    │   ├── temporal-redundancy-functional-v0.2.md
-    │   └── temporal-redundancy-functional-v0.3.md  (current)
-    └── literature/                   (literature review)
-        ├── README.md
-        ├── references.bib            (verified bibliography)
-        ├── index.md                  (corpus triage tracker)
-        ├── synthesis-v0.1.md         (Phase-3 synthesis)
-        ├── notes/                    (per-paper findings — public)
-        └── sources/                  (original PDFs — local-only, git-ignored)
+│   ├── tutorial.md                   (guided on-ramp for first-time visitors)
+│   ├── roadmap.md
+│   ├── logbook.md                    (project logbook — provenance / FAIR)
+│   ├── literature-review-plan.md
+│   ├── harbour-view-structural-deliberation-note-v0.6.md  (Views artefact-category specification)
+│   ├── view-framework-overview-v0.1-pilot-reader-brief.md (first-View pilot-reader brief, closed-call audit record)
+│   ├── notes/                        (methodological notes — instruments for the framework)
+│   │   ├── temporal-redundancy-functional-v0.1.md
+│   │   ├── temporal-redundancy-functional-v0.2.md
+│   │   └── temporal-redundancy-functional-v0.3.md  (current)
+│   └── literature/                   (literature review)
+│       ├── README.md
+│       ├── references.bib            (verified bibliography)
+│       ├── index.md                  (corpus triage tracker)
+│       ├── synthesis-v0.1.md         (Phase-3 synthesis)
+│       ├── notes/                    (per-paper findings — public)
+│       └── sources/                  (original PDFs — local-only, git-ignored)
 └── workplans/
-    └── toolkit-work-plan-v0.1.md     (numerical toolkit work plan — current)
+    ├── toolkit-work-plan-v0.1.md                          (numerical toolkit work plan — current)
+    ├── toolkit-phase1-api-contract-v0.1.md                (D6-locked Phase-1 public API)
+    ├── toolkit-phase2-api-contract-v0.1.md                (D6-locked Phase-2 anchor-measure post-processors)
+    ├── toolkit-module3a-sorci-contract-v0.1.md            (Module 3a — Sorci D1 nuisance budget)
+    └── toolkit-module3b-open-instrument-contract-v0.1.md  (Module 3b — open temporal instrument)
 ```
 
 ## Version conventions
@@ -113,7 +137,7 @@ This repository uses a three-part split licence following the T(h)reehouse conve
 - **CC BY-SA 4.0** — Coastline framework notes and Breakwater Ledger entries (`coastlines/`, `ledger/`). These are the framework infrastructure; they are shareable and adaptable under attribution and share-alike. See `LICENSE-CC-BY-SA-4.0`.
 - **CC BY-NC-SA 4.0** — Sails and other authored prose (`sails/`). These are commentaries and essays where authorial voice is load-bearing; they are shareable for non-commercial use under attribution and share-alike. See `LICENSE-CC-BY-NC-SA-4.0`.
 
-When in doubt about which licence applies to a particular file, the document type indicated by its directory placement governs. The `docs/` directory contains documentation and planning artefacts (`tutorial.md`, `roadmap.md`, `logbook.md`, `literature-review-plan.md`) under the same **CC BY-SA 4.0** licence as Coastlines and Ledgers, as does the `workplans/` directory (planning artefacts); authored methodological notes or prose essays in `docs/` would fall under **CC BY-NC-SA 4.0** if authorial voice is load-bearing. A future consolidation into a single CC BY-SA 4.0 licence may be considered if multi-licence compilation downstream becomes the dominant use case; this question is registered in the roadmap.
+When in doubt about which licence applies to a particular file, the document type indicated by its directory placement governs. The `docs/` directory contains documentation and planning artefacts (`tutorial.md`, `roadmap.md`, `logbook.md`, `literature-review-plan.md`, the Views-category specification and pilot-reader brief) under the same **CC BY-SA 4.0** licence as Coastlines and Ledgers; the `workplans/` directory (planning artefacts) and the `views/` directory (presentational vantage-points derived from framework-internal Coastline/Ledger/MN material) are likewise **CC BY-SA 4.0**; the `numerics/` directory (code, scripts, configuration, test suite, example notebooks, committed JSON results) is **MIT** per `numerics/pyproject.toml`. Authored methodological notes or prose essays in `docs/` would fall under **CC BY-NC-SA 4.0** if authorial voice is load-bearing. A future consolidation into a single CC BY-SA 4.0 licence may be considered if multi-licence compilation downstream becomes the dominant use case; this question is registered in the roadmap.
 
 ## Relationship to other Harbour artefacts
 
@@ -127,10 +151,10 @@ This repository operates within the broader Open-Science Harbour architecture ma
 
 If you are encountering this repository for the first time:
 
-1. Start with the [`docs/tutorial.md`](docs/tutorial.md) for a guided introduction to the concepts, architecture, and current state.
+1. Start with the [`docs/tutorial.md`](docs/tutorial.md) for a guided introduction to the concepts, architecture, and current state. Foundations-metrology readers with no prior project background may prefer the first **Harbour View** ([`views/view-framework-overview-v0.1.md`](views/view-framework-overview-v0.1.md)) — a single externally-readable presentation of the framework, its methodology, and its first worked exemplar.
 2. Read the most recent Coastline (`coastlines/consensus-emergence-v0.4.md`) for the authoritative framework statement.
 3. Read the most recent Sail (`sails/sorci-commentary-v0.4.md`) to see how the framework is applied in a concrete case.
-4. Consult the Sorci Ledger entry (`ledger/CL-2026-006-sorci-v0.5.md`) for the framework-relative classification underwriting the Sail.
+4. Consult the Sorci Ledger entry (`ledger/CL-2026-006-sorci-v0.5.1.md`) for the framework-relative classification underwriting the Sail. (v0.5 is the substantive issuance — Module 3a quantitative grounding of D1; v0.5.1 is a 2026-05-29 patch revision that updated three stale MN v0.2 → MN v0.3 cross-references with no content change.)
 5. Consult `docs/roadmap.md` for what is in active development and what is deferred.
 
 Earlier versions are retained for transparency; readers comparing against current claims should always use the latest version.

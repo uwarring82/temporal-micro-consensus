@@ -8,6 +8,10 @@
 
 **Status:** **LOCKED 2026-05-28** (Guardian sign-off held by steward; two substantive amendments — the Q10c carve-out for schematics; the §5 first-instance pilot-reader reclassification — both recorded below). Pre-prose scaffolding complete as of the 2026-05-28 6c completion: next-move 5 (Jekyll permalink) deferred to release; next-move 6 (figure generation) DONE (schematics + data figures + three integrity conditions verified at commit `7d1f774`); next-move 7 (commented bibliography) DRAFTED + folded into the View's reference apparatus at next-move 10 with A1–A4 anchors locked (A5 thermodynamics removed 2026-05-28). **§1 + §2 prose committed and pushed (commit `2503c07`, 2026-05-28); §§3–5 + reference-apparatus drafted (commit `ca8872a`); two-pass Guardian corrections folded (commit `577765b`); residual-pass corrections folded (this commit).** Per Guardian determination 2026-05-28, the spec §5 first-instance pilot-reader gate is reclassified from *mandatory pre-release, no omission* to *best-effort pre-release with disclosed limitation* (logbook 2026-05-28 Item 1). **Full draft complete; awaiting steward direction on the tagged-release commit.**
 
+> **FROZEN 2026-05-29 — superseded by [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) at HEAD.**
+>
+> This TOC outline served its purpose at the pre-prose stage; the final View prose, figures, bibliography, and apparatus all live in the View file itself. Outline-internal references to *CL-2026-007 v0.2* (subsequently superseded by v0.3) and to the dropped Schematic 2 *L_source / L_apparatus / L_comparison* comparison-geometry top panel (dropped per Guardian figure-check at commit `d9aae87`) are retained as the audit record of the outline as posted on 2026-05-28; they are **not** the current state of the View. See the 2026-05-29 logbook entry for the Step-3 D-queue pass that registered this banner.
+
 ---
 
 ## Lock Record (2026-05-28, Guardian sign-off)

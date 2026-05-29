@@ -1,9 +1,9 @@
 # Harbour View — Structural Deliberation Note
 
 **Document type:** Deliberation note (not a Harbour View itself; a design document for the artefact category).
-**Version:** v0.6 (lock candidate, 2026-05-27).
+**Version:** v0.6 (locked 2026-05-27; status flipped from "lock candidate" to "locked" retroactively on 2026-05-29).
 **Endorsement Marker:** Local Stewardship (Ulrich Warring, Physikalisches Institut, Albert-Ludwigs-Universität Freiburg). Authority from use, not endorsement.
-**Status:** Lock candidate. All architectural questions resolved; all open decisions (O1–O12) carry recommendations awaiting explicit steward confirmation at a single lock call. No item blocks lockability. v0.6 adds language boundaries and readability discipline (Q12), the rule that holds a View to its externally-readable purpose.
+**Status:** **Locked 2026-05-27** — treated-as-locked in downstream artefacts since 2026-05-28 (HV-DRAFT-001 task card, TOC outline, bibliography draft, and the first Harbour View have all been built on v0.6 without architectural revision). Status flipped retroactively on 2026-05-29 to record the lock-in-use; see [`logbook.md` 2026-05-29 entry](logbook.md). v0.6 adds language boundaries and readability discipline (Q12), the rule that holds a View to its externally-readable purpose; all architectural questions are resolved; all open decisions (O1–O12) stand at their v0.6 recommendations.
 **Lineage:** Discovery deliberation (2026-05-27 prior turn) → consolidated-write-up proposal → v0.1 → Guardian pass → structural pass → v0.2 → Scout pass → structural-pass approval → v0.3 → steward-initiated figure/notebook expansion → Guardian ADM-EC pass → v0.4 → Scout + structural + Architect passes → steward query on external-reference anchoring → v0.5 → steward-initiated language-boundary addition → Guardian pass → v0.6 (this version).
 
 -----

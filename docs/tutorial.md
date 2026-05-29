@@ -169,7 +169,7 @@ All three rest on the **experimental-witness gap**: the structural claims are fr
 
 ## 6. The Sail: translating into prose
 
-The **Sail** (*Visibility, the Right Witness*, v0.4) is a commentary on Sorci et al. 2026, anchored to Coastline v0.4 — with its Ledger anchor kept at CL-2026-006 **v0.2** (a documented *mixed anchor*; the Ledger entry is itself now at v0.3, and the v0.2→v0.3 re-anchor changed no verdict, so the citation remains valid). It translates the Ledger's UNDERDETERMINED classification into a thesis:
+The **Sail** (*Visibility, the Right Witness*, v0.4) is a commentary on Sorci et al. 2026, anchored to Coastline v0.4 — with its Ledger anchor kept at CL-2026-006 **v0.2** (a documented *mixed anchor*; the Ledger entry is itself now at v0.5.1, and the v0.2→v0.5.1 re-anchor sequence has changed no verdict — the classification has stood at UNDERDETERMINED throughout, so the Sail's citation remains valid). It translates the Ledger's UNDERDETERMINED classification into a thesis:
 
 > The Sorci proposal is a valuable operationalisation step. Its demarcation between semiclassically-reproducible frequency shifts and genuinely nonclassical visibility loss is the right demarcation. But sensitivity ≠ discriminability. The path to isolating evidence runs through explicit nuisance decomposition, an r-dependence test, and a calibrated null-test protocol.
 
@@ -231,7 +231,7 @@ If you are new to the repository, read in this order:
 1. **This tutorial** (you are here) — concepts and architecture.
 2. [`coastlines/consensus-emergence-v0.4.md`](../coastlines/consensus-emergence-v0.4.md) — the framework itself, in full.
 3. [`sails/sorci-commentary-v0.4.md`](../sails/sorci-commentary-v0.4.md) — see the framework applied to a concrete case.
-4. [`ledger/CL-2026-006-sorci-v0.3.md`](../ledger/CL-2026-006-sorci-v0.3.md) — the Ledger classification underwriting the Sail.
+4. [`ledger/CL-2026-006-sorci-v0.5.1.md`](../ledger/CL-2026-006-sorci-v0.5.1.md) — the Ledger classification underwriting the Sail (current; v0.5 added the Module 3a quantitative grounding of Discriminant D1; v0.5.1 is a 2026-05-29 patch revision correcting stale MN v0.2 → MN v0.3 cross-references with no content change).
 5. [`docs/literature/synthesis-v0.1.md`](literature/synthesis-v0.1.md) — how the literature review stress-tested the framework.
 6. [`docs/roadmap.md`](roadmap.md) — what is in active development and what is deferred.
 
@@ -275,6 +275,7 @@ The first of those methodological notes is now drafted — the **temporal-redund
 | v0.1 | 2026-05-26 | Initial tutorial. Covers Harbour architecture, five Claims, Ledger system, literature-review methodology, synthesis headline, regime of validity, reading order, open problems, and key distinctions. Anchored to Coastline v0.4, Ledger entries 006 v0.3 / 007 v0.3 / 008 v0.2, Sail v0.4, synthesis v0.1. |
 | v0.2 | 2026-05-27 | Wove in the temporal-redundancy functional finding (new methodological note, `docs/notes/`): §10 updated (the toy functional is now drafted, with the `R_{0.10} ≈ 7.1` vs `1` headline and the residual non-toy open problem); §4 *multipartite ≠ redundant* caveat and §11 key-distinctions row now cross-reference the computed result. No change to the five-Claim exposition. |
 | v0.3 | 2026-05-27 | Re-pointed the methodological-note citations from v0.1 to **v0.2** (Guardian-review revision of the note: einselection reframing, Schmidt derivation, §3/§4/§5 tightening, arXiv:2509.17775 grounding). No change to the tutorial's content or the headline numbers. |
+| v0.3 rev. (a) | 2026-05-29 | **Anchor-propagation pass** (HV-DRAFT-001 Step-3 D-queue). Updated the §10 Sail-mixed-anchor sentence from "the Ledger entry is itself now at v0.3" to "now at v0.5.1" (the Sail anchor at CL-2026-006 v0.2 remains documented mixed-anchor; v0.5 added Module 3a's quantitative grounding of D1, then v0.5.1 patched stale MN cross-references, neither moved the verdict, so the Sail citation remains valid). Updated the reading-list file link at the foot of §10 from `CL-2026-006-sorci-v0.3.md` to `CL-2026-006-sorci-v0.5.1.md` (current). No change to the five-Claim exposition, the headline numbers, or any other downstream pointer. |
 
 ---
 
