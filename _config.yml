@@ -16,6 +16,14 @@ description: >-
   framework, with Breakwater Ledger classifications, Sail commentaries, and
   Harbour Views.
 
+# Project-pages baseurl. The Pages site is served from
+# https://uwarring82.github.io/temporal-micro-consensus/ — the `/temporal-micro-consensus`
+# prefix must be applied to every absolute path the layout emits, which is what the
+# `relative_url` Liquid filter does. Without this, the primary-nav links in
+# `_layouts/default.html` (which use absolute paths like `/docs/tutorial.html`)
+# would 404 on the live site.
+baseurl: /temporal-micro-consensus
+
 # This is a prose/documentation repo — we never intend to use Liquid templating.
 # 'lax' makes Jekyll render incidental brace sequences in the Markdown literally
 # instead of failing the whole build on them (defence against math/notation braces).

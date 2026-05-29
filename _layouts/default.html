@@ -101,26 +101,75 @@
     .brand-lockup img:first-child { width: 32px; height: 32px; flex: none; }
     .brand-lockup img:last-child { width: 7.05rem; height: auto; flex: none; }
 
-    .site-meta {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--stone);
-      text-align: right;
-      line-height: 1.35;
+    /* Primary navigation — cd-rules pattern (blueprint §10 component) */
+    .site-nav { justify-self: end; }
+
+    .site-nav__list {
+      display: flex;
+      gap: 0.4rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .site-meta a {
+    .site-nav a,
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--min-target);
+      padding: 0.5rem 0.85rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.3;
       color: var(--sea);
       text-decoration: none;
-    }
-    .site-meta a:hover, .site-meta a:focus-visible {
-      text-decoration: underline;
-      text-underline-offset: 2px;
+      border: 1px solid transparent;
+      background: transparent;
+      border-radius: 2px;
     }
 
+    .site-nav a:hover,
+    .site-nav a:focus-visible,
+    .nav-toggle:hover,
+    .nav-toggle:focus-visible {
+      border-color: var(--grid);
+      background: rgba(250, 248, 244, 0.88);
+    }
+
+    .site-nav a[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--sea);
+      background: var(--warm-white);
+    }
+
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+      justify-self: end;
+    }
+
+    /* Mobile: collapse the nav behind a Menu button */
     @media (max-width: 640px) {
-      .site-meta { display: none; }
-      .site-header__inner { grid-template-columns: auto 1fr; }
+      .site-header__inner {
+        grid-template-columns: auto auto;
+      }
+      .nav-toggle { display: inline-flex; }
+      .site-nav {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+      }
+      .site-nav[data-open="false"] {
+        display: none;
+      }
+      .site-nav__list {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding-top: 0.4rem;
+      }
+      .site-nav a {
+        justify-content: flex-start;
+      }
     }
 
     /* Main content — reading column at --measure */
@@ -293,11 +342,28 @@
         <img src="{{ '/assets/emblem-32.svg' | relative_url }}" alt="" role="presentation">
         <img src="{{ '/assets/wordmark-full.svg' | relative_url }}" alt="T(h)ree +EC">
       </a>
-      <div></div>
-      <div class="site-meta">
-        <div>{{ site.title }}</div>
-        <div>Local Stewardship · <a href="https://github.com/uwarring82/temporal-micro-consensus">repository</a></div>
-      </div>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation"
+      >Menu</button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-open="true">
+        {% assign nav_items = "Tutorial|/docs/tutorial.html;View|/views/view-framework-overview-v0.1.html;Coastline|/coastlines/consensus-emergence-v0.4.html;Ledger|/ledger/;Sail|/sails/sorci-commentary-v0.4.html" | split: ";" %}
+        <ul class="site-nav__list">
+          {% for item in nav_items %}
+            {% assign parts = item | split: "|" %}
+            {% assign label = parts[0] %}
+            {% assign href = parts[1] | relative_url %}
+            {% assign is_current = false %}
+            {% if page.url == parts[1] or page.url contains parts[1] %}{% assign is_current = true %}{% endif %}
+            <li><a href="{{ href }}"{% if is_current %} aria-current="page"{% endif %}>{{ label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -308,6 +374,45 @@
       </article>
     </div>
   </main>
+
+  <script>
+    (function () {
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+      var mobileQuery = window.matchMedia('(max-width: 640px)');
+
+      function syncNavState() {
+        var mobile = mobileQuery.matches;
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        if (!mobile) {
+          nav.dataset.open = 'true';
+          return;
+        }
+        nav.dataset.open = expanded ? 'true' : 'false';
+      }
+
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        syncNavState();
+      });
+
+      if (typeof mobileQuery.addEventListener === 'function') {
+        mobileQuery.addEventListener('change', syncNavState);
+      } else if (typeof mobileQuery.addListener === 'function') {
+        // Safari < 14 fallback
+        mobileQuery.addListener(syncNavState);
+      }
+
+      // Initialise: collapsed by default on mobile, open on desktop.
+      if (mobileQuery.matches) {
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      syncNavState();
+    })();
+  </script>
 
   <footer class="colophon">
     <div class="colophon__grid">
@@ -320,7 +425,7 @@
         Page chrome built on the
         <a href="https://github.com/threehouse-plus-ec/cd-rules">T(h)reehouse +EC corporate design</a>
         (assets pinned at <code>cd-v1.7.1</code> / <code>ee01c80</code>; see
-        <a href="{{ '/assets/SOURCE.md' | relative_url }}">assets/SOURCE.md</a>
+        <a href="{{ '/assets/SOURCE.html' | relative_url }}">assets/SOURCE</a>
         and the
         <a href="{{ '/LICENCE' | relative_url }}">root LICENCE</a>).
       </div>

@@ -994,3 +994,30 @@ Pre-tag check on the GitHub Pages site against the T(h)reehouse +EC corporate-de
 **Lock-Key held throughout this pass.** No edits to Coastline / Ledger / MN / Sail / committed JSONs / results-JSON / notebooks. Only the GitHub Pages chrome (`_config.yml`, new `_layouts/default.html`), the licence declaration (new root `LICENCE`), and the assets folder (new `assets/`) are introduced. The View prose is untouched.
 
 **Pre-tag status update.** The remaining gates before the Harbour View v0.1 tag are unchanged: CITATION.cff `date-released` bump and View Block 6 citation-metadata-stub population (Zenodo DOI + the O6-regime citation locator). Steward direction needed for the tag itself.
+
+### Web appearance — primary nav added (steward: "we need a menu on the web pages to properly browse")
+
+Follow-up to the same-day in-house style adoption (`site-style-cd-001`). The custom `_layouts/default.html` shipped without a navigation menu — the site-header only had a brand lockup and a small meta block. Steward called for browsable navigation. Following the cd-rules demonstrator pattern (its `.site-nav` + `.site-nav__list` + `.nav-toggle` chord with the JS mobile toggle):
+
+- **Five primary-nav items added**, in cd-rules' compact-mono style: *Tutorial* → `docs/tutorial.html`; *View* → `views/view-framework-overview-v0.1.html`; *Coastline* → `coastlines/consensus-emergence-v0.4.html`; *Ledger* → `ledger/`; *Sail* → `sails/sorci-commentary-v0.4.html`. The brand lockup remains the *Home* link. Items use `aria-current="page"` when the current page matches the target (computed by a small Liquid block in the layout against `page.url`).
+- **Mobile responsiveness**: a `Menu` button appears at `max-width: 640px` with `aria-expanded` state; the nav list collapses below the header by default and opens via the button. The toggle script is a small IIFE (~20 lines, no dependencies) attached at the foot of `<body>`; it syncs `data-open` on the nav and handles the responsive breakpoint transition. WCAG 2.2 AA touch-target sizing carries over from the `--min-target` token (`2.75rem`).
+- **New `ledger/index.md`** — a small folder-index page listing the three current Ledger entries (CL-2026-006 v0.5.1, CL-2026-007 v0.3, CL-2026-008 v0.2) with their classification (all UNDERDETERMINED), declared anchors, and a one-paragraph statement of the discriminant gap shared across the three. Gives the "Ledger" nav item a meaningful landing page rather than dumping the visitor into a specific entry. Equivalent index pages for `coastlines/`, `views/`, `sails/`, `docs/` are not added at this pass — each of those folders currently has a single primary artefact, so direct-link nav targets serve. If more entries are added later (a second View, a v0.5 Coastline, a second Sail), the corresponding index pages can be created without breaking the nav.
+- **`baseurl: /temporal-micro-consensus`** set in `_config.yml`. The project Pages site is served from `https://uwarring82.github.io/temporal-micro-consensus/`; the nav items use absolute paths (`/docs/tutorial.html` etc.) routed through Liquid's `relative_url` filter, which prepends the baseurl. Without this setting, the nav links would have 404'd on the live site (the `relative_url` filter passes paths through unchanged when `baseurl` is empty). Existing relative Markdown links in `index.md` and elsewhere are unaffected; the `jekyll-relative-links` plugin handles `.md` → `.html` conversion for those.
+- **Colophon link to `assets/SOURCE.md` updated to `.html`** — Jekyll renders `.md` files to HTML, so the linkable path on the live site is `assets/SOURCE.html`. The link text is shortened to *"assets/SOURCE"* to keep the colophon compact.
+
+The site is now properly browsable: every page carries the same primary nav, the lockup is Home, and the colophon links out to the assets-pin record and the root licence. Visual styling is unchanged (cd-rules tokens, in-house typography, `--measure: 38rem` reading column).
+
+**Compliance against the cd-rules blueprint (incremental, layered on the same-day site-style pass):**
+
+- §3 (usage levels — Level 1 identity emblem ≤ 32px in header lockup) — still satisfied; the `emblem-32.svg` in the lockup is unchanged. ✅
+- §4 (wordmark — B-full in formal lockup) — still satisfied. ✅
+- §10 (component patterns — header lockup, site-nav, mobile toggle, focus ring) — added, matching the demonstrator pattern. ✅
+- §12A (accessibility — `aria-label`, `aria-controls`, `aria-expanded`, `aria-current="page"`, touch targets, focus-visible) — added on the nav components. ✅
+
+**Files added / changed (this commit):**
+
+- `_layouts/default.html` — added `.site-nav` + `.nav-toggle` HTML; added the responsive CSS block; added the mobile-toggle script; updated the colophon SOURCE link to `.html`.
+- `_config.yml` — added `baseurl: /temporal-micro-consensus` with an explanatory comment.
+- `ledger/index.md` (new) — Ledger folder-index page.
+
+**Lock-Key held throughout this addendum.** No edits to Coastline / Ledger entries / MN / Sail / committed JSONs / results-JSON / notebooks. The Ledger entry files themselves are unchanged; only the new `ledger/index.md` is added as a non-Ledger landing page sibling.
