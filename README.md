@@ -82,6 +82,8 @@ temporal-micro-consensus/
 │   │   ├── temporal-redundancy-functional-v0.1.md
 │   │   ├── temporal-redundancy-functional-v0.2.md
 │   │   └── temporal-redundancy-functional-v0.3.md  (current)
+│   ├── memos/                        (research-direction memoranda; not artefacts, not under review discipline)
+│   │   └── anti-claim-6-analytical-route.md       (parked 2026-05-28: relational temporal Darwinism)
 │   └── literature/                   (literature review)
 │       ├── README.md
 │       ├── references.bib            (verified bibliography)
