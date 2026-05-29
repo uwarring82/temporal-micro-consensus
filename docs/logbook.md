@@ -1021,3 +1021,23 @@ The site is now properly browsable: every page carries the same primary nav, the
 - `ledger/index.md` (new) — Ledger folder-index page.
 
 **Lock-Key held throughout this addendum.** No edits to Coastline / Ledger entries / MN / Sail / committed JSONs / results-JSON / notebooks. The Ledger entry files themselves are unchanged; only the new `ledger/index.md` is added as a non-Ledger landing page sibling.
+
+### Tutorial v0.4 — post-View-v0.1 integration pass (steward: "make edits")
+
+The tutorial at [`docs/tutorial.md`](tutorial.md) was audited against the post-View-v0.1 state of the repo and four substantive drifts were identified: (i) the *"three artefact families"* framing predated the Views category; (ii) the Harbour View was unmentioned anywhere in the tutorial, including in §9's recommended reading order; (iii) the §5 CL-2026-006 anchor row carried the pre-v0.4-Ledger single-anchor reading `I(C:M)` rather than the dual classification `I(C:M)` + `R_δ` plus resolution `F[τ]` that the current v0.5.1 declares; (iv) the `numerics/` toolkit was alluded to in passing in §10 but never introduced. Steward approved a v0.4 minor-version bump rather than a rev-letter polish given the substantive integration involved.
+
+**Eight surgical edits folded** (Lock-Key safe — tutorial is `docs/`):
+
+- **Front-matter** — Version v0.3 → v0.4; Date 2026-05-27 → 2026-05-29.
+- **§1 line 22** — *"three artefact families — Coastlines, Ledgers, and Sails"* → *"four artefact families — Coastlines, Ledgers, Sails, and Views"*.
+- **§2 terms table** — new *"Harbour View"* row inserted between *"Sail"* and *"Local Stewardship"*, with the standard-form description and a *"consolidated review-style presentation from one declared vantage point"* analogue.
+- **§2 *"Why three families?"*** → *"Why these families?"* with a fourth bullet on the Harbour View; the closing *Lock-Key disciplined* sentence extended with *"a View summarises the underlying work, it does not replace it."*
+- **§5 CL-2026-006 row** — anchor column updated from *"Mutual information I(C:M)"* to *"**Dual classification:** I(C:M) and R_δ; **resolution:** F[τ]"*; key-gap column updated to *"Discriminability from nuisance channels (D2/D3 experimental, unmet; D1 theoretical decomposition grounded by toolkit Module 3a at v0.5)"*. CL-2026-007 and CL-2026-008 rows unchanged — both already match the current Ledger entries.
+- **§6 restructure** — renamed *"The Sail: translating into prose"* → *"Sails and Views: commentary and presentation"* with an introductory sentence framing the two outward-facing families. Sub-section §6.1 carries the existing Sail content verbatim; new sub-section §6.2 introduces the Harbour View artefact category, the first View, the foundations-metrology vantage, and the Lock-Key citation-pin discipline; links to the Views spec at [`harbour-view-structural-deliberation-note-v0.6.md`](harbour-view-structural-deliberation-note-v0.6.md).
+- **§9 reading-order step 1** — added an *Alternative fast on-ramp for foundations-metrology readers* sub-bullet pointing at the first Harbour View, mirroring the README's existing wording. Step 3 (Sail) gains the qualifier *"in authorial prose"* to distinguish from the View's role.
+- **§10** — new H3 sub-section *"The numerical toolkit"* added after the temporal-redundancy functional paragraph. Introduces `numerics/` as the `tmc-numerics` Python package over a QuTiP master-equation backbone, then describes Module 3a (Sorci D1 nuisance budget — four-layer nuisance model + per-channel I(C:M)+visibility decomposition + committed result JSON) and Module 3b (open temporal instrument — `R_δ(N, γ_φ t)` grid over `N ∈ {4, 8, 16, 32, 64, 128}` + the rising-boundary `0.273 → 1.827` numerical headline + committed result JSON). Mentions the example notebooks, the 85-test suite, the locked Phase-1 / Phase-2 API contracts under `workplans/`, and the toolkit's A5 anti-claim that numerical results *inform but do not auto-update* Ledger verdicts.
+- **§12 version history** — new v0.4 row recording the full scope of the pass.
+
+**No claim revision, no headline-number change.** The five-Claim exposition, the load-bearing sentence, the Regime-of-Validity statement, the `R_{0.10} ≈ 7.1` vs `1` redundancy headline, and all downstream pointers to Coastline / Ledger / MN / Sail versions are unchanged. Anchored to Coastline v0.4, Ledger CL-2026-006 v0.5.1 / CL-2026-007 v0.3 / CL-2026-008 v0.2, MN v0.3, Sail v0.4, Harbour View v0.1 (pre-release draft).
+
+**Lock-Key held throughout.** Only `docs/tutorial.md` and this logbook addendum are edited.

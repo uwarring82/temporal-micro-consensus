@@ -4,8 +4,8 @@
 
 | Field | Value |
 | --- | --- |
-| Version | v0.3 |
-| Date | 2026-05-27 |
+| Version | v0.4 |
+| Date | 2026-05-29 |
 | Licence | CC BY-SA 4.0 |
 | Scope | Conceptual tutorial — no prior knowledge of the Harbour architecture assumed |
 
@@ -19,7 +19,7 @@ This repository contains a **research framework** called *Consensus-Emergence of
 
 The short answer proposed here: *when many independent microscopic carriers agree on the same elapsed time* — not because some underlying clock is ticking, but because the collective behaviour of many degrees of freedom stabilises a single effective parameter. Time, on this view, is a **consensus variable**, not a private property of any single subsystem.
 
-The repository is organised into three artefact families — **Coastlines**, **Ledgers**, and **Sails** — each with a distinct role. This tutorial explains what they are, what concepts they carry, and how to read them in order.
+The repository is organised into four artefact families — **Coastlines**, **Ledgers**, **Sails**, and **Views** — each with a distinct role. This tutorial explains what they are, what concepts they carry, and how to read them in order.
 
 ---
 
@@ -32,17 +32,19 @@ The repository uses a controlled vocabulary from the broader **Open-Science Harb
 | **Coastline** | A versioned framework note — the "shoreline" where ideas are anchored. It states claims, anti-claims, and falsifiability conditions. | A theory paper or framework document |
 | **Ledger** | A **Breakwater Claim Analysis Ledger** entry — a classification of an external scientific claim against a named Coastline. | A structured peer review or claim assessment |
 | **Sail** | A commentary or essay that translates framework content into prose for broader readership. | A News & Views, commentary, or essay |
+| **Harbour View** | A presentational vantage-point document — externally readable, citable, derived from the Coastline / Ledger / Methodological Note body of work but not authoritative over it. | A consolidated review-style presentation from one declared vantage point |
 | **Local Stewardship** | The status of every document here: draft, versioned, and maintained by a named steward. **Not** peer-reviewed, **not** institutionally endorsed. | A preprint or working paper |
 
 Every document carries an explicit version number (v0.1, v0.2, …). Citations **must** include the version, because claims evolve. The Git history provides the external audit trail.
 
-### Why three families?
+### Why these families?
 
 - The **Coastline** states the framework in its own terms. It is abstract and self-contained.
 - The **Ledger** tests the framework against the real literature: "Given this Coastline, how does Smith & Ahmadi (2020) sit?"
-- The **Sail** translates the result into prose: "Here is why the Sorci proposal matters, and what remains to do."
+- The **Sail** translates a Ledger result into authorial prose for broader readership: "Here is why the Sorci proposal matters, and what remains to do."
+- The **Harbour View** presents the framework's current state from one declared vantage point — externally readable, citable as a single artefact, derived from the underlying Coastlines / Ledgers / Methodological Notes but not authoritative over them: "Here is what the framework currently says, where the open boundaries are, and how to engage."
 
-This separation prevents framework drift. The Coastline cannot silently absorb a Ledger finding; the Ledger cannot soften its verdict to suit a Sail's narrative. Each family is **Lock-Key disciplined**: changes to one do not automatically propagate to the others.
+This separation prevents framework drift. The Coastline cannot silently absorb a Ledger finding; the Ledger cannot soften its verdict to suit a Sail's narrative; a View summarises the underlying work, it does not replace it. Each family is **Lock-Key disciplined**: changes to one do not automatically propagate to the others.
 
 ---
 
@@ -159,7 +161,7 @@ Every entry contains:
 
 | Entry | Source | Classification | Anchor | Key gap |
 | --- | --- | --- | --- | --- |
-| **CL-2026-006** | Sorci et al. 2026 | UNDERDETERMINED | Mutual information I(C:M) | Discriminability from nuisance channels |
+| **CL-2026-006** | Sorci et al. 2026 | UNDERDETERMINED | **Dual classification:** I(C:M) and R_δ; **resolution:** F[τ] | Discriminability from nuisance channels (D2/D3 experimental, unmet; D1 theoretical decomposition grounded by toolkit Module 3a at v0.5) |
 | **CL-2026-007** | Smith & Ahmadi 2020 | UNDERDETERMINED | Fisher F[τ] (registered); coherence term γ_Q⁻¹ noted as carrying the structural content | Experimental witness isolating γ_Q⁻¹ from nuisances |
 | **CL-2026-008** | Covey 2025; Fromonteil 2025 | UNDERDETERMINED | Cross-probe mismatch Δω (classification); QFI (resolution) | Discriminability of GR signature from technical decoherence |
 
@@ -167,13 +169,25 @@ All three rest on the **experimental-witness gap**: the structural claims are fr
 
 ---
 
-## 6. The Sail: translating into prose
+## 6. Sails and Views: commentary and presentation
+
+The Coastline and the Ledger are framework-internal: they state and classify. Two other families translate that framework work outward, to different audiences and registers.
+
+### 6.1 The Sail
 
 The **Sail** (*Visibility, the Right Witness*, v0.4) is a commentary on Sorci et al. 2026, anchored to Coastline v0.4 — with its Ledger anchor kept at CL-2026-006 **v0.2** (a documented *mixed anchor*; the Ledger entry is itself now at v0.5.1, and the v0.2→v0.5.1 re-anchor sequence has changed no verdict — the classification has stood at UNDERDETERMINED throughout, so the Sail's citation remains valid). It translates the Ledger's UNDERDETERMINED classification into a thesis:
 
 > The Sorci proposal is a valuable operationalisation step. Its demarcation between semiclassically-reproducible frequency shifts and genuinely nonclassical visibility loss is the right demarcation. But sensitivity ≠ discriminability. The path to isolating evidence runs through explicit nuisance decomposition, an r-dependence test, and a calibrated null-test protocol.
 
 Sails are where **authorial voice** is load-bearing. They are licensed more restrictively (CC BY-NC-SA 4.0) than Coastlines or Ledgers (CC BY-SA 4.0) because the prose itself is part of the contribution.
+
+### 6.2 The Harbour View
+
+A **Harbour View** is a presentational vantage-point document: externally readable, citable as a single artefact, derived from the Coastline / Ledger / Methodological Note body of work but **not authoritative over** it. Unlike the Sail, a View has no authorial-essay voice — it states what each underlying artefact says, with explicit pointers back. Unlike the Coastline or the Ledger, a View is not the authoritative version of any claim it carries: every claim, anti-claim, definition, and discriminant condition resolves to a specific section in the underlying Coastline, Ledger, or Methodological Note.
+
+The first View — [*Harbour View — Temporal Redundancy and Emergent Proper Time*](../views/view-framework-overview-v0.1.md), v0.1 — surveys the framework's current state from the foundations-metrology vantage. Its §1 executive overview is intended to be followable by such a reader without consulting any other document; §§2–4 then operationalise that overview through the Coastline (§2), the toolkit's first methodological instrument (§3), and the first worked exemplar (§4); §5 names what is open and how to engage. The View is designed to be the natural fast on-ramp for first-time visitors who already have a foundations-metrology background — complementing this tutorial, which assumes no background.
+
+Views inherit Lock-Key discipline: a View can be superseded at its next version, but its current-version pins to underlying artefacts do not retroactively change. A citation of *Harbour View v0.1* is a citation to the specific snapshot of the project's current state at the time of that View's issue. The Views artefact category is specified by [`harbour-view-structural-deliberation-note-v0.6.md`](harbour-view-structural-deliberation-note-v0.6.md) (locked 2026-05-27; status flipped to *Locked* on 2026-05-29 to reflect lock-in-use across downstream artefacts).
 
 ---
 
@@ -228,9 +242,11 @@ This was made load-bearing by CL-2026-008, which classifies curvature/redshift p
 
 If you are new to the repository, read in this order:
 
-1. **This tutorial** (you are here) — concepts and architecture.
+1. **This tutorial** (you are here) — concepts and architecture, no prior background assumed.
+
+   *Alternative fast on-ramp for foundations-metrology readers:* [`views/view-framework-overview-v0.1.md`](../views/view-framework-overview-v0.1.md) — the first **Harbour View** consolidates the framework, its methodology, and its first worked exemplar into one externally-readable presentation. §6.2 above describes what a View is.
 2. [`coastlines/consensus-emergence-v0.4.md`](../coastlines/consensus-emergence-v0.4.md) — the framework itself, in full.
-3. [`sails/sorci-commentary-v0.4.md`](../sails/sorci-commentary-v0.4.md) — see the framework applied to a concrete case.
+3. [`sails/sorci-commentary-v0.4.md`](../sails/sorci-commentary-v0.4.md) — see the framework applied to a concrete case in authorial prose.
 4. [`ledger/CL-2026-006-sorci-v0.5.1.md`](../ledger/CL-2026-006-sorci-v0.5.1.md) — the Ledger classification underwriting the Sail (current; v0.5 added the Module 3a quantitative grounding of Discriminant D1; v0.5.1 is a 2026-05-29 patch revision correcting stale MN v0.2 → MN v0.3 cross-references with no content change).
 5. [`docs/literature/synthesis-v0.1.md`](literature/synthesis-v0.1.md) — how the literature review stress-tested the framework.
 6. [`docs/roadmap.md`](roadmap.md) — what is in active development and what is deferred.
@@ -252,6 +268,15 @@ Other deferred items:
 - **Methodological notes:** a temporal-redundancy toy functional (Riedel-style) — ✅ **drafted, current v0.3** (see below); a platform-general nuisance-discrimination kit (still open).
 
 The first of those methodological notes is now drafted — the **temporal-redundancy functional** ([`docs/notes/temporal-redundancy-functional-v0.3.md`](notes/temporal-redundancy-functional-v0.3.md)). Borrowing the Riedel–Zurek redundancy measure from quantum Darwinism, it re-bases the partial-information plot on a *temporal* pointer and computes the redundancy `R_δ` of a few-carrier clock. **The headline:** for `N = 64` carriers reading the same elapsed-time bin, an **independent (redundant)** record has `R_{0.10} ≈ 7.1` (a small fragment already fixes the time), while a **GHZ / squeezing-enhanced (anti-redundant)** record has `R_δ = 1` (every proper fragment carries zero) — *multipartite ≠ redundant* made numerical. The note also gives a principled basis for the resolution-anchor vs classification-anchor split (bounded mutual information plateaus; extensive Fisher information does not) and maps onto the Sorci case (CL-2026-006). It is explicitly a **toy** for its *analytic* poles, but **v0.3 (§8) now supplies the many-carrier numerical exemplar** — a master-equation–derived `R_δ(N, γ_φ t)` for `N` independently dephasing carriers (toolkit Module 3b), validated against the §2 poles — *within the assumed-einselection regime*. It still does *not* close the principal open problem above: the continuous-`τ`, **dynamically-einselected** model remains open, so Anti-Claim #6 stays open.
+
+### The numerical toolkit
+
+The numerical instrument that produces the methodological note's §8 companion and the CL-2026-006 D1 nuisance budget lives at [`numerics/`](../numerics/) as the `tmc-numerics` Python package. It exposes the framework's anchor measures (`I(C:M)`, `F[τ]`, `R_δ`) over a QuTiP master-equation backbone and currently ships two priority modules:
+
+- **Module 3a — Sorci D1 nuisance budget.** A four-layer master-equation model (initial-state preparation infidelity / dynamical-Lindblad heating + motional dephasing / stochastic-Hamiltonian drive-phase noise / detection-side correlated infidelity) of the Sorci protocol in a rotating-frame secular-dispersive Hamiltonian that reproduces Sorci Eq. (12). Output: the per-channel `I(C:M)` and Ramsey-visibility decomposition that grounds CL-2026-006 v0.5's D1 *theoretical* component. Committed result: [`numerics/results/sorci_nuisance_budget_v0.1.json`](../numerics/results/sorci_nuisance_budget_v0.1.json).
+- **Module 3b — open temporal instrument.** The numerical companion to MN v0.3 §8 — the dynamical `R_δ(N, γ_φ t)` grid for `N` ∈ {4, 8, 16, 32, 64, 128} independently dephasing carriers, with the per-carrier flip/error probability `ε` derived from a single-carrier master equation (not posited). The boundary at which the redundancy plateau disappears rises with `N` (0.273 → 1.827 across `N = 4 → 128`) — more independent carriers tolerate more per-carrier dephasing, the dynamical realisation of Claim II's redundancy point. Committed result: [`numerics/results/open_instrument_redundancy_v0.1.json`](../numerics/results/open_instrument_redundancy_v0.1.json).
+
+Both modules ship with example notebooks that regenerate the committed JSON results end-to-end ([`numerics/examples/`](../numerics/examples/)). The package is exercised by an 85-test suite; see [`numerics/README.md`](../numerics/README.md) for the install / run instructions and the locked Phase-1 / Phase-2 API contracts under [`workplans/`](../workplans/). Per the toolkit's anti-claim A5, **numerical results inform but do not auto-update Ledger verdicts** — verdict moves remain a human-deliberated steward act (Lock-Key).
 
 ---
 
@@ -276,6 +301,7 @@ The first of those methodological notes is now drafted — the **temporal-redund
 | v0.2 | 2026-05-27 | Wove in the temporal-redundancy functional finding (new methodological note, `docs/notes/`): §10 updated (the toy functional is now drafted, with the `R_{0.10} ≈ 7.1` vs `1` headline and the residual non-toy open problem); §4 *multipartite ≠ redundant* caveat and §11 key-distinctions row now cross-reference the computed result. No change to the five-Claim exposition. |
 | v0.3 | 2026-05-27 | Re-pointed the methodological-note citations from v0.1 to **v0.2** (Guardian-review revision of the note: einselection reframing, Schmidt derivation, §3/§4/§5 tightening, arXiv:2509.17775 grounding). No change to the tutorial's content or the headline numbers. |
 | v0.3 rev. (a) | 2026-05-29 | **Anchor-propagation pass** (HV-DRAFT-001 Step-3 D-queue). Updated the §10 Sail-mixed-anchor sentence from "the Ledger entry is itself now at v0.3" to "now at v0.5.1" (the Sail anchor at CL-2026-006 v0.2 remains documented mixed-anchor; v0.5 added Module 3a's quantitative grounding of D1, then v0.5.1 patched stale MN cross-references, neither moved the verdict, so the Sail citation remains valid). Updated the reading-list file link at the foot of §10 from `CL-2026-006-sorci-v0.3.md` to `CL-2026-006-sorci-v0.5.1.md` (current). No change to the five-Claim exposition, the headline numbers, or any other downstream pointer. |
+| **v0.4** | 2026-05-29 | **Post-View-v0.1 integration pass.** Four substantive updates folded after the Harbour View v0.1 pre-release draft completed and the repository restructured around the new artefact category. **§1 + §2** reworked from three artefact families to four (Coastline / Ledger / Sail / **View**); §2 terms table gains a Harbour View row; *"Why three families?"* → *"Why these families?"* with a fourth bullet on Views. **§5** CL-2026-006 anchor row updated from single-anchor `I(C:M)` to the dual-classification reading the current v0.5.1 entry declares (`I(C:M)` and `R_δ`; resolution `F[τ]`), with the discriminant-status column noting D2/D3 unmet vs D1 theoretically grounded by toolkit Module 3a at v0.5. **§6** renamed *"Sails and Views: commentary and presentation"*, with two H3 sub-sections — §6.1 carries the existing Sail content verbatim; new §6.2 introduces the Harbour View artefact category, the first View (`view-framework-overview-v0.1.md`), the Lock-Key discipline that pins View citations at issue time, and the spec at [`harbour-view-structural-deliberation-note-v0.6.md`](harbour-view-structural-deliberation-note-v0.6.md). **§9** reading-order step 1 gains an *alternative fast on-ramp* pointer to the first View for foundations-metrology readers (mirroring the README's existing wording). **§10** gains a new sub-section *"The numerical toolkit"* introducing the `numerics/` package explicitly — Module 3a (Sorci D1 nuisance budget) and Module 3b (open temporal instrument) — with result-JSON pointers, the boundary numbers from the Module 3b sweep, the 85-test-suite reference, and the A5 *inform-but-do-not-auto-update* anti-claim. No change to the five-Claim exposition, the *load-bearing sentence*, the headline numbers (`R_{0.10} ≈ 7.1` vs `1`), the Regime-of-Validity statement, or any other downstream claim. Anchored to Coastline v0.4, Ledger CL-2026-006 v0.5.1 / CL-2026-007 v0.3 / CL-2026-008 v0.2, MN v0.3, Sail v0.4, Harbour View v0.1 (pre-release draft). |
 
 ---
 
