@@ -266,7 +266,7 @@ Three externally-validated physical frameworks the View operates within and does
 
 #### D. Prior art — Worked-exemplar dossier subject
 
-- **D1.** Sorci, G., Foo, J., Leibfried, D., Sanner, C., & Pikovski, I. (2026). Quantum signatures of proper time in optical ion clocks. *Physical Review Letters*, 136, 163602. DOI [10.1103/qhj9-pc2b](https://doi.org/10.1103/qhj9-pc2b); preprint arXiv:2509.09573. **Role:** *prior-art* / candidate-witness (subject of Breakwater Ledger entry CL-2026-006 v0.5, the worked exemplar drawn on in §1 + §4). **Surfaced where:** §1 headline finding; §4 throughout (via the Ledger entry). **COI cross-link to Block 5:** D. Leibfried is a co-author and is declared in the Acknowledgements & COI block.
+- **D1.** Sorci, G., Foo, J., Leibfried, D., Sanner, C., & Pikovski, I. (2026). Quantum Signatures of Proper Time in Optical Ion Clocks. *Physical Review Letters*, 136, 163602. DOI [10.1103/qhj9-pc2b](https://doi.org/10.1103/qhj9-pc2b); preprint arXiv:2509.09573. **Role:** *prior-art* / candidate-witness (subject of Breakwater Ledger entry CL-2026-006 v0.5, the worked exemplar drawn on in §1 + §4). **Surfaced where:** §1 headline finding; §4 throughout (via the Ledger entry). **COI cross-link to Block 5:** D. Leibfried is a co-author and is declared in the Acknowledgements & COI block.
 
 #### E. Prior art — structural-match anchor for §3 / MN v0.3 §8.5
 
@@ -274,7 +274,7 @@ Three externally-validated physical frameworks the View operates within and does
 
 #### F. Prior art — Clock-network dossier subjects (CL-2026-008)
 
-- **F1.** Covey, J. P., Pikovski, I., & Borregaard, J. (2025). [Distributed entanglement-enhanced clock-network proposal — three-node W-state architecture; spacetime curvature appears as the higher-order cross-probe residual `Δω ≈ 2 (ΔE GM/ℏc²)(d²/R³)` after the leading inter-node consensus `ω₁₂ ≈ ω₂₃` is removed.] *PRX Quantum*, 6, 030310. DOI [10.1103/q188-b1cr](https://doi.org/10.1103/q188-b1cr). **Role:** *prior-art* (subject of Breakwater Ledger entry CL-2026-008 v0.2, one of the two papers in the class claim; the operational instance of the Coastline Claim IV cross-probe anchor surfaced at §5.2). **Surfaced where:** §5.2 CL-2026-008 cross-View pointer (via the Ledger entry).
+- **F1.** Covey, J. P., Pikovski, I., & Borregaard, J. (2025). Probing Curved Spacetime with a Distributed Atomic Processor Clock. *PRX Quantum*, 6, 030310. DOI [10.1103/q188-b1cr](https://doi.org/10.1103/q188-b1cr). **Role:** *prior-art* (subject of Breakwater Ledger entry CL-2026-008 v0.2, one of the two papers in the class claim; three-node W-state architecture in which spacetime curvature appears as the higher-order cross-probe residual `Δω ≈ 2 (ΔE GM/ℏc²)(d²/R³)` after the leading inter-node consensus `ω₁₂ ≈ ω₂₃` is removed — the operational instance of the Coastline Claim IV cross-probe anchor). **Surfaced where:** §5.2 CL-2026-008 cross-View pointer (via the Ledger entry).
 - **F2.** Fromonteil, C., *et al.* (2025). Non-local mass superpositions and optical clock interferometry in atomic ensemble quantum networks. arXiv preprint [arXiv:2509.19501](https://arxiv.org/abs/2509.19501). **Role:** *prior-art* (subject of Breakwater Ledger entry CL-2026-008 v0.2, paired with F1 as the N-atom-ensemble companion to Covey's three-node W-state architecture; introduces the gravitational-decoherence visibility signature `τ_dec` surfaced at §5.2). **Surfaced where:** §5.2 CL-2026-008 cross-View pointer (via the Ledger entry).
 
 ### Block 2 — Version-pinning appendix
