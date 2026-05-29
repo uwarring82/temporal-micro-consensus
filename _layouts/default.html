@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if site.description %}<meta name="description" content="{{ site.description | strip_newlines }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/emblem-16.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/tokens.css' | relative_url }}">
+  <style>
+    /* Page chrome — extends the cd-rules tokens; never overrides token values
+       (blueprint §12: "Local styles may extend but must not override token values").
+       Source: threehouse-plus-ec/cd-rules@ee01c80 (cd-v1.7.1).                       */
+
+    :root { color-scheme: light; }
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--parchment);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      line-height: 1.68;
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    :focus-visible {
+      outline: var(--focus-ring);
+      outline-offset: var(--focus-offset);
+    }
+
+    a, button, [role="button"], input, select, textarea {
+      min-height: var(--min-target-aa);
+    }
+
+    /* Skip-link — WCAG 2.4.1 */
+    .skip-link {
+      position: absolute;
+      top: -3rem;
+      left: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      background: var(--ink);
+      color: var(--parchment);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-decoration: none;
+      z-index: 1000;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Site header — sticky lockup with emblem + wordmark */
+    .site-shell { width: min(calc(100% - 3rem), 72rem); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(245, 240, 232, 0.92);
+      border-bottom: 1px solid var(--grid);
+    }
+
+    .site-header__inner {
+      width: min(calc(100% - 3rem), 72rem);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 0.85rem 0;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-height: 44px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-lockup img:first-child { width: 32px; height: 32px; flex: none; }
+    .brand-lockup img:last-child { width: 7.05rem; height: auto; flex: none; }
+
+    .site-meta {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--stone);
+      text-align: right;
+      line-height: 1.35;
+    }
+
+    .site-meta a {
+      color: var(--sea);
+      text-decoration: none;
+    }
+    .site-meta a:hover, .site-meta a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .site-meta { display: none; }
+      .site-header__inner { grid-template-columns: auto 1fr; }
+    }
+
+    /* Main content — reading column at --measure */
+    main { padding: 2.25rem 0 4rem; }
+
+    .content {
+      max-width: var(--measure);
+      margin: 0 auto;
+    }
+
+    /* Headings — IBM Plex Mono labels per cd-rules §6 */
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6 {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.25;
+      margin: 2rem 0 0.75rem;
+    }
+
+    .content > h1:first-child { margin-top: 0.25rem; }
+
+    .content h1 { font-size: 1.65rem; letter-spacing: -0.01em; }
+    .content h2 { font-size: 1.2rem;  letter-spacing: -0.005em; margin-top: 2.5rem; }
+    .content h3 { font-size: 1rem; }
+    .content h4 { font-size: 0.875rem; color: var(--stone); }
+
+    /* Body prose — Crimson Pro */
+    .content p, .content li, .content dd { font-family: var(--font-serif); }
+
+    .content p { margin: 0.85rem 0; }
+
+    .content a {
+      color: var(--sea);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2.5px;
+    }
+    .content a:hover, .content a:focus-visible {
+      color: var(--signal);
+    }
+
+    /* Inline code + code blocks */
+    .content code {
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      background: var(--warm-white);
+      border: 1px solid var(--grid);
+      border-radius: 2px;
+      padding: 0.04em 0.3em;
+    }
+    .content pre {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      background: var(--warm-white);
+      border: 1px solid var(--grid);
+      border-left: 3px solid var(--sea);
+      border-radius: 2px;
+      padding: 0.85rem 1rem;
+      overflow-x: auto;
+      line-height: 1.55;
+    }
+    .content pre code {
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-size: 1em;
+    }
+
+    /* Blockquote — used as Endorsement Marker / status box */
+    .content blockquote {
+      margin: 1.25rem 0;
+      padding: 0.6rem 1rem;
+      border-left: 3px solid var(--signal);
+      background: var(--warm-white);
+      color: var(--ink);
+      font-style: normal;
+    }
+    .content blockquote p { margin: 0.4rem 0; }
+
+    /* Tables — bordered, mono headers */
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.92rem;
+    }
+    .content th, .content td {
+      padding: 0.5rem 0.7rem;
+      border-bottom: 1px solid var(--grid);
+      text-align: left;
+      vertical-align: top;
+    }
+    .content th {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--stone);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .content tr:hover td { background: var(--warm-white); }
+
+    /* Lists */
+    .content ul, .content ol { padding-left: 1.5rem; }
+    .content li { margin: 0.35rem 0; }
+    .content li > ul, .content li > ol { margin: 0.25rem 0; }
+
+    /* Horizontal rule — used as section rule */
+    .content hr {
+      border: 0;
+      height: 1px;
+      background: var(--grid);
+      margin: 2.5rem 0;
+    }
+
+    /* Images & figures */
+    .content img { max-width: 100%; height: auto; }
+    .content figure { margin: 1.5rem 0; }
+    .content figcaption {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--stone);
+      margin-top: 0.4rem;
+    }
+
+    /* Colophon */
+    .colophon {
+      border-top: 1px solid var(--grid);
+      padding: 1.5rem 0 2.5rem;
+      margin-top: 3rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      line-height: 1.55;
+      color: var(--stone);
+    }
+
+    .colophon .colophon__grid {
+      max-width: var(--measure);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .colophon .label {
+      font-weight: 500;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .colophon a { color: var(--sea); text-decoration: none; }
+    .colophon a:hover, .colophon a:focus-visible { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .colophon .colophon__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <img src="{{ '/assets/emblem-32.svg' | relative_url }}" alt="" role="presentation">
+        <img src="{{ '/assets/wordmark-full.svg' | relative_url }}" alt="T(h)ree +EC">
+      </a>
+      <div></div>
+      <div class="site-meta">
+        <div>{{ site.title }}</div>
+        <div>Local Stewardship · <a href="https://github.com/uwarring82/temporal-micro-consensus">repository</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="site-shell">
+      <article class="content">
+        {{ content }}
+      </article>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="colophon__grid">
+      <div>
+        <span class="label">Endorsement marker</span>
+        Local Stewardship — U. Warring, Physikalisches Institut, Albert-Ludwigs-Universität Freiburg. Documents are versioned drafts; cite documents by version.
+      </div>
+      <div>
+        <span class="label">Design</span>
+        Page chrome built on the
+        <a href="https://github.com/threehouse-plus-ec/cd-rules">T(h)reehouse +EC corporate design</a>
+        (assets pinned at <code>cd-v1.7.1</code> / <code>ee01c80</code>; see
+        <a href="{{ '/assets/SOURCE.md' | relative_url }}">assets/SOURCE.md</a>
+        and the
+        <a href="{{ '/LICENCE' | relative_url }}">root LICENCE</a>).
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

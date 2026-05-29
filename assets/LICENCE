@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2025–2026 T(h)reehouse +EC (https://github.com/threehouse-plus-ec/cd-rules)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This MIT-licensed asset set was copied from
+https://github.com/threehouse-plus-ec/cd-rules at commit
+ee01c80352dd8446f189c3159a3d9e347463902c (tag cd-v1.7.1, 2026-04-17)
+following the asset-propagation rules of the T(h)reehouse +EC corporate
+design blueprint §0.10 (Model B — distributed copy + checksum validation).
+The copied files are:
+
+  emblem-16.svg
+  emblem-32.svg
+  emblem-64.svg
+  wordmark-full.svg
+  wordmark-silent.svg
+  tokens.css
+
+Origin commit, copy date, and SHA-256 hashes are recorded in this folder's
+SOURCE.md. The MIT licence terms above govern the copied files only; the
+broader temporal-micro-consensus repository uses a split licence declared
+in the root LICENCE file.

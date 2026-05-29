@@ -948,3 +948,49 @@ The two pre-tag confirmations the prior commit left open were returned by the st
 - **F1 — Covey, Pikovski & Borregaard 2025 paper title** confirmed as *"Probing Curved Spacetime with a Distributed Atomic Processor Clock"*. View Block 1 §F1 — which had been carrying a bracketed paraphrase placeholder for the paper's identifying line — updated to use the actual title; the physics content of the placeholder (three-node W-state architecture; curvature as the higher-order cross-probe residual `Δω` after the leading inter-node consensus is removed) is preserved by moving it into the *Role* line, where it complements the cross-View pointer to CL-2026-008 v0.2 without doubling the entry's information density.
 
 **Net state.** The View is consistency-clean against all three cross-reviewer reports + the two pre-tag confirmations; the four-step plan presented to the steward at the start of this consolidated pass is fully discharged at the agent level. The remaining gates are release-time tasks only: CITATION.cff `date-released` bump; View Block 6 citation-metadata-stub population (Zenodo DOI + the O6-regime citation locator); the tag itself (steward direction). **Lock-Key untouched** by this addendum: only `views/view-framework-overview-v0.1.md` and `docs/logbook.md` are edited; the Ledger's line-3 in-house descriptive label is deliberately not propagated to the published title (the Ledger is the canonical reference for what the entry classifies, not for the paper's published title).
+
+### Web appearance — adoption of the T(h)reehouse +EC in-house style (steward "go for i.")
+
+Pre-tag check on the GitHub Pages site against the T(h)reehouse +EC corporate-design blueprint at [`threehouse-plus-ec/cd-rules`](https://github.com/threehouse-plus-ec/cd-rules) tag `cd-v1.7.1` (commit `ee01c80`, 2026-04-17). Audit identified the existing site as using `jekyll-theme-cayman` (generic GitHub Pages theme) with no in-house assets, typography, palette, or wordmark. Two paths offered: **(A)** minimum pre-tag compliance (assets + custom layout + tokens) and **(B)** full demonstrator-grade adoption with a hand-coded `index.html` à la cd-rules' own demonstrator. Steward selected **Path A, option (i)**: replace cayman with a custom `_layouts/default.html` (clean break, full Markdown → HTML rendering control).
+
+**Files added / changed (this commit):**
+
+- `assets/` (new folder) — six files copied byte-identical from `threehouse-plus-ec/cd-rules@ee01c80`:
+  - `emblem-16.svg`, `emblem-32.svg`, `emblem-64.svg` — Level-1 identity emblems per blueprint §3.
+  - `wordmark-full.svg`, `wordmark-silent.svg` — B-full and B-silent wordmark variants per blueprint §4.
+  - `tokens.css` — `:root` design tokens (palette, typography, layout, accessibility) per blueprint §5/§6/§7. The Google Fonts `@import` for IBM Plex Mono + Crimson Pro lives inside this file (cd-rules canonical).
+  - `assets/SOURCE.md` — source-pin record per blueprint §0.10 (Model B distributed copy + checksum validation): source repo + tag + commit + date + copy method + consuming repo; per-file SHA-256 hashes (consumer-side audit); per-file `git hash-object` blob SHA verification against the source-repo blobs at the pin (all six matched OK at copy time); drift-detection one-liner; update-history table.
+  - `assets/LICENCE` — MIT licence text governing the copied assets, plus a copy-attribution paragraph naming the source pin and the per-file inventory.
+- `LICENCE` (new, root) — split-licence declaration per blueprint §0.3, mapping each repository folder to its layer (Coastline / Sail / Handbook / Infrastructure / External fonts), with per-layer licence pointers, the rationale for not using a uniform NC-SA, and per-folder LICENCE-discipline notes. References the existing `LICENSE-MIT`, `LICENSE-CC-BY-SA-4.0`, and `LICENSE-CC-BY-NC-SA-4.0` files rather than replacing them.
+- `_layouts/default.html` (new) — custom Jekyll layout, ~280 lines, replacing `jekyll-theme-cayman`. Imports `assets/tokens.css`; sets the favicon to `assets/emblem-16.svg`; renders a sticky site-header with the emblem-32 + wordmark-full brand lockup; renders the page content at the `--measure: 38rem` reading width per blueprint §7; renders a colophon footer crediting the cd-rules pin and pointing at `assets/SOURCE.md` + the root `LICENCE`. Body in Crimson Pro; headings in IBM Plex Mono per blueprint §6. WCAG 2.2 AA per blueprint §12A: viewport meta, skip-link (WCAG 2.4.1), focus ring (using the `--focus-ring` token), `prefers-reduced-motion` handling, minimum touch-target sizing. **Token-extension discipline:** the layout's local CSS extends tokens (typography assignments, table chrome, code-block styling, blockquote treatment) but **never overrides token values** per blueprint §12 ("Local styles may extend but must not override token values").
+- `_config.yml` — removed `theme: jekyll-theme-cayman`; updated the header comment block to document the new build method ("Markdown source + assets/tokens.css + manual `_layouts/default.html`" — satisfying the blueprint §12 rendering invariant); updated the site description to include Harbour Views; clarified the `exclude:` block (`assets/` is intentionally **not** excluded so the layout's references resolve; the root `LICENCE` is intentionally **not** excluded so the colophon link resolves; the three `LICENSE-*` text files are still excluded — they are served from the repo, not from the web).
+
+**Files intentionally NOT changed at this pass:**
+
+- `index.md` — the existing landing-page prose is already cd-rules-style-compatible (concise, specimen-sheet voice, no marketing language). The new layout wraps it without rewrites needed.
+- The four existing `LICENSE-*` files at the repo root — kept as the authoritative per-layer texts the new root `LICENCE` declaration points to.
+- All artefact prose (`views/`, `coastlines/`, `ledger/`, `sails/`, `docs/`, `workplans/`) — unchanged; the layout is presentational chrome only.
+
+**Compliance against cd-rules blueprint at commit `ee01c80`:**
+
+- §0.3 (split licence) — root `LICENCE` declaration added with per-layer pointers. ✅
+- §0.5 (Markdown-first, web-rendered) — explicit in `_config.yml` header comment + layout docstring. ✅
+- §0.7 (endorsement marker on all documents) — already satisfied by artefact prose; colophon also surfaces the Local-Stewardship marker. ✅
+- §0.10 (asset propagation Model B) — `assets/SOURCE.md` records source repo + commit + date + per-file SHA-256 hashes + per-file `git hash-object` audit against source blobs. ✅
+- §0.11 (cross-repo reference pattern) — `tokens.css` imported, not redefined; emblem and wordmark SVGs copied per Model B; blueprint linked from `LICENCE` and from the colophon, not paraphrased. ✅
+- §5 / §6 (palette / typography) — `tokens.css` import provides `--ink` / `--sea` / `--signal` / secondaries and the IBM Plex Mono + Crimson Pro Google Fonts import. ✅
+- §7 (spacing / `--measure: 38rem`) — applied to `.content` and `.colophon__grid`. ✅
+- §12 (web rendering invariant) — manual build, documented; HTML reproducible from Markdown + `tokens.css` + the `_layouts/default.html` step. ✅
+- §12A (accessibility WCAG 2.2 AA) — viewport meta, skip-link, focus-visible outline using `--focus-ring`, reduced-motion handling, minimum touch-target sizing. ✅
+- §13 (asset inventory) — all six assets present with the inventory recorded in `assets/SOURCE.md`. ✅
+- §14 (folder structure, content-heavy repo) — `index.md` (Jekyll-rendered) + root `LICENCE` + `assets/` (with `SOURCE.md` and `LICENCE`) + `docs/` are now all in place. ✅
+
+**Out of scope for this pass (recorded as a Path-B follow-up):**
+
+- A demonstrator-grade hand-coded `index.html` à la the cd-rules reference page (`hero` block, `layer-stack`, `evidence-grid`, `colophon` grid patterns). Path A satisfies the rendering invariant and the asset-propagation discipline; the cd-rules-demonstrator-style visual patterns are deferred until after the Harbour View v0.1 tagged release.
+- Per-folder `LICENCE` files in each content folder (`coastlines/`, `ledger/`, `views/`, `sails/`, `docs/`, `workplans/`, `numerics/`). The blueprint allows per-folder declarations *or* a single root declaration that maps folders to layers (§0.3). The single-root approach is chosen for this pass; per-folder files can be added later without breaking the existing references.
+- The TMC repo has not yet pushed a cd-asset-pin update tooling/CI check. Per blueprint §0.5, "when the number of consuming repos exceeds five, a CI hash-check should be introduced." TMC is currently one consuming repo; the CI check is not yet warranted.
+
+**Lock-Key held throughout this pass.** No edits to Coastline / Ledger / MN / Sail / committed JSONs / results-JSON / notebooks. Only the GitHub Pages chrome (`_config.yml`, new `_layouts/default.html`), the licence declaration (new root `LICENCE`), and the assets folder (new `assets/`) are introduced. The View prose is untouched.
+
+**Pre-tag status update.** The remaining gates before the Harbour View v0.1 tag are unchanged: CITATION.cff `date-released` bump and View Block 6 citation-metadata-stub population (Zenodo DOI + the O6-regime citation locator). Steward direction needed for the tag itself.

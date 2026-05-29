@@ -1,0 +1,75 @@
+# Split-Licence Declaration
+
+This repository uses a split licence following the T(h)reehouse +EC corporate
+design blueprint §0.3 (split licence architecture). Different parts of the
+repository are released under different licences, mirroring the Harbour's
+own epistemic architecture: Coastlines (frameworks) are open infrastructure;
+Sails (interpretive works) are protected authorial output; Handbook assets
+are maximally integrable code/design under MIT.
+
+## Licence matrix
+
+| Layer | Folder(s) | Licence | SPDX | Full text |
+| --- | --- | --- | --- | --- |
+| Core frameworks (Coastline) | `coastlines/`, `ledger/`, `views/`, `docs/`, `workplans/` | CC BY-SA 4.0 | `CC-BY-SA-4.0` | [`LICENSE-CC-BY-SA-4.0`](LICENSE-CC-BY-SA-4.0) |
+| Authored works (Sail) | `sails/` | CC BY-NC-SA 4.0 | `CC-BY-NC-SA-4.0` | [`LICENSE-CC-BY-NC-SA-4.0`](LICENSE-CC-BY-NC-SA-4.0) |
+| Design assets (Handbook) | `assets/` | MIT | `MIT` | [`assets/LICENCE`](assets/LICENCE) |
+| Code and tooling (Infrastructure) | `numerics/`, scripts, configuration | MIT | `MIT` | [`LICENSE-MIT`](LICENSE-MIT) |
+| Fonts (external) | (not redistributed; canonical Google Fonts URL is referenced) | SIL OFL 1.1 | `OFL-1.1` | upstream |
+
+The repository's content layers and their licences are:
+
+- **`coastlines/`** — versioned framework notes (CC BY-SA 4.0).
+- **`ledger/`** — Breakwater Claim Analysis Ledger entries (CC BY-SA 4.0).
+- **`views/`** — presentational vantage-points; Harbour Views (CC BY-SA 4.0).
+- **`sails/`** — commentaries and authored essays (CC BY-NC-SA 4.0).
+- **`docs/`** — tutorial, roadmap, project logbook, literature-review plan, methodological notes, Views-category specification, pilot-reader brief (CC BY-SA 4.0).
+- **`workplans/`** — planning artefacts including the toolkit work plan and D6-locked API contracts (CC BY-SA 4.0).
+- **`numerics/`** — `tmc-numerics` Python toolkit: code, tests, example notebooks, committed JSON results (MIT — see [`numerics/pyproject.toml`](numerics/pyproject.toml)).
+- **`assets/`** — design assets (emblem, wordmark, `tokens.css`) copied from `threehouse-plus-ec/cd-rules` per blueprint §0.10 Model B (MIT — see [`assets/LICENCE`](assets/LICENCE) and [`assets/SOURCE.md`](assets/SOURCE.md)).
+
+## How to cite
+
+Citations of documents in this repository must include the version number of
+the specific document (e.g. *Coastline v0.4*, *CL-2026-006 v0.5.1*, *Sail v0.4*,
+*Harbour View v0.1*). The repository as a whole is archived at a persistent
+Zenodo DOI; see [`README.md`](README.md) and [`CITATION.cff`](CITATION.cff).
+
+## Why a split, not a single licence?
+
+A uniform NC-SA licence would create licence islands that cannot interoperate
+with the open-source ecosystems this project touches (QuTiP, NumPy, SciPy,
+GitHub-native workflows, ARTIQ/Sinara, reproducible-research tooling). The
+NC clause introduces legal ambiguity for universities, spin-offs, and
+mixed-funding organisations, producing a chilling effect even when use is
+benign. The split architecture resolves this:
+
+- For Coastlines and design assets, authority flows from use and citation
+  (matching the project's epistemology); both are maximally reusable.
+- For Sails (authored essays), authority flows from both use and licence
+  restriction (matching the nature of interpretive output); NC protects
+  authored prose from commercial repackaging without the epistemic
+  commitments that give it meaning.
+- For the numerical toolkit (`numerics/`), MIT licensing maximises
+  integrability with computational research workflows.
+
+See the corporate design blueprint at
+[`threehouse-plus-ec/cd-rules`](https://github.com/threehouse-plus-ec/cd-rules)
+§0.3 for the full rationale and the per-folder licence-declaration discipline
+this repository follows.
+
+## Per-folder LICENCE references
+
+When in doubt about which licence applies to a particular file:
+1. Check the folder it lives in against the matrix above.
+2. If the folder has its own `LICENCE` file (as `assets/` does), that file governs.
+3. If a file carries its own licence header (as `assets/tokens.css` does), that header governs.
+4. When folders contain mixed content, the more restrictive licence applies unless individual files carry their own header declarations.
+
+## Relicensing
+
+The repository steward may relicense specific files to a more permissive
+licence (e.g. CC BY-SA to CC BY, or MIT to CC0) but never to a more
+restrictive one. Relicensing from Sail (NC-SA) to a permissive licence
+requires explicit steward decision and is recorded in the relevant document's
+version history.

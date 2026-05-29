@@ -2,12 +2,19 @@
 # The site is built from the current `main`; the landing page (index.md) lists the
 # most recent version of each artefact. Inter-document .md links are rewritten to .html
 # by GitHub Pages' jekyll-relative-links plugin (enabled by default).
+#
+# Page chrome: custom _layouts/default.html, built on the T(h)reehouse +EC corporate
+# design system (assets pinned in assets/ from threehouse-plus-ec/cd-rules at tag
+# cd-v1.7.1 / commit ee01c80; see assets/SOURCE.md). No GitHub Pages theme is set
+# (no `theme:` key) — the rendering invariant from cd-rules blueprint §12 is
+# "Markdown source + tokens.css + documented build method", and the build method
+# here is the manual _layouts/default.html that imports assets/tokens.css.
 
 title: Temporal Micro Consensus
 description: >-
   Consensus-Emergence of Classical Proper Time — a Local-Stewardship research
-  framework, with Breakwater Ledger classifications and Sail commentaries.
-theme: jekyll-theme-cayman
+  framework, with Breakwater Ledger classifications, Sail commentaries, and
+  Harbour Views.
 
 # This is a prose/documentation repo — we never intend to use Liquid templating.
 # 'lax' makes Jekyll render incidental brace sequences in the Markdown literally
@@ -15,14 +22,17 @@ theme: jekyll-theme-cayman
 liquid:
   error_mode: lax
 
-# Apply the theme's layout to every page (the artefact .md files carry no front matter).
+# Apply the layout to every page (the artefact .md files carry no front matter).
 defaults:
   - scope:
       path: ""
     values:
       layout: default
 
-# Keep non-content files out of the built site (licences/config are served from the repo).
+# Keep non-content files out of the built site (per-layer licence texts are served
+# from the repo, not the web). The `assets/` folder is intentionally NOT excluded —
+# the layout references its files (tokens.css, emblem-*.svg, wordmark-*.svg).
+# The root `LICENCE` (split declaration) IS served so the colophon link resolves.
 exclude:
   - LICENSE-MIT
   - LICENSE-CC-BY-SA-4.0
